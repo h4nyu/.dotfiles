@@ -64,6 +64,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 "colorscheme
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
 
 "UI
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -90,7 +91,7 @@ call neobundle#end()
 filetype plugin indent on
 
 "colorscheme
-colorscheme jellybeans
+colorscheme molokai 
 
 
 " im-indent-guides settings
