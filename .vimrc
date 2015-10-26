@@ -155,3 +155,4 @@ vmap <Enter> <Plug>(EasyAlign)
 "other key setting
 nnoremap <Space>o :only<CR>
 nnoremap <ESC><ESC> :noh<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
