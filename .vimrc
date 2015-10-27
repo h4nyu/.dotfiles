@@ -139,6 +139,26 @@ let g:quickrun_config = {
 		\   },
 		\}
 
+let g:quickrun_config = {
+			\   "avr-gcc" : {
+			\       "command"   : "avr-gcc",
+			\       "exec" : "%c %o %s -o %S:p:r",
+			\       "cmdopt" : "-Os -DF_CPU=16000000UL -mmcu=atmega328p ",
+			\   },
+			\}
+
+
+let g:quickrun_config = {
+			\   "avr-objcopy" : {
+			\       "command"   : "avr-objcopy",
+			\       "exec" : "%c %o  %S:p:r %S:p:r.ihex",
+			\       "cmdopt" : "-O ihex",
+			\   },
+			\}
+
+
+
+
 
 "quickrun key settings 
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
