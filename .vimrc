@@ -85,6 +85,7 @@ NeoBundle 'Townk/vim-autoclose'
 "edit tool
 NeoBundle 'vim-easy-align'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'tomtom/tcomment_vim'
 
 NeoBundleCheck
 call neobundle#end()
@@ -107,11 +108,13 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+
+" plugin key-mappings.
+imap <c-k>     <plug>(neocomplcache_snippets_expand)
 smap <C-k>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
@@ -135,6 +138,7 @@ let g:quickrun_config = {
 		\       "hook/shabadoubi_touch_henshin/wait"   : 20,
 		\   },
 		\}
+
 
 "quickrun key settings 
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
