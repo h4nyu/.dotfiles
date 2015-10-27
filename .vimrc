@@ -91,7 +91,7 @@ call neobundle#end()
 filetype plugin indent on
 
 "colorscheme
-colorscheme molokai 
+colorscheme jellybeans 
 
 
 " im-indent-guides settings
