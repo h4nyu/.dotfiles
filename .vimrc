@@ -81,6 +81,7 @@ NeoBundle 'scrooloose/nerdtree'
 "scrip 
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'tpope/vim-fugitive'
 
 "edit tool
 NeoBundle 'vim-easy-align'
@@ -137,27 +138,22 @@ let g:quickrun_config = {
 		\       "hook/shabadoubi_touch_henshin/enable" : 1,
 		\       "hook/shabadoubi_touch_henshin/wait"   : 20,
 		\   },
+		\   "avr-gcc" : {
+		\       "command"   : "avr-gcc",
+		\       "exec" : "%c %o %s -o %S:p:r",
+		\       "cmdopt" : "-Os -DF_CPU=16000000UL -mmcu=atmega328p ",
+		\   },
+		\   "avr-objcopy" : {
+		\       "command"   : "avr-objcopy",
+		\       "exec" : "%c %o  %S:p:r %S:p:r.hex",
+		\       "cmdopt" : "-O ihex",
+		\   },
+		\   "avrdude" : {
+		\       "command"   : "avrdude",
+		\       "exec" : "%c %o %S:p:r.hex",
+		\       "cmdopt" : "-F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -U",
+		\   },
 		\}
-
-let g:quickrun_config = {
-			\   "avr-gcc" : {
-			\       "command"   : "avr-gcc",
-			\       "exec" : "%c %o %s -o %S:p:r",
-			\       "cmdopt" : "-Os -DF_CPU=16000000UL -mmcu=atmega328p ",
-			\   },
-			\}
-
-
-let g:quickrun_config = {
-			\   "avr-objcopy" : {
-			\       "command"   : "avr-objcopy",
-			\       "exec" : "%c %o  %S:p:r %S:p:r.ihex",
-			\       "cmdopt" : "-O ihex",
-			\   },
-			\}
-
-
-
 
 
 "quickrun key settings 
