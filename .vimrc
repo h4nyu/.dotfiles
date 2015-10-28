@@ -158,6 +158,17 @@ let g:quickrun_config = {
 
 "quickrun key settings 
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
+nnoremap <F9> :QuickRun<Space>
+
+"git key settings
+nnoremap \gb :Gblame<CR>
+nnoremap \gd :Gdiff<CR>
+nnoremap \gs :Gstatus<CR>
+nnoremap \gp :Git push origin master<CR>
+nnoremap \ga :Git add -A<CR>
+nnoremap \gc :Gcommit<CR>
+
+
 
 
 "previm_open_cmd setting
