@@ -24,6 +24,8 @@ set incsearch
 set cmdheight=2
 set t_Co=256
 set backupdir=/home/yao/.vim
+set nobackup
+set nowritebackup
 
 if has("autocmd")
 	autocmd BufReadPost *
