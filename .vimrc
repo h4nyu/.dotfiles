@@ -33,21 +33,23 @@ if has("autocmd")
 				\ endif
 endif
 
-
 "Neoboundle
-if has('vim_starting') set nocompatible if
-	!isdirectory(expand("~/.vim/bundle/neobundle.vim/")) echo "install
-	neobundle..." :call system("git clone
-	git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-	
-	endif set runtimepath+=~/.vim/bundle/neobundle.vim/ endif call
-	neobundle#begin(expand('~/.vim/bundle')) let
-	g:neobundle_default_git_protocol='https' NeoBundleFetch
-	'Shougo/neobundle.vim'
+if has('vim_starting') 
+	set nocompatible 
+	if !isdirectory(expand("~/.vim/bundle/neobundle.vim/")) 
+		echo "install neobundle..." 
+		:call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+	endif 
+	set runtimepath+=~/.vim/bundle/neobundle.vim/ 
+endif
+
+call neobundle#begin(expand('~/.vim/bundle')) 
+let g:neobundle_default_git_protocol='https' 
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 "vimproc
-NeoBundle 'Shougo/vimproc.vim', { \ 'build' : { \     'windows' :
-'tools\\update-dll-mingw',
+NeoBundle 'Shougo/vimproc.vim', { 
+			\ 'build' : { 
 			\     'cygwin' : 'make -f make_cygwin.mak',
 			\     'mac' : 'make',
 			\     'linux' : 'make',
@@ -156,6 +158,7 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 nnoremap <F9> :QuickRun<Space>
 
 "git key settings
+nnoremap \gw :Gwrite<CR>
 nnoremap \gb :Gblame<CR>
 nnoremap \gd :Gdiff<CR>
 nnoremap \gs :Gstatus<CR>
