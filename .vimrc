@@ -23,8 +23,7 @@ set wildmenu
 set incsearch
 set cmdheight=2
 set t_Co=256
-
-
+set backupdir=/home/yao/.vim
 
 if has("autocmd")
 	autocmd BufReadPost *
@@ -96,10 +95,11 @@ filetype plugin indent on
 colorscheme jellybeans 
 
 
+
 " im-indent-guides settings
 let g:indent_guides_auto_colors=0
 au VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=240
-au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=248
+au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
@@ -177,6 +177,7 @@ augroup PrevimSettings
 	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
+nnoremap <F8> :PrevimOpen<CR>
 "let g:previm_open_cmd = 'open -a Firefox'
 
 
