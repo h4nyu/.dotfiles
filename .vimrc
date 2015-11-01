@@ -78,6 +78,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ivanov/vim-ipython'
 
 "edit tool
 NeoBundle 'vim-easy-align'
@@ -186,4 +187,4 @@ vmap <Enter> <Plug>(EasyAlign)
 "other key setting
 nnoremap <Space>o :only<CR>
 nnoremap <ESC><ESC> :noh<CR>
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+noremap <silent><C-e> :NERDTreeToggle<CR>

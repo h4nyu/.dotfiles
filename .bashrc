@@ -102,3 +102,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 export EDITOR=vim
+
+# added by Anaconda 2.3.0 installer
+export PATH="/home/yao/anaconda/bin:$PATH"
+
+# added by Anaconda 2.3.0 installer
+export PATH="/home/yao/anaconda/bin:$PATH"
+
+# added by Anaconda 2.3.0 installer
+export PATH="/home/yao/anaconda/bin:$PATH"
