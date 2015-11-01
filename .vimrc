@@ -73,6 +73,7 @@ NeoBundle 'tpope/vim-markdown'
 
 "filer
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/unite.vim'
 
 "scrip 
 NeoBundle 'thinca/vim-quickrun'
@@ -158,13 +159,13 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 nnoremap <F9> :QuickRun<Space>
 
 "git key settings
-nnoremap \gw :Gwrite<CR>
-nnoremap \gb :Gblame<CR>
-nnoremap \gd :Gdiff<CR>
-nnoremap \gs :Gstatus<CR>
-nnoremap \gp :Git push origin master<CR>
-nnoremap \ga :Git add -A<CR>
-nnoremap \gc :Gcommit<CR>
+nnoremap \gw :<C-u>Gwrite<CR>
+nnoremap \gb :<C-u>Gblame<CR>
+nnoremap \gd :<C-u>Gdiff<CR>
+nnoremap \gs :<C-u>Gstatus<CR>
+nnoremap \gp :<C-u>Git push origin master<CR>
+nnoremap \ga :<C-u>Git add -A<CR>
+nnoremap \gc :<C-u>Gcommit<CR>
 
 
 
@@ -182,6 +183,17 @@ nnoremap <F8> :PrevimOpen<CR>
 "vim-easy-align key setting
 vmap <Enter> <Plug>(EasyAlign)
 
+" Unite 
+" The prefix key.
+nnoremap    [unite]   <Nop>
+nmap    <Leader>f [unite]
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 
 "other key setting
 nnoremap <Space>o :only<CR>
