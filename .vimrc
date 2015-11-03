@@ -158,7 +158,7 @@ let g:quickrun_config = {
 
 "quickrun key settings 
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-nnoremap <F9> :QuickRun<Space>
+nnoremap <F9> :w<CR>:QuickRun<Space>
 
 "git key settings
 nnoremap \gw :<C-u>Gwrite<CR>
