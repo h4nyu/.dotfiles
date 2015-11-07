@@ -212,3 +212,7 @@ noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 
 imap <F5> <nop>
 set pastetoggle=<F5>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
