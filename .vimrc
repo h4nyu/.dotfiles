@@ -208,3 +208,5 @@ nnoremap <silent> ,vr :UniteResume<CR>
 nnoremap <Space>o :only<CR>
 nnoremap <ESC><ESC> :noh<CR>
 noremap <silent><C-e> :NERDTreeToggle<CR>
+imap <F5> <nop>
+set pastetoggle=<F5>
