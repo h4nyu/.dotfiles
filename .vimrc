@@ -26,6 +26,7 @@ set t_Co=256
 set nobackup
 set nowritebackup
 set softtabstop=4
+set paste
 
 if has("autocmd")
 	autocmd BufReadPost *
@@ -208,5 +209,6 @@ nnoremap <silent> ,vr :UniteResume<CR>
 nnoremap <Space>o     :<C-u> only<CR>
 nnoremap <ESC><ESC>   :<C-u> noh<CR>
 noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
+
 imap <F5> <nop>
 set pastetoggle=<F5>
