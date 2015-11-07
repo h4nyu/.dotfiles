@@ -205,8 +205,8 @@ nnoremap <silent> [unite]c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,vr :UniteResume<CR>
 
 "other key setting
-nnoremap <Space>o :only<CR>
-nnoremap <ESC><ESC> :noh<CR>
-noremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <Space>o     :<C-u> only<CR>
+nnoremap <ESC><ESC>   :<C-u> noh<CR>
+noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 imap <F5> <nop>
 set pastetoggle=<F5>
