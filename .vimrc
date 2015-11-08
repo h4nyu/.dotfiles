@@ -188,7 +188,7 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " The prefix key.
 nnoremap    [unite]   <Nop>
-nmap    <Leader>f [unite]
+nmap    <Space>f [unite]
 
 " unite.vim keymap
 let g:unite_enable_start_insert=1
