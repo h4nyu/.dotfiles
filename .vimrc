@@ -26,7 +26,6 @@ set t_Co=256
 set nobackup
 set nowritebackup
 set softtabstop=4
-set paste
 
 if has("autocmd")
 	autocmd BufReadPost *
@@ -79,13 +78,12 @@ NeoBundle 'Shougo/unite.vim'
 
 "scrip 
 NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/neomru.vim'
 
 "edit tool
 NeoBundle 'vim-easy-align'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
 
 NeoBundleCheck
@@ -96,8 +94,9 @@ filetype plugin indent on
 colorscheme jellybeans 
 
 
-
+"--------------------------
 " im-indent-guides settings
+"--------------------------
 let g:indent_guides_auto_colors=0
 au VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=240
 au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
@@ -105,30 +104,69 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
 
-"neocomplcache settings
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" -----------
+" neocomplete
+" -----------
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-" plugin key-mappings.
-imap <c-k>     <plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"-----------------
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()""
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
 
 
+"----------------
 "quickrun setting
+"----------------
 let g:quickrun_config = {
 		\   "_" : {
 		\       "outputter/buffer/split"               : ":botright 8sp",
@@ -157,32 +195,35 @@ let g:quickrun_config = {
 		\}
 
 
+"---------------------
 "quickrun key settings 
+"---------------------
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 nnoremap <F9> :w<CR>:QuickRun<Space>
 
 "git key settings
-nnoremap \gw :<C-u>Gwrite<CR>
-nnoremap \gb :<C-u>Gblame<CR>
-nnoremap \gd :<C-u>Gdiff<CR>
-nnoremap \gs :<C-u>Gstatus<CR>
-nnoremap \gp :<C-u>Git push origin master<CR>
-nnoremap \ga :<C-u>Git add -A<CR>
-nnoremap \gc :<C-u>Gcommit<CR>
+nnoremap    [git]   <Nop>
+nmap    <Space>g [git]
+nnoremap [git]w :<C-u>Gwrite<CR>
+nnoremap [git]b :<C-u>Gblame<CR>
+nnoremap [git]d :<C-u>Gdiff<CR>
+nnoremap [git]s :<C-u>Gstatus<CR>
+nnoremap [git]p :<C-u>Git push origin master<CR>
+nnoremap [git]a :<C-u>Git add -A<CR>
+nnoremap [git]c :<C-u>Gcommit<CR>
 
 
 
-
+"-----------------------
 "previm_open_cmd setting
+"-----------------------
 augroup PrevimSettings
 	autocmd!
 	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
+"keymap
 nnoremap <F8> :PrevimOpen<CR>
-"let g:previm_open_cmd = 'open -a Firefox'
-
-
 "vim-easy-align key setting
 vmap <Enter> <Plug>(EasyAlign)
 
@@ -190,7 +231,10 @@ vmap <Enter> <Plug>(EasyAlign)
 nnoremap    [unite]   <Nop>
 nmap    <Space>f [unite]
 
+
+"-----------------
 " unite.vim keymap
+"-----------------
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
