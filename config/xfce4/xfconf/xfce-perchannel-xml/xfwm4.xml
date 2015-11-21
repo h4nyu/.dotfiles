@@ -5,7 +5,7 @@
     <property name="frame_opacity" type="empty"/>
     <property name="show_frame_shadow" type="empty"/>
     <property name="show_popup_shadow" type="empty"/>
-    <property name="theme" type="empty"/>
+    <property name="theme" type="string" value="Bluebird"/>
     <property name="use_compositing" type="empty"/>
     <property name="workspace_count" type="empty"/>
     <property name="workspace_names" type="empty"/>
@@ -35,7 +35,7 @@
     <property name="shadow_opacity" type="empty"/>
     <property name="show_app_icon" type="empty"/>
     <property name="show_dock_shadow" type="empty"/>
-    <property name="snap_to_border" type="empty"/>
+    <property name="snap_to_border" type="bool" value="true"/>
     <property name="snap_to_windows" type="empty"/>
     <property name="snap_width" type="empty"/>
     <property name="title_alignment" type="empty"/>
@@ -46,7 +46,7 @@
     <property name="title_vertical_offset_active" type="empty"/>
     <property name="title_vertical_offset_inactive" type="empty"/>
     <property name="urgent_blink" type="empty"/>
-    <property name="wrap_resistance" type="empty"/>
+    <property name="wrap_resistance" type="int" value="12"/>
     <property name="wrap_windows" type="empty"/>
     <property name="wrap_workspaces" type="empty"/>
     <property name="double_click_time" type="empty"/>
