@@ -8,6 +8,6 @@ Text=Net
 Network_Device=eth0
 Max_In=10240000
 Max_Out=10240000
-Auto_Max=true
+Auto_Max=false
 Update_Interval=300
 
