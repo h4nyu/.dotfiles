@@ -86,6 +86,7 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'vim-easy-align'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
+"NeoBundle 'scrooloose/syntastic.git'
 
 NeoBundleCheck
 call neobundle#end()
@@ -250,6 +251,19 @@ nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 noremap  <silent> [unite]c :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
 nnoremap <silent> ,vr :UniteResume<CR>
 
+
+"-----------------
+" lightline 
+"-----------------
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"x":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+
 "other key setting
 nnoremap <Space>o     :<C-u> only<CR>
 nnoremap <ESC><ESC>   :<C-u> noh<CR>
@@ -257,8 +271,4 @@ noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 
 imap <F5> <nop>
 set pastetoggle=<F5>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-inoremap <silent> <C-h> <C-g>u<C-h>
+inoremap <ESC>   <ESC>
