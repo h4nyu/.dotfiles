@@ -276,10 +276,9 @@ let g:lightline = {
       \ }
 
 "other key setting
-nnoremap <Space>o     :<C-u> only<CR>
-nnoremap <ESC><ESC>   :<C-u> noh<CR>
+nnoremap <silent><Space>o     :<C-u> only<CR>
+nnoremap <silent><ESC><ESC>   :<C-u>noh<CR>
 noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 
 imap <F5> <nop>
 set pastetoggle=<F5>
-inoremap <ESC>   <ESC>
