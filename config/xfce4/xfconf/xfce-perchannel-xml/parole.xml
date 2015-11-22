@@ -5,10 +5,10 @@
     <property name="font" type="string" value="Droid Serif Bold 15"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/home/yao/Downloads/American Sniper (2014) [1080p]"/>
+    <property name="last-used-media" type="string" value="/media/yao/video/doc/movies/Edge.of.Tomorrow.2014.1080p.BluRay.x264-SPARKS[rarbg]"/>
   </property>
   <property name="window" type="empty">
-    <property name="maximized" type="bool" value="true"/>
+    <property name="maximized" type="bool" value="false"/>
     <property name="width" type="int" value="1920"/>
     <property name="height" type="int" value="1025"/>
   </property>
@@ -16,6 +16,6 @@
     <property name="show-playlist" type="bool" value="false"/>
   </property>
   <property name="audio" type="empty">
-    <property name="volume" type="int" value="100"/>
+    <property name="volume" type="int" value="96"/>
   </property>
 </channel>

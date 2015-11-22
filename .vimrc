@@ -171,7 +171,7 @@ endif
 "----------------
 let g:quickrun_config = {
 		\   "_" : {
-		\       "outputter/buffer/split"               : ":botright 8sp",
+		\       "outputter/buffer/split"               : ":botright 6sp",
 		\       "runner"                               : "vimproc",
 		\       "runner/vimproc/updatetime"            : 40,
 		\		"hook/time/enable"                     : 1,
