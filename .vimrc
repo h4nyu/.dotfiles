@@ -26,7 +26,7 @@ set t_Co=256
 set nobackup
 set nowritebackup
 set softtabstop=4
-
+set completeopt=menuone
 if has("autocmd")
 	autocmd BufReadPost *
 				\ if line("'\"") > 0 && line ("'\"") <= line("$") |
