@@ -5,10 +5,10 @@
     <property name="font" type="string" value="Droid Serif Bold 15"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/media/yao/video/doc/movies/Edge.of.Tomorrow.2014.1080p.BluRay.x264-SPARKS[rarbg]"/>
+    <property name="last-used-media" type="string" value="/media/yao/淼淼"/>
   </property>
   <property name="window" type="empty">
-    <property name="maximized" type="bool" value="false"/>
+    <property name="maximized" type="bool" value="true"/>
     <property name="width" type="int" value="1920"/>
     <property name="height" type="int" value="1025"/>
   </property>
