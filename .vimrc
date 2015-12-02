@@ -2,6 +2,8 @@ if has("syntax")
       syntax on
 endif
 
+set columns=110
+set lines=35
 set nocompatible
 set number
 set title
@@ -171,13 +173,16 @@ endif
 "----------------
 let g:quickrun_config = {
 		\   "_" : {
-		\       "outputter/buffer/split"               : ":botright 6sp",
+		\       "outputter/buffer/split"               : ":botright 8sp",
 		\       "runner"                               : "vimproc",
 		\       "runner/vimproc/updatetime"            : 40,
 		\		"hook/time/enable"                     : 1,
 		\       "hook/close_buffer/enable_empty_data"  : 1,
 		\       "hook/shabadoubi_touch_henshin/enable" : 1,
 		\       "hook/shabadoubi_touch_henshin/wait"   : 20,
+		\   },
+		\   "python" : {
+		\       "cmdopt" : "-u"
 		\   },
 		\   "avr-gcc" : {
 		\       "command"   : "avr-gcc",
@@ -282,3 +287,9 @@ noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 
 imap <F5> <nop>
 set pastetoggle=<F5>
+
+inoremap <silent> jj <ESC>
+inoremap <silent> <C-j> j
+inoremap <silent> kk <ESC>
+inoremap <silent> <C-k> k
+autocmd FileType python setlocal completeopt-=preview
