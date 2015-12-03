@@ -2,8 +2,6 @@ if has("syntax")
       syntax on
 endif
 
-set columns=110
-set lines=35
 set nocompatible
 set number
 set title
@@ -28,7 +26,7 @@ set t_Co=256
 set nobackup
 set nowritebackup
 set softtabstop=4
-
+set expandtab 
 if has("autocmd")
 	autocmd BufReadPost *
 				\ if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -173,7 +171,7 @@ endif
 "----------------
 let g:quickrun_config = {
 		\   "_" : {
-		\       "outputter/buffer/split"               : ":botright 8sp",
+		\       "outputter/buffer/split"               : ":botright 10sp",
 		\       "runner"                               : "vimproc",
 		\       "runner/vimproc/updatetime"            : 40,
 		\		"hook/time/enable"                     : 1,
