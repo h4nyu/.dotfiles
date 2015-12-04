@@ -13,5 +13,5 @@
   <property name="last-window-height" type="int" value="711"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="last-compact-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_NORMAL"/>
-  <property name="last-show-hidden" type="bool" value="true"/>
+  <property name="last-show-hidden" type="bool" value="false"/>
 </channel>
