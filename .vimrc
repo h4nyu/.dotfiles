@@ -2,6 +2,7 @@ if has("syntax")
       syntax on
 endif
 
+set noswapfile
 set nocompatible
 set number
 set title
