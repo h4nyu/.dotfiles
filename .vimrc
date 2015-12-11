@@ -288,6 +288,8 @@ imap <F5> <nop>
 set pastetoggle=<F5>
 
 inoremap <silent> jj <ESC>
+inoremap <silent> hh <ESC>
+inoremap <silent> ll <ESC>
 inoremap <silent> <C-j> j
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-k> k
