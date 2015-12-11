@@ -2,6 +2,7 @@ if has("syntax")
       syntax on
 endif
 
+set noswapfile
 set nocompatible
 set number
 set title
@@ -26,7 +27,11 @@ set t_Co=256
 set nobackup
 set nowritebackup
 set softtabstop=4
+<<<<<<< HEAD
 set completeopt=menuone
+=======
+set expandtab 
+>>>>>>> ee02e6a7501fc9f0fcca80f912bc73fbbdcc8022
 if has("autocmd")
 	autocmd BufReadPost *
 				\ if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -171,13 +176,16 @@ endif
 "----------------
 let g:quickrun_config = {
 		\   "_" : {
-		\       "outputter/buffer/split"               : ":botright 6sp",
+		\       "outputter/buffer/split"               : ":botright 10sp",
 		\       "runner"                               : "vimproc",
 		\       "runner/vimproc/updatetime"            : 40,
 		\		"hook/time/enable"                     : 1,
 		\       "hook/close_buffer/enable_empty_data"  : 1,
 		\       "hook/shabadoubi_touch_henshin/enable" : 1,
 		\       "hook/shabadoubi_touch_henshin/wait"   : 20,
+		\   },
+		\   "python" : {
+		\       "cmdopt" : "-u"
 		\   },
 		\   "avr-gcc" : {
 		\       "command"   : "avr-gcc",
@@ -282,3 +290,11 @@ noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 
 imap <F5> <nop>
 set pastetoggle=<F5>
+
+inoremap <silent> jj <ESC>
+inoremap <silent> hh <ESC>
+inoremap <silent> ll <ESC>
+inoremap <silent> <C-j> j
+inoremap <silent> kk <ESC>
+inoremap <silent> <C-k> k
+autocmd FileType python setlocal completeopt-=preview
