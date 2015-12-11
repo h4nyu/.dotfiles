@@ -27,11 +27,8 @@ set t_Co=256
 set nobackup
 set nowritebackup
 set softtabstop=4
-<<<<<<< HEAD
 set completeopt=menuone
-=======
-set expandtab 
->>>>>>> ee02e6a7501fc9f0fcca80f912bc73fbbdcc8022
+
 if has("autocmd")
 	autocmd BufReadPost *
 				\ if line("'\"") > 0 && line ("'\"") <= line("$") |
