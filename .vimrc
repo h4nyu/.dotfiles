@@ -28,6 +28,8 @@ set nobackup
 set nowritebackup
 set softtabstop=4
 set completeopt=menuone
+set expandtab
+
 
 if has("autocmd")
 	autocmd BufReadPost *
@@ -289,8 +291,11 @@ imap <F5> <nop>
 set pastetoggle=<F5>
 
 inoremap <silent> jj <ESC>
+inoremap <silent> っｊ <ESC>
 inoremap <silent> hh <ESC>
+inoremap <silent> っｈ <ESC>
 inoremap <silent> ll <ESC>
+inoremap <silent> っｌ <ESC>
 inoremap <silent> <C-j> j
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-k> k
