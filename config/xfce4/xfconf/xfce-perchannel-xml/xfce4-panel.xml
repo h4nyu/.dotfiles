@@ -56,8 +56,8 @@
         <value type="string" value="ibus panel"/>
         <value type="string" value="skype"/>
         <value type="string" value="ibus-ui-gtk3"/>
+        <value type="string" value="chromium-browser"/>
         <value type="string" value="blueman-applet"/>
-        <value type="string" value="xfce4-power-manager"/>
       </property>
     </property>
     <property name="plugin-5" type="string" value="indicator">
@@ -81,6 +81,7 @@
     <property name="plugin-8" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14476853711.desktop"/>
+        <value type="string" value="14505380181.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="screenshooter"/>
