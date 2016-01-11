@@ -107,4 +107,4 @@ xrandr --output DVI-I-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output D
 
 
 # added by Anaconda2 2.4.0 installer
-export PATH="/home/yao/anaconda2/bin:$PATH"
+export PATH="/home/yao/anaconda/bin:$PATH"

@@ -74,7 +74,8 @@ NeoBundle 'itchyny/lightline.vim'
 "markdown
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'tpope/vim-markdown'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'joker1007/vim-markdown-quote-syntax'
 
 "filer
 NeoBundle 'scrooloose/nerdtree'
@@ -93,14 +94,15 @@ NeoBundle 'tomtom/tcomment_vim'
 
 NeoBundleCheck
 call neobundle#end()
-filetype plugin indent on
+filetype plugin on
 
 "colorscheme
 colorscheme jellybeans 
 
 
+
 "--------------------------
-" im-indent-guides settings
+" vim-indent-guides settings
 "--------------------------
 let g:indent_guides_auto_colors=0
 au VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=240
@@ -201,7 +203,9 @@ let g:quickrun_config = {
 		\       "cmdopt" : "-F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -U",
 		\   },
 		\}
-
+let g:quickrun_config['markdown'] = {
+      \   'outputter': 'browser'
+      \ }
 
 "---------------------
 "quickrun key settings 
@@ -220,6 +224,14 @@ nnoremap [git]p :<C-u>Git push origin master<CR>
 nnoremap [git]a :<C-u>Git add -A<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
 
+
+"-----------------------
+" vim-markdown
+"-----------------------
+let g:vim_markdown_frontmatter=1
+let g:vim_markdown_math=1
+let g:vim_markdown_folding_disabled=1
+au BufRead,BufNewFile *.{txt,text} set filetype=markdown
 
 
 "-----------------------

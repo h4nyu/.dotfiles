@@ -4,7 +4,7 @@
   <property name="panels" type="array">
     <value type="int" value="0"/>
     <property name="panel-0" type="empty">
-      <property name="position" type="string" value="p=8;x=960;y=1064"/>
+      <property name="position" type="string" value="p=6;x=960;y=16"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
@@ -58,6 +58,7 @@
         <value type="string" value="ibus-ui-gtk3"/>
         <value type="string" value="chromium-browser"/>
         <value type="string" value="blueman-applet"/>
+        <value type="string" value="update-notifier"/>
       </property>
     </property>
     <property name="plugin-5" type="string" value="indicator">
@@ -77,6 +78,7 @@
     </property>
     <property name="plugin-7" type="string" value="clock">
       <property name="digital-format" type="string" value="%d %b, %H:%M"/>
+      <property name="mode" type="uint" value="2"/>
     </property>
     <property name="plugin-8" type="string" value="launcher">
       <property name="items" type="array">
