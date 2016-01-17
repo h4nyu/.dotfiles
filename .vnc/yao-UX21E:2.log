@@ -1,0 +1,20 @@
+
+Xvnc Free Edition 4.1.1 - built Jul 31 2015 19:10:31
+Copyright (C) 2002-2005 RealVNC Ltd.
+See http://www.realvnc.com for information on VNC.
+Underlying X server release 40300000, The XFree86 Project, Inc
+
+
+Sun Jan 17 16:42:56 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on port 5902
+ vncext:      created VNC server for screen 0
+error opening security policy file /etc/X11/xserver/SecurityPolicy
+Could not init font path element /usr/X11R6/lib/X11/fonts/Type1/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/Speedo/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/misc/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/75dpi/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/100dpi/, removing from list!
+Could not init font path element /usr/share/fonts/X11/75dpi/, removing from list!
+Could not init font path element /usr/share/fonts/X11/100dpi/, removing from list!
+/home/yao/.vnc/xstartup: 5: exec: /etc/X11/xinit/xinitrc: Permission denied

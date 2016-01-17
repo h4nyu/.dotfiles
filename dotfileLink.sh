@@ -7,3 +7,5 @@ rm -rf ~/.config/xfce4
 ln -sf ~/.dotfiles/config/xfce4 ~/.config/xfce4
 rm -rf ~/.config/Thunar
 ln -sf ~/.dotfiles/config/Thunar ~/.config/Thunar
+rm -rf ~/.vnc
+ln -sf ~/.dotfiles/.vnc

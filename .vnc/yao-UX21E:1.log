@@ -1,0 +1,49 @@
+
+Xvnc Free Edition 4.1.1 - built Jul 31 2015 19:10:31
+Copyright (C) 2002-2005 RealVNC Ltd.
+See http://www.realvnc.com for information on VNC.
+Underlying X server release 40300000, The XFree86 Project, Inc
+
+
+Sun Jan 17 16:59:10 2016
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on port 5901
+ vncext:      created VNC server for screen 0
+error opening security policy file /etc/X11/xserver/SecurityPolicy
+Could not init font path element /usr/X11R6/lib/X11/fonts/Type1/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/Speedo/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/misc/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/75dpi/, removing from list!
+Could not init font path element /usr/X11R6/lib/X11/fonts/100dpi/, removing from list!
+Could not init font path element /usr/share/fonts/X11/75dpi/, removing from list!
+Could not init font path element /usr/share/fonts/X11/100dpi/, removing from list!
+
+Sun Jan 17 16:59:17 2016
+ Connections: accepted: 0.0.0.0::46304
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 16 (16bpp) little-endian rgb565
+ VNCSConnST:  Client pixel format depth 8 (8bpp) bgr233
+
+Sun Jan 17 17:00:37 2016
+ Connections: closed: 0.0.0.0::46304 (Clean disconnection)
+ SMsgWriter:  framebuffer updates 493
+ SMsgWriter:    copyRect rects 273, bytes 4368
+ SMsgWriter:    ZRLE rects 1227, bytes 172723
+ SMsgWriter:    raw bytes equivalent 7803143, compression ratio 45.177209
+
+Sun Jan 17 17:00:45 2016
+ Connections: accepted: 0.0.0.0::46307
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 16 (16bpp) little-endian rgb565
+ VNCSConnST:  Client pixel format depth 16 (16bpp) little-endian rgb565
+
+Sun Jan 17 17:07:02 2016
+ Connections: accepted: 0.0.0.0::42977
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sun Jan 17 17:07:12 2016
+ VNCSConnST:  Server default pixel format depth 16 (16bpp) little-endian rgb565
+ VNCSConnST:  Client pixel format depth 16 (16bpp) little-endian rgb565
