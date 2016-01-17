@@ -59,7 +59,6 @@
         <value type="string" value="chromium-browser"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="update-notifier"/>
-        <value type="string" value="xfce4-power-manager"/>
       </property>
     </property>
     <property name="plugin-5" type="string" value="indicator">
@@ -94,7 +93,7 @@
     <property name="plugin-9" type="string" value="netload"/>
     <property name="plugin-10" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14481185161.desktop"/>
+        <value type="string" value="14530211691.desktop"/>
       </property>
     </property>
     <property name="plugin-15" type="string" value="launcher">
