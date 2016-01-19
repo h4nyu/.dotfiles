@@ -90,6 +90,8 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'vim-easy-align'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'cohama/lexima.vim'
+
 "NeoBundle 'scrooloose/syntastic.git'
 
 NeoBundleCheck
