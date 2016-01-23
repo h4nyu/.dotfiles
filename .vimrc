@@ -244,14 +244,6 @@ augroup PrevimSettings
 	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
-"keymap
-nnoremap <F8> :PrevimOpen<CR>
-"vim-easy-align key setting
-vmap <Enter> <Plug>(EasyAlign)
-
-" The prefix key.
-nnoremap    [unite]   <Nop>
-nmap    <Space>f [unite]
 
 
 "-----------------
@@ -295,11 +287,25 @@ let g:lightline = {
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 
+"-----------------
+" key config 
+"-----------------
+
 "other key setting
 nnoremap <silent><Space>o     :<C-u> only<CR>
 nnoremap <silent><ESC><ESC>   :<C-u>noh<CR>
 noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 noremap <silent> <C-S-b> :<C-u>QuickRun<CR>
+
+"keymap
+nnoremap <C-S-m> :PrevimOpen<CR>
+
+"vim-easy-align key setting
+vmap <Enter> <Plug>(EasyAlign)
+
+" The prefix key.
+nnoremap    [unite]   <Nop>
+nmap    <Space>f [unite]
 
 imap <F5> <nop>
 set pastetoggle=<F5>
