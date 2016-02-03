@@ -5,10 +5,10 @@
     <property name="font" type="string" value="Droid Serif Bold 15"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/home/yao/Downloads/DP.Nymphomaniac"/>
+    <property name="last-used-media" type="string" value="/home/yao/Videos"/>
   </property>
   <property name="window" type="empty">
-    <property name="maximized" type="bool" value="false"/>
+    <property name="maximized" type="bool" value="true"/>
     <property name="width" type="int" value="1920"/>
     <property name="height" type="int" value="1025"/>
   </property>

@@ -66,6 +66,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'scrooloose/syntastic'
 
 "UI
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -101,7 +102,7 @@ filetype plugin on
 "colorscheme
 colorscheme jellybeans 
 
-
+let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 
 "--------------------------
 " vim-indent-guides settings
