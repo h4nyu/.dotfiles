@@ -103,7 +103,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 export EDITOR=vim
 
-xrandr --output DVI-I-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DVI-I-2 --rate 120.00  --mode 1920x1080 --pos 0x0 --rotate normal
+xrandr --output DP-1 --off --output HDMI-0 --off --output DVI-I-2 --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-I-1 --off --output DVI-I-0 --off --output DVI-I-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-0 --off
 
 export LC_ALL=en_US.UTF-8
 
