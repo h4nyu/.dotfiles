@@ -86,6 +86,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/unite-build'
 
 "edit tool
 NeoBundle 'vim-easy-align'
@@ -93,6 +94,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
+
 
 "NeoBundle 'scrooloose/syntastic.git'
 
@@ -297,7 +299,8 @@ let g:lightline = {
 nnoremap <silent><Space>o     :<C-u> only<CR>
 nnoremap <silent><ESC><ESC>   :<C-u>noh<CR>
 noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
-noremap <silent> <C-S-b> :write<CR>:<C-u>QuickRun<CR>
+" noremap <silent> <C-S-b> :write<CR>:<C-u>QuickRun<CR>
+noremap <silent> <C-S-b> :write<CR>:<C-u>Unite build<CR>
 
 "keymap
 nnoremap <C-S-m> :PrevimOpen<CR>
@@ -360,3 +363,6 @@ call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" ビジュアルモード選択した部分を*で検索
+vnoremap / "zy:let @/ = @z<CR>n
