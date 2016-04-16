@@ -217,7 +217,7 @@ let g:quickrun_config['markdown'] = {
 "quickrun key settings 
 "---------------------
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-nnoremap <F9> :w<CR>:QuickRun<Space>
+nnoremap <F9> :w<CR>:QuickRun<CR>
 
 "git key settings
 nnoremap    [git]   <Nop>
