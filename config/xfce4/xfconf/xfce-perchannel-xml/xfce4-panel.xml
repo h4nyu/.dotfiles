@@ -11,12 +11,8 @@
         <value type="int" value="1"/>
         <value type="int" value="13"/>
         <value type="int" value="8"/>
-        <value type="int" value="10"/>
-        <value type="int" value="15"/>
         <value type="int" value="16"/>
-        <value type="int" value="17"/>
         <value type="int" value="11"/>
-        <value type="int" value="18"/>
         <value type="int" value="2"/>
         <value type="int" value="3"/>
         <value type="int" value="9"/>
@@ -85,7 +81,6 @@
     <property name="plugin-8" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14476853711.desktop"/>
-        <value type="string" value="14505380181.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="screenshooter"/>
@@ -93,29 +88,9 @@
     <property name="plugin-13" type="string" value="places"/>
     <property name="plugin-14" type="string" value="pager"/>
     <property name="plugin-9" type="string" value="netload"/>
-    <property name="plugin-10" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14530211691.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-15" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14481547511.desktop"/>
-      </property>
-    </property>
     <property name="plugin-16" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14482438861.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-17" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14536417561.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-18" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14539811741.desktop"/>
       </property>
     </property>
   </property>
