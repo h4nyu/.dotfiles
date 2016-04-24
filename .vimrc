@@ -190,9 +190,6 @@ let g:quickrun_config = {
 		\       "hook/shabadoubi_touch_henshin/enable" : 1,
 		\       "hook/shabadoubi_touch_henshin/wait"   : 20,
 		\   },
-		\   "python" : {
-		\       "cmdopt" : "-u"
-		\   },
 		\   "avr-gcc" : {
 		\       "command"   : "avr-gcc",
 		\       "exec" : "%c %o %s -o %S:p:r",
@@ -217,7 +214,7 @@ let g:quickrun_config['markdown'] = {
 "quickrun key settings 
 "---------------------
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-nnoremap <F9> :w<CR>:QuickRun<Space>
+nnoremap <silent> <F9> :w<CR>:QuickRun<CR>
 
 "git key settings
 nnoremap    [git]   <Nop>
@@ -303,7 +300,7 @@ noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 noremap <silent> <C-S-b> :write<CR>:<C-u>Unite build<CR>
 
 "keymap
-nnoremap <C-S-m> :PrevimOpen<CR>
+" nnoremap <C-S-m> :PrevimOpen<CR>
 
 "vim-easy-align key setting
 vmap <Enter> <Plug>(EasyAlign)
@@ -366,3 +363,11 @@ nmap ga <Plug>(EasyAlign)
 
 " ビジュアルモード選択した部分を*で検索
 vnoremap / "zy:let @/ = @z<CR>n
+
+function! OpenModifiableQF()
+        cw
+        set modifiable
+        set nowrap
+endfunction
+
+autocmd QuickfixCmdPost vimgrep call OpenModifiableQF()

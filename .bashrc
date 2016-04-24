@@ -101,11 +101,9 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
 export EDITOR=vim
-
-xrandr --output DP-1 --off --output HDMI-0 --off --output DVI-I-2 --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-I-1 --off --output DVI-I-0 --off --output DVI-I-3 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-0 --off
-
-export LC_ALL=en_US.UTF-8
-
-# added by Anaconda2 2.4.0 installer
-export PATH="/home/yao/anaconda/bin:$PATH"
+export http_proxy=http://aaa110800:2854injy@proxy.canon.co.jp:10080
+export https_proxy=http://aaa110800:2854injy@proxy.canon.co.jp:10080
+export PATH="/home/yao/anaconda2/bin:$PATH"
+sudo mount -t vboxsf home /home/yao/workplace/
