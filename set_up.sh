@@ -1,9 +1,14 @@
 #!/bin/sh
+
+sudo apt-get update 
+sudo apt-get -y upgrade
 sudo apt-get -y install curl 
 sudo apt-get -y install aptitude 
 sudo apt-get -y install vim-gtk 
 sudo apt-get -y install ibus-mozc 
+sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
+sudo apt-get -y install pepperflashplugin-nonfree
 
 # monaco font for programing
 curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | sudo bash
