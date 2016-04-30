@@ -197,7 +197,7 @@ let g:quickrun_config['python'] = {
         \ }
 
 let g:quickrun_config['markdown'] = {
-      \   'cmdopt': '--self-contained --mathml -s ',
+      \   'cmdopt': '--self-contained -t html5 -c github.css --mathml -s',
       \   'outputter': 'browser',
       \ }
 
