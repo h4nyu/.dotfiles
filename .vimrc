@@ -186,6 +186,8 @@ let g:quickrun_config = {
         \       "runner"                               : "vimproc",
         \       "runner/vimproc/updatetime"            : 60,
         \       'outputter': 'buffer',
+        \       "outputter/error/error" : "quickfix",
+        \       "outputter/error/success" : "buffer",
         \		"hook/time/enable"                     : 1,
         \       "hook/close_buffer/enable_empty_data"  : 1,
         \       "hook/shabadoubi_touch_henshin/enable" : 1,
@@ -197,8 +199,17 @@ let g:quickrun_config['python'] = {
         \ }
 
 let g:quickrun_config['markdown'] = {
-      \   'cmdopt': '--self-contained -t html5 -c github.css --mathml -s',
-      \   'outputter': 'browser',
+      \   'command': 'pandoc',
+      \   'cmdopt': '-t html5 --template=mytemplate.html --mathjax -s',
+      \   'exec': '%c %o %s',
+      \ }
+
+let g:quickrun_config['markdown'] = {
+      \   'command': 'pandoc',
+      \   'cmdopt': '-t html5 -c github.css --mathjax -s',
+      \   'exec': '%c %o %s -o out.html',
+      \   "outputter" : "browser",
+      \   "outputter/browser/name" : "out.html",
       \ }
 
 "---------------------
