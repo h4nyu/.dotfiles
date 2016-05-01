@@ -206,12 +206,12 @@ let g:quickrun_config['markdown'] = {
 
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c github.css --mathjax -s',
+      \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
       \   'exec': '%c %o %s -o out.html',
-      \   "outputter" : "browser",
-      \   "outputter/browser/name" : "out.html",
+      \   "outputter" : "null",
       \ }
 
+      "outputter/browser/name" : "out.html",
 "---------------------
 "quickrun key settings 
 "---------------------
