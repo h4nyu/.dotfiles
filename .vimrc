@@ -73,7 +73,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'itchyny/lightline.vim'
 
 "markdown
-NeoBundle 'kannokanno/previm'
+" NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
@@ -181,38 +181,37 @@ endif
 "quickrun setting
 "----------------
 let g:quickrun_config = {
-		\   "_" : {
-		\       "outputter/buffer/split"               : ":botright 10sp",
-		\       "runner"                               : "vimproc",
-		\       "runner/vimproc/updatetime"            : 40,
-		\		"hook/time/enable"                     : 1,
-		\       "hook/close_buffer/enable_empty_data"  : 1,
-		\       "hook/shabadoubi_touch_henshin/enable" : 1,
-		\       "hook/shabadoubi_touch_henshin/wait"   : 20,
-		\   },
-		\   "python" : {
-		\       "cmdopt" : "-u"
-		\   },
-		\   "avr-gcc" : {
-		\       "command"   : "avr-gcc",
-		\       "exec" : "%c %o %s -o %S:p:r",
-		\       "cmdopt" : "-Os -DF_CPU=16000000UL -mmcu=atmega328p ",
-		\   },
-		\   "avr-objcopy" : {
-		\       "command"   : "avr-objcopy",
-		\       "exec" : "%c %o  %S:p:r %S:p:r.hex",
-		\       "cmdopt" : "-O ihex",
-		\   },
-		\   "avrdude" : {
-		\       "command"   : "avrdude",
-		\       "exec" : "%c %o %S:p:r.hex",
-		\       "cmdopt" : "-F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -U",
-		\   },
-		\}
+\   "_" : {
+        \       "outputter/buffer/split"               : ":botright 10sp",
+        \       "runner"                               : "vimproc",
+        \       "runner/vimproc/updatetime"            : 60,
+        \       'outputter': 'buffer',
+        \       "outputter/error/error" : "quickfix",
+        \       "outputter/error/success" : "buffer",
+        \		"hook/time/enable"                     : 1,
+        \       "hook/close_buffer/enable_empty_data"  : 1,
+        \       "hook/shabadoubi_touch_henshin/enable" : 1,
+        \       "hook/shabadoubi_touch_henshin/wait"   : 20,
+        \   },
+        \}
+let g:quickrun_config['python'] = {
+        \ 'cmdopt': '-u',
+        \ }
+
 let g:quickrun_config['markdown'] = {
-      \   'outputter': 'browser'
+      \   'command': 'pandoc',
+      \   'cmdopt': '-t html5 --template=mytemplate.html --mathjax -s',
+      \   'exec': '%c %o %s',
       \ }
 
+let g:quickrun_config['markdown'] = {
+      \   'command': 'pandoc',
+      \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
+      \   'exec': '%c %o %s -o out.html',
+      \   "outputter" : "null",
+      \ }
+
+      "outputter/browser/name" : "out.html",
 "---------------------
 "quickrun key settings 
 "---------------------
@@ -303,7 +302,7 @@ noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
 noremap <silent> <C-S-b> :write<CR>:<C-u>Unite build<CR>
 
 "keymap
-nnoremap <C-S-m> :PrevimOpen<CR>
+" nnoremap <C-S-m> :PrevimOpen<CR>
 
 "vim-easy-align key setting
 vmap <Enter> <Plug>(EasyAlign)

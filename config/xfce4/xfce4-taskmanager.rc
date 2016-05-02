@@ -1,13 +1,13 @@
 [Settings]
 ShowAllProcesses=FALSE
 MorePrecision=FALSE
-FullCommandLine=FALSE
+FullCommandLine=TRUE
 ShowStatusIcon=TRUE
 MonitorPaintBox=TRUE
 ShowApplicationIcons=TRUE
 ToolbarStyle=DEFAULT
 PromptTerminateTask=TRUE
-RefreshRate=750
+RefreshRate=500
 ColumnUID=FALSE
 ColumnPID=TRUE
 ColumnPPID=FALSE
