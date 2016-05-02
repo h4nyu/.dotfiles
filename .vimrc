@@ -200,15 +200,9 @@ let g:quickrun_config['python'] = {
 
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 --template=mytemplate.html --mathjax -s',
-      \   'exec': '%c %o %s',
-      \ }
-
-let g:quickrun_config['markdown'] = {
-      \   'command': 'pandoc',
       \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
       \   'exec': '%c %o %s -o out.html',
-      \   "outputter" : "null",
+      \   "outputter" : "buffer",
       \ }
 
       "outputter/browser/name" : "out.html",
