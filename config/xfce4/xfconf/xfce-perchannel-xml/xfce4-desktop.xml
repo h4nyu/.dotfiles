@@ -9,6 +9,8 @@
       <property name="show-removable" type="empty"/>
       <property name="show-trash" type="empty"/>
     </property>
+    <property name="icon-size" type="empty"/>
+    <property name="tooltip-size" type="empty"/>
   </property>
   <property name="backdrop" type="empty">
     <property name="screen0" type="empty">
@@ -19,13 +21,18 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-blue.jpg"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
         </property>
       </property>
       <property name="monitor1" type="empty">
         <property name="image-path" type="empty"/>
         <property name="image-style" type="empty"/>
         <property name="image-show" type="empty"/>
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/xubuntu-wallpaper.png"/>
+        </property>
       </property>
       <property name="monitorDVI-I-1" type="empty">
         <property name="workspace0" type="empty">

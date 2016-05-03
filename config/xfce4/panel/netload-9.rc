@@ -10,4 +10,5 @@ Max_In=10240000
 Max_Out=10240000
 Auto_Max=false
 Update_Interval=300
+Values_As_Bits=false
 

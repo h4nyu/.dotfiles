@@ -1,16 +1,20 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[BEB89241B891F7DB]
-row=2
-col=0
-
-[F0FCBC07FCBBC65E]
+[4CD2-4210]
 row=0
 col=0
 
-[FA326C0F326BCEE7]
+[BEB89241B891F7DB]
+row=3
+col=0
+
+[F0FCBC07FCBBC65E]
 row=1
+col=0
+
+[FA326C0F326BCEE7]
+row=2
 col=0
 
 [Trash]
