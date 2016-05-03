@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="parole" version="1.0">
+  <property name="video" type="empty">
+    <property name="videosink" type="empty"/>
+  </property>
+  <property name="parole" type="empty">
+    <property name="plugins" type="empty"/>
+  </property>
   <property name="subtitles" type="empty">
     <property name="font" type="string" value="Droid Serif Bold 15"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/media/yao/video/doc/movies/Edge.of.Tomorrow.2014.1080p.BluRay.x264-SPARKS[rarbg]"/>
+    <property name="last-used-media" type="string" value="/media/yao/video/doc/Anime/H_フルメタルパニック ふもっふ"/>
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="true"/>
     <property name="width" type="int" value="1920"/>
-    <property name="height" type="int" value="1025"/>
+    <property name="height" type="int" value="1023"/>
   </property>
   <property name="playlist" type="empty">
     <property name="show-playlist" type="bool" value="false"/>
