@@ -11,7 +11,7 @@ sudo apt-get -y install python-pip
 sudo apt-get -y install pepperflashplugin-nonfree
 
 # monaco font for programing
-curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | sudo bash
+sudo cp monaco /usr/share/fonts/truetype
 
 # anaconda python
 # wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-2.3.0-Linux-x86_64.sh
