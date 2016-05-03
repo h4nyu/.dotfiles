@@ -85,7 +85,6 @@
     </property>
     <property name="plugin-5" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14622869642.desktop"/>
       </property>
     </property>
   </property>
