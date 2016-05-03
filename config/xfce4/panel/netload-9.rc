@@ -8,7 +8,7 @@ Text=wifi
 Network_Device=wlp1s0
 Max_In=10240000
 Max_Out=10240000
-Auto_Max=false
+Auto_Max=true
 Update_Interval=250
 Values_As_Bits=true
 
