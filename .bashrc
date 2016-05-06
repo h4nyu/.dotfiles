@@ -107,7 +107,7 @@ export EDITOR=vim
 export http_proxy=http://aaa110800:2854injy@proxy.canon.co.jp:10080
 export https_proxy=http://aaa110800:2854injy@proxy.canon.co.jp:10080
 export PATH="/home/yao/anaconda2/bin:$PATH"
-sudo mount -t vboxsf home /home/yao/workplace/
+# sudo mount -t vboxsf home /home/yao/workplace/
 =======
 export LC_ALL=en_US.UTF-8
 

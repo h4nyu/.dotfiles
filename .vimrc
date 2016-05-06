@@ -198,6 +198,12 @@ let g:quickrun_config['python'] = {
         \ 'cmdopt': '-u',
         \ }
 
+" let g:quickrun_config['markdown'] = {
+"       \   'command': 'pandoc',
+"       \   'cmdopt': '-t html5 -c github.css --mathml -s --self-contained',
+"       \   'exec': '%c %o %s -o out.html',
+"       \   "outputter" : "buffer",
+"       \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
       \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
@@ -205,7 +211,6 @@ let g:quickrun_config['markdown'] = {
       \   "outputter" : "buffer",
       \ }
 
-      "outputter/browser/name" : "out.html",
 "---------------------
 "quickrun key settings 
 "---------------------
