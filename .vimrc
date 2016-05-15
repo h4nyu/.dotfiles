@@ -94,6 +94,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
+NeoBundle 'soramugi/auto-ctags.vim'
 
 
 "NeoBundle 'scrooloose/syntastic.git'
@@ -176,13 +177,18 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
+ "-----------------
+" auto_ctags
+"-----------------
+let g:auto_ctags = 1
+
 
 "----------------
 "quickrun setting
 "----------------
 let g:quickrun_config = {
 \   "_" : {
-        \       "outputter/buffer/split"               : ":botright 10sp",
+        \       "outputter/buffer/split"               : ":belowright 10sp",
         \       "runner"                               : "vimproc",
         \       "runner/vimproc/updatetime"            : 60,
         \       'outputter': 'buffer',
@@ -289,16 +295,17 @@ let g:lightline = {
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 
+
 "-----------------
 " key config 
 "-----------------
 
 "other key setting
-nnoremap <silent><Space>o     :<C-u> only<CR>
-nnoremap <silent><ESC><ESC>   :<C-u>noh<CR>
-noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
+nnoremap <silent><Space>o :<C-u>only<CR>
+nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
+noremap <silent><C-e> :<C-u>NERDTreeToggle<CR>
 " noremap <silent> <C-S-b> :write<CR>:<C-u>QuickRun<CR>
-noremap <silent> <C-S-b> :write<CR>:<C-u>Unite build<CR>
+noremap <silent><C-S-b> :write<CR>:<C-u>Unite build<CR>
 
 "keymap
 " nnoremap <C-S-m> :PrevimOpen<CR>
@@ -310,8 +317,8 @@ vmap <Enter> <Plug>(EasyAlign)
 nnoremap    [unite]   <Nop>
 nmap    <Space>f [unite]
 
-imap <F5> <nop>
-set pastetoggle=<F5>
+" imap <F5> <nop>
+" set pastetoggle=<F5>
 
 inoremap <silent> jj <ESC>
 inoremap <silent> っｊ <ESC>
