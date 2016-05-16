@@ -109,6 +109,8 @@ export LC_ALL=en_US.UTF-8
 
 # added by Anaconda2 2.4.0 installer
 export PATH="/home/yao/anaconda/bin:$PATH"
+export PATH="/usr/local/cuda/bin:$PATH"
+
 
 # added by Anaconda2 4.0.0 installer
 export PATH="/home/yao/anaconda2/bin:$PATH"

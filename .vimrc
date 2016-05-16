@@ -94,6 +94,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
+NeoBundle 'soramugi/auto-ctags.vim'
 
 
 "NeoBundle 'scrooloose/syntastic.git'
@@ -116,6 +117,7 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
+let g:auto_ctags = 1
 
 " -----------
 " neocomplete
@@ -164,6 +166,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
 
+"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -176,6 +179,8 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
+"python config
+autocmd FileType python setlocal completeopt-=preview
 
 "----------------
 "quickrun setting
@@ -194,15 +199,6 @@ let g:quickrun_config = {
         \       "hook/shabadoubi_touch_henshin/wait"   : 20,
         \   },
         \}
-let g:quickrun_config['python'] = {
-        \ 'cmdopt': '-u',
-        \ }
-
-let g:quickrun_config['markdown'] = {
-      \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 --template=mytemplate.html --mathjax -s',
-      \   'exec': '%c %o %s',
-      \ }
 
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
@@ -211,7 +207,6 @@ let g:quickrun_config['markdown'] = {
       \   "outputter" : "null",
       \ }
 
-      "outputter/browser/name" : "out.html",
 "---------------------
 "quickrun key settings 
 "---------------------
@@ -233,6 +228,7 @@ nnoremap [git]c :<C-u>Gcommit<CR>
 "-----------------------
 " vim-markdown
 "-----------------------
+
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=1
 let g:vim_markdown_folding_disabled=1
@@ -311,8 +307,8 @@ vmap <Enter> <Plug>(EasyAlign)
 nnoremap    [unite]   <Nop>
 nmap    <Space>f [unite]
 
-imap <F5> <nop>
-set pastetoggle=<F5>
+" imap <F5> <nop>
+" set pastetoggle=<F5>
 
 inoremap <silent> jj <ESC>
 inoremap <silent> っｊ <ESC>
@@ -323,7 +319,6 @@ inoremap <silent> っｌ <ESC>
 inoremap <silent> <C-j> j
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-k> k
-autocmd FileType python setlocal completeopt-=preview
 
 nnoremap s <Nop>
 nnoremap sj <C-w>j

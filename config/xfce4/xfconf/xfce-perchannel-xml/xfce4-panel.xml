@@ -56,6 +56,7 @@
         <value type="string" value="ibus-ui-gtk3"/>
         <value type="string" value="gigolo"/>
         <value type="string" value="chromium-browser"/>
+        <value type="string" value="steam"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="update-notifier"/>
       </property>

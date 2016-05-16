@@ -11,10 +11,10 @@
     <property name="font" type="string" value="Droid Serif Bold 15"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/media/yao/video/doc/Anime/S_それでも町は廻っている"/>
+    <property name="last-used-media" type="string" value="/media/yao/video/doc/Anime/H_氷菓/話"/>
   </property>
   <property name="window" type="empty">
-    <property name="maximized" type="bool" value="true"/>
+    <property name="maximized" type="bool" value="false"/>
     <property name="width" type="int" value="1920"/>
     <property name="height" type="int" value="1023"/>
   </property>
