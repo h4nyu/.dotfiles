@@ -2,6 +2,7 @@ if has("syntax")
       syntax on
 endif
 
+set diffopt+=vertical
 set tags+=.git/tags
 set noswapfile
 set nocompatible
