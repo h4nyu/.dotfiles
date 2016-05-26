@@ -2,6 +2,7 @@ if has("syntax")
       syntax on
 endif
 
+set tags+=.git/tags
 set noswapfile
 set nocompatible
 set number
@@ -84,7 +85,6 @@ NeoBundle 'Shougo/unite.vim'
 
 "scrip 
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-build'
 
@@ -95,6 +95,13 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
+
+
+"git
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'cohama/agit.vim'
+NeoBundle 'kmnk/vim-unite-giti'
+
 
 
 "NeoBundle 'scrooloose/syntastic.git'
@@ -117,7 +124,6 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
-let g:auto_ctags = 1
 
 " -----------
 " neocomplete
@@ -166,7 +172,6 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
 
-"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -179,15 +184,19 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
-"python config
-autocmd FileType python setlocal completeopt-=preview
+ "-----------------
+" auto_ctags
+"-----------------
+let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']
+
 
 "----------------
 "quickrun setting
 "----------------
 let g:quickrun_config = {
 \   "_" : {
-        \       "outputter/buffer/split"               : ":botright 10sp",
+        \       "outputter/buffer/split"               : ":belowright 10sp",
         \       "runner"                               : "vimproc",
         \       "runner/vimproc/updatetime"            : 60,
         \       'outputter': 'buffer',
@@ -199,12 +208,21 @@ let g:quickrun_config = {
         \       "hook/shabadoubi_touch_henshin/wait"   : 20,
         \   },
         \}
+let g:quickrun_config['python'] = {
+        \ 'cmdopt': '-u',
+        \ }
 
+" let g:quickrun_config['markdown'] = {
+"       \   'command': 'pandoc',
+"       \   'cmdopt': '-t html5 -c github.css --mathml -s --self-contained',
+"       \   'exec': '%c %o %s -o out.html',
+"       \   "outputter" : "buffer",
+"       \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
       \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
       \   'exec': '%c %o %s -o out.html',
-      \   "outputter" : "null",
+      \   "outputter" : "buffer",
       \ }
 
 "---------------------
@@ -217,18 +235,20 @@ nnoremap <F9> :w<CR>:QuickRun<CR>
 nnoremap    [git]   <Nop>
 nmap    <Space>g [git]
 nnoremap [git]w :<C-u>Gwrite<CR>
-nnoremap [git]b :<C-u>Gblame<CR>
+nnoremap [git]m :<C-u>Gblame<CR>
 nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]s :<C-u>Gstatus<CR>
-nnoremap [git]p :<C-u>Git push origin master<CR>
-nnoremap [git]a :<C-u>Git add -A<CR>
+nnoremap [git]a :<C-u>Gwrite<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
+nnoremap [git]m :<C-u>Gmove<CR>
+nnoremap [git]r :<C-u>Gremove<CR>
+nnoremap [git]l :<C-u>Agit<CR>
+
 
 
 "-----------------------
 " vim-markdown
 "-----------------------
-
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=1
 let g:vim_markdown_folding_disabled=1
@@ -251,15 +271,21 @@ augroup END
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
+" The prefix key.
+nnoremap    [unite]   <Nop>
+nmap    <Space>f [unite]
 nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
 nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
 nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
-nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
 nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 noremap  <silent> [unite]c :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
+nnoremap <silent> [git]b :<C-u>Unite<Space>giti/branch<CR>
+nnoremap <silent> [git]f :<C-u>GitiFetch<CR>
+nnoremap <expr><silent> [git]p ':<C-u>GitiPushWithSettingUpstream origin ' . giti#branch#current_name() . '<CR>'
+nnoremap <silent> [git]s :<C-u>Unite giti/status<CR>
 nnoremap <silent> ,vr :UniteResume<CR>
 
 
@@ -286,16 +312,17 @@ let g:lightline = {
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 
+
 "-----------------
 " key config 
 "-----------------
 
 "other key setting
-nnoremap <silent><Space>o     :<C-u> only<CR>
-nnoremap <silent><ESC><ESC>   :<C-u>noh<CR>
-noremap <silent><C-e> :<C-u> NERDTreeToggle<CR>
+nnoremap <silent><Space>o :<C-u>only<CR>
+nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
+noremap <silent><C-e> :<C-u>NERDTreeToggle<CR>
 " noremap <silent> <C-S-b> :write<CR>:<C-u>QuickRun<CR>
-noremap <silent> <C-S-b> :write<CR>:<C-u>Unite build<CR>
+noremap <silent><C-S-b> :write<CR>:<C-u>Unite build<CR>
 
 "keymap
 " nnoremap <C-S-m> :PrevimOpen<CR>
@@ -303,9 +330,6 @@ noremap <silent> <C-S-b> :write<CR>:<C-u>Unite build<CR>
 "vim-easy-align key setting
 vmap <Enter> <Plug>(EasyAlign)
 
-" The prefix key.
-nnoremap    [unite]   <Nop>
-nmap    <Space>f [unite]
 
 " imap <F5> <nop>
 " set pastetoggle=<F5>
@@ -319,6 +343,7 @@ inoremap <silent> っｌ <ESC>
 inoremap <silent> <C-j> j
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-k> k
+autocmd FileType python setlocal completeopt-=preview
 
 nnoremap s <Nop>
 nnoremap sj <C-w>j
@@ -334,7 +359,7 @@ nnoremap sp gT
 nnoremap sr <C-w>r
 nnoremap s= <C-w>=
 nnoremap sw <C-w>w
-nnoremap so <C-w>_<C-w>|
+nnoremap so <C-w>_<C-w>|
 nnoremap sO <C-w>=
 nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
