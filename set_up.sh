@@ -10,6 +10,7 @@ sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
 sudo apt-get -y install pepperflashplugin-nonfree
 sudo add-apt-repository ppa:mystic-mirage/pycharm
+sudo add-apt-repository ppa:openjdk-r/ppa
 
 # monaco font for programing
 curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | sudo bash

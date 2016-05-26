@@ -5,7 +5,7 @@
     <property name="navigationbar" type="empty">
       <property name="position" type="string" value="left"/>
     </property>
-    <property name="height" type="uint" value="914"/>
+    <property name="height" type="uint" value="1023"/>
     <property name="width" type="uint" value="956"/>
     <property name="bgcolor-override" type="bool" value="false"/>
   </property>
