@@ -234,7 +234,10 @@ nnoremap <F9> :w<CR>:QuickRun<CR>
 "git key settings
 nnoremap    [git]   <Nop>
 nmap    <Space>g [git]
-nnoremap [git]m :<C-u>Gblame<CR>
+nnoremap [git]s :<C-u>Gstatus<CR>
+nnoremap [git]w :<C-u>Gwrite<CR>
+nnoremap [git]m :<C-u>Gmove
+nnoremap [git]r :<C-u>Gremove
 nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
 nnoremap [git]l :<C-u>Agit<CR>
@@ -277,10 +280,9 @@ nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 noremap  <silent> [unite]c :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
-nnoremap <silent> [git]b :<C-u>Unite<Space>giti/branch<CR>
+nnoremap <silent> [git]br :<C-u>Unite<Space>giti/branch<CR>
 nnoremap <silent> [git]f :<C-u>GitiFetch<CR>
 nnoremap <expr><silent> [git]p ':<C-u>GitiPushWithSettingUpstream origin ' . giti#branch#current_name() . '<CR>'
-nnoremap <silent> [git]s :<C-u>Unite giti/status<CR>
 nnoremap <silent> ,vr :UniteResume<CR>
 
 
