@@ -234,14 +234,9 @@ nnoremap <F9> :w<CR>:QuickRun<CR>
 "git key settings
 nnoremap    [git]   <Nop>
 nmap    <Space>g [git]
-nnoremap [git]w :<C-u>Gwrite<CR>
 nnoremap [git]m :<C-u>Gblame<CR>
 nnoremap [git]d :<C-u>Gdiff<CR>
-nnoremap [git]s :<C-u>Gstatus<CR>
-nnoremap [git]a :<C-u>Gwrite<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
-nnoremap [git]m :<C-u>Gmove<CR>
-nnoremap [git]r :<C-u>Gremove<CR>
 nnoremap [git]l :<C-u>Agit<CR>
 
 
