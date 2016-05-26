@@ -2,6 +2,7 @@ if has("syntax")
       syntax on
 endif
 
+set tags+=.git/tags
 set noswapfile
 set nocompatible
 set number
@@ -84,7 +85,6 @@ NeoBundle 'Shougo/unite.vim'
 
 "scrip 
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-build'
 
@@ -95,6 +95,13 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
+
+
+"git
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'cohama/agit.vim'
+NeoBundle 'kmnk/vim-unite-giti'
+
 
 
 "NeoBundle 'scrooloose/syntastic.git'
@@ -181,6 +188,7 @@ endif
 " auto_ctags
 "-----------------
 let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']
 
 
 "----------------
@@ -230,9 +238,10 @@ nnoremap [git]w :<C-u>Gwrite<CR>
 nnoremap [git]b :<C-u>Gblame<CR>
 nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]s :<C-u>Gstatus<CR>
-nnoremap [git]p :<C-u>Git push origin master<CR>
-nnoremap [git]a :<C-u>Git add -A<CR>
+nnoremap [git]a :<C-u>Gwrite<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
+nnoremap [git]m :<C-u>Gmove<CR>
+nnoremap [git]r :<C-u>Gremove<CR>
 
 
 "-----------------------
@@ -257,18 +266,24 @@ augroup END
 "-----------------
 " unite.vim keymap
 "-----------------
-let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=0
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
+" The prefix key.
+nnoremap    [unite]   <Nop>
+nmap    <Space>f [unite]
 nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
 nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
 nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
-nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
 nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 noremap  <silent> [unite]c :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
+nnoremap <silent> [unite]gb :<C-u>Unite<Space>giti/branch<CR>
+nnoremap <silent> [unite]gf :<C-u>GitiFetch<CR>
+nnoremap <expr><silent> [unite]gp ':<C-u>GitiPushWithSettingUpstream origin ' . giti#branch#current_name() . '<CR>'
+nnoremap <silent> [unite]gs :<C-u>Unite giti/status<CR>
 nnoremap <silent> ,vr :UniteResume<CR>
 
 
@@ -313,9 +328,6 @@ noremap <silent><C-S-b> :write<CR>:<C-u>Unite build<CR>
 "vim-easy-align key setting
 vmap <Enter> <Plug>(EasyAlign)
 
-" The prefix key.
-nnoremap    [unite]   <Nop>
-nmap    <Space>f [unite]
 
 " imap <F5> <nop>
 " set pastetoggle=<F5>
@@ -345,7 +357,7 @@ nnoremap sp gT
 nnoremap sr <C-w>r
 nnoremap s= <C-w>=
 nnoremap sw <C-w>w
-nnoremap so <C-w>_<C-w>|
+nnoremap so <C-w>_<C-w>|
 nnoremap sO <C-w>=
 nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
