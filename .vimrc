@@ -235,13 +235,15 @@ nnoremap <F9> :w<CR>:QuickRun<CR>
 nnoremap    [git]   <Nop>
 nmap    <Space>g [git]
 nnoremap [git]w :<C-u>Gwrite<CR>
-nnoremap [git]b :<C-u>Gblame<CR>
+nnoremap [git]m :<C-u>Gblame<CR>
 nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]s :<C-u>Gstatus<CR>
 nnoremap [git]a :<C-u>Gwrite<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
 nnoremap [git]m :<C-u>Gmove<CR>
 nnoremap [git]r :<C-u>Gremove<CR>
+nnoremap [git]l :<C-u>Agit<CR>
+
 
 
 "-----------------------
@@ -280,10 +282,10 @@ nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 noremap  <silent> [unite]c :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
-nnoremap <silent> [unite]gb :<C-u>Unite<Space>giti/branch<CR>
-nnoremap <silent> [unite]gf :<C-u>GitiFetch<CR>
-nnoremap <expr><silent> [unite]gp ':<C-u>GitiPushWithSettingUpstream origin ' . giti#branch#current_name() . '<CR>'
-nnoremap <silent> [unite]gs :<C-u>Unite giti/status<CR>
+nnoremap <silent> [git]b :<C-u>Unite<Space>giti/branch<CR>
+nnoremap <silent> [git]f :<C-u>GitiFetch<CR>
+nnoremap <expr><silent> [git]p ':<C-u>GitiPushWithSettingUpstream origin ' . giti#branch#current_name() . '<CR>'
+nnoremap <silent> [git]s :<C-u>Unite giti/status<CR>
 nnoremap <silent> ,vr :UniteResume<CR>
 
 
