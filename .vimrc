@@ -30,6 +30,7 @@ set nowritebackup
 set softtabstop=4
 set completeopt=menuone
 set expandtab
+set background=dark
 
 
 if has("autocmd")
@@ -66,9 +67,10 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 "colorscheme
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'scrooloose/syntastic'
+
 
 "UI
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -96,6 +98,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
+NeoBundle 'davidhalter/jedi-vim'
 
 
 "git
@@ -112,7 +115,7 @@ call neobundle#end()
 filetype plugin on
 
 "colorscheme
-colorscheme jellybeans 
+colorscheme hybrid 
 
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 
@@ -185,7 +188,8 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
- "-----------------
+
+"-----------------
 " auto_ctags
 "-----------------
 let g:auto_ctags = 1
@@ -231,6 +235,7 @@ let g:quickrun_config['markdown'] = {
 "---------------------
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 nnoremap <F9> :w<CR>:QuickRun<CR>
+nmap <F8> :!python -m pdb %<CR>
 
 "git key settings
 nnoremap    [git]   <Nop>
@@ -332,14 +337,6 @@ vmap <Enter> <Plug>(EasyAlign)
 " set pastetoggle=<F5>
 
 inoremap <silent> jj <ESC>
-inoremap <silent> っｊ <ESC>
-inoremap <silent> hh <ESC>
-inoremap <silent> っｈ <ESC>
-inoremap <silent> ll <ESC>
-inoremap <silent> っｌ <ESC>
-inoremap <silent> <C-j> j
-inoremap <silent> kk <ESC>
-inoremap <silent> <C-k> k
 autocmd FileType python setlocal completeopt-=preview
 
 nnoremap s <Nop>
