@@ -9,6 +9,8 @@ sudo apt-get -y install ibus-mozc
 sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
 sudo apt-get -y install pepperflashplugin-nonfree
+sudo add-apt-repository ppa:mystic-mirage/pycharm
+sudo add-apt-repository ppa:openjdk-r/ppa
 
 # monaco font for programing
 sudo cp monaco /usr/share/fonts/truetype

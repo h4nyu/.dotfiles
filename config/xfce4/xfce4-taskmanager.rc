@@ -1,5 +1,5 @@
 [Settings]
-ShowAllProcesses=FALSE
+ShowAllProcesses=TRUE
 MorePrecision=FALSE
 FullCommandLine=TRUE
 ShowStatusIcon=TRUE
@@ -8,18 +8,23 @@ MonitorPaintBox=TRUE
 ShowApplicationIcons=TRUE
 ToolbarStyle=DEFAULT
 PromptTerminateTask=TRUE
-RefreshRate=500
+RefreshRate=1000
 ColumnUID=FALSE
 ColumnPID=TRUE
-ColumnPPID=FALSE
-ColumnState=FALSE
-ColumnVSZ=FALSE
+ColumnPPID=TRUE
+ColumnState=TRUE
+ColumnVSZ=TRUE
 ColumnRSS=TRUE
 ColumnCPU=TRUE
-ColumnPriority=FALSE
+ColumnPriority=TRUE
 SortColumn=7
 SortType=1
+<<<<<<< HEAD
 WindowWidth=1289
 WindowHeight=1022
 HandlePosition=100
 ProcessTreeView=FALSE
+=======
+WindowWidth=936
+WindowHeight=623
+>>>>>>> origin/virtualbox

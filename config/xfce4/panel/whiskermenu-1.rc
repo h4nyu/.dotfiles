@@ -1,5 +1,5 @@
-favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,pidgin.desktop,exo-terminal-emulator.desktop
-recent=skype.desktop,steam.desktop,nvidia-settings.desktop,nm-connection-editor.desktop,lightdm-gtk-greeter-settings.desktop,xfce-settings-manager.desktop,ibus-setup.desktop,xfce4-screenshooter.desktop,update-manager.desktop,xfce-ui-settings.desktop
+favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,gnumeric.desktop,pidgin.desktop,gmusicbrowser.desktop,ubuntu-software-center.desktop,exo-terminal-emulator.desktop,xfhelp4.desktop
+recent=pycharm-community.desktop,exo-web-browser.desktop,xfce-settings-manager.desktop,update-manager.desktop
 button-title=Applications Menu
 button-icon=xubuntu-logo-menu
 button-single-row=false

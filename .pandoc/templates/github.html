@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html$if(lang)$ lang="$lang$"$endif$>
+<<<<<<< HEAD
 <link rel="stylesheet" href="github.css">
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -20,6 +21,27 @@
   });
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+=======
+    <link rel="stylesheet" href="github.css">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        menuSettings: {locale: "ja"},
+        extensions: ["tex2jax.js", "MathMenu.js", "MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"],
+          noErrors: {disabled: true},
+          noUndefined: {disabled: true}
+        },
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [["$$","$$"], ["\\(","\\)"]],
+          displayMath: [["$$$$","$$$$"], ["\\[","\\]"]],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+>>>>>>> origin/virtualbox
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
