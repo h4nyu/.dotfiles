@@ -31,7 +31,7 @@ set softtabstop=4
 set completeopt=menuone
 set expandtab
 set background=dark
-set foldmethod=syntax
+set foldmethod=manual
 set foldlevel=1
 set foldcolumn=3
 
@@ -103,6 +103,7 @@ NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'vim-scripts/python_fold'
+NeoBundle 'Konfekt/FastFold'
 
 
 "git
