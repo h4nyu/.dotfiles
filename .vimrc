@@ -24,13 +24,16 @@ set encoding=utf-8
 set laststatus=2
 set wildmenu
 set incsearch
-set cmdheight=2
+set cmdheight=1
 set t_Co=256
 set nowritebackup
 set softtabstop=4
 set completeopt=menuone
 set expandtab
 set background=dark
+set foldmethod=syntax
+set foldlevel=1
+set foldcolumn=3
 
 
 if has("autocmd")
@@ -99,6 +102,7 @@ NeoBundle 'cohama/lexima.vim'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'vim-scripts/python_fold'
 
 
 "git
@@ -117,7 +121,7 @@ filetype plugin on
 "colorscheme
 colorscheme hybrid 
 
-let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:syntastic_python_checkers = ['pep8']
 
 "--------------------------
 " vim-indent-guides settings
@@ -254,7 +258,6 @@ nnoremap [git]l :<C-u>Agit<CR>
 "-----------------------
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=1
-let g:vim_markdown_folding_disabled=1
 au BufRead,BufNewFile *.{txt,text} set filetype=markdown
 
 
