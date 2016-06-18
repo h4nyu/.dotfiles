@@ -31,8 +31,8 @@ set softtabstop=4
 set completeopt=menuone
 set expandtab
 set background=dark
-set foldmethod=manual
-set foldlevel=1
+set foldmethod=syntax
+set foldlevel=0
 set foldcolumn=3
 
 
@@ -222,18 +222,16 @@ let g:quickrun_config['python'] = {
         \ 'cmdopt': '-u',
         \ }
 
-" let g:quickrun_config['markdown'] = {
-"       \   'command': 'pandoc',
-"       \   'cmdopt': '-t html5 -c github.css --mathml -s --self-contained',
-"       \   'exec': '%c %o %s -o out.html',
-"       \   "outputter" : "buffer",
-"       \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
-      \   'exec': '%c %o %s -o out.html',
-      \   "outputter" : "buffer",
+      \   'cmdopt': '-t html5 -c /home/yao/.pandoc/github.css --mathml -s --self-contained',
+      \   'exec': '%c %o %s -o index.html',
       \ }
+" let g:quickrun_config['markdown'] = {
+"       \   'command': 'pandoc',
+"       \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
+"       \   'exec': '%c %o %s -o out.html',
+"       \ }
 
 "---------------------
 "quickrun key settings 
