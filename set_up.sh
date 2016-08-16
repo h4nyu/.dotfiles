@@ -22,7 +22,7 @@ sudo cp -r monaco /usr/share/fonts/truetype
 git config --global user.name "x1nyuan"
 git config --global user.email yao.ntno@gmail.com
 
-sh ./dotfileLink.sh
+#sh ./dotfileLink.sh
 echo setup finished
 
 
