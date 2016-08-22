@@ -9,8 +9,8 @@ sudo apt-get -y install ibus-mozc
 sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
 sudo apt-get -y install pepperflashplugin-nonfree
-sudo add-apt-repository ppa:mystic-mirage/pycharm
-sudo add-apt-repository ppa:openjdk-r/ppa
+#sudo add-apt-repository ppa:mystic-mirage/pycharm
+#sudo add-apt-repository ppa:openjdk-r/ppa
 
 # monaco font for programing
 sudo cp -r monaco /usr/share/fonts/truetype
@@ -22,7 +22,7 @@ sudo cp -r monaco /usr/share/fonts/truetype
 git config --global user.name "x1nyuan"
 git config --global user.email yao.ntno@gmail.com
 
-#sh ./dotfileLink.sh
+sh ./dotfileLink.sh
 echo setup finished
 
 
