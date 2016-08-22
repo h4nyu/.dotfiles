@@ -70,9 +70,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 "colorscheme
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'tomasr/molokai'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'scrooloose/syntastic'
+" NeoBundle 'scrooloose/syntastic'
 
 
 "UI
@@ -81,12 +80,12 @@ NeoBundle 'itchyny/lightline.vim'
 
 "markdown
 " NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
+" NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 
 "filer
-NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
 
 "scrip 
@@ -98,7 +97,9 @@ NeoBundle 'Shougo/unite-build'
 NeoBundle 'vim-easy-align'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'cohama/lexima.vim'
+" NeoBundle 'cohama/lexima.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'davidhalter/jedi-vim'
@@ -133,6 +134,21 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
+" neo snippets
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+ 
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
 " -----------
 " neocomplete
@@ -174,6 +190,7 @@ function! s:my_cr_function()
 endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>" 
 "-----------------
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
