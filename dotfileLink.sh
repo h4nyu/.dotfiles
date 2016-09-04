@@ -22,5 +22,8 @@ ln -sf ~/.dotfiles/config/lxpanel ~/.config/lxpanel
 rm -rf ~/.config/lxsession
 ln -sf ~/.dotfiles/config/lxsession ~/.config/lxsession
 
+rm -rf ~/.config/lxterminal
+ln -sf ~/.dotfiles/config/lxterminal ~/.config/lxterminal
+
 rm -rf ~/.config/openbox
 ln -sf ~/.dotfiles/config/openbox ~/.config/openbox
