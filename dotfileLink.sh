@@ -19,5 +19,8 @@ fi
 rm -rf ~/.config/lxpanel
 ln -sf ~/.dotfiles/config/lxpanel ~/.config/lxpanel
 
+rm -rf ~/.config/lxsession
+ln -sf ~/.dotfiles/config/lxsession ~/.config/lxsession
+
 rm -rf ~/.config/openbox
 ln -sf ~/.dotfiles/config/openbox ~/.config/openbox
