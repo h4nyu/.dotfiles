@@ -15,7 +15,9 @@ if [ ! -e ~/.config ]; then
     echo "no dir"
     mkdir ~/.config
 fi
-ln -sf ~/.dotfiles/config/lxterminal ~/.config/lxterminal
 
-rm -rf ~/.config/lxsession
-ln -sf ~/.dotfiles/config/lxsession ~/.config/lxsession
+rm -rf ~/.config/lxpanel
+ln -sf ~/.dotfiles/config/lxpanel ~/.config/lxpanel
+
+rm -rf ~/.config/openbox
+ln -sf ~/.dotfiles/config/openbox ~/.config/openbox
