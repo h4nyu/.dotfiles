@@ -241,14 +241,9 @@ let g:quickrun_config['python'] = {
 
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c /home/yao/.pandoc/github.css --mathml -s --self-contained',
-      \   'exec': '%c %o %s -o index.html',
+      \   'cmdopt': '-t html5 -c ~/.pandoc/github.css',
+      \   'exec': '%c %o %s -o %s:p:r.html',
       \ }
-" let g:quickrun_config['markdown'] = {
-"       \   'command': 'pandoc',
-"       \   'cmdopt': '-t html5 --template=github.html --mathjax -s',
-"       \   'exec': '%c %o %s -o out.html',
-"       \ }
 
 "---------------------
 "quickrun key settings 
