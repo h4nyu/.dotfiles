@@ -31,6 +31,9 @@ set softtabstop=4
 set completeopt=menuone
 set expandtab
 set background=dark
+set foldmethod=marker
+set foldlevel=2
+set foldcolumn=3
 
 
 if has("autocmd")
@@ -84,7 +87,7 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'cohama/agit.vim'
-NeoBundle 'kmnk/vim-unite-giti'
+NeoBundle 'vim-scripts/python_fold'
 
 NeoBundleCheck
 
