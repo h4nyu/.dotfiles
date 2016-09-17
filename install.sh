@@ -10,4 +10,8 @@ sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
 sudo apt-get -y install python-mysqldb
 
+
+# python packege
+sudo pip install flake8 autopep8
+
 exit

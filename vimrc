@@ -31,99 +31,68 @@ set softtabstop=4
 set completeopt=menuone
 set expandtab
 set background=dark
-set foldmethod=syntax
-set foldlevel=0
-set foldcolumn=3
 
 
 if has("autocmd")
-	autocmd BufReadPost *
-				\ if line("'\"") > 0 && line ("'\"") <= line("$") |
-				\   exe "normal! g'\"" |
-				\ endif
+    autocmd BufReadPost *
+                \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+            \   exe "normal! g'\"" |
+            \ endif
 endif
 
 "Neoboundle
 if has('vim_starting') 
-	set nocompatible 
-	if !isdirectory(expand("~/.vim/bundle/neobundle.vim/")) 
-		echo "install neobundle..." 
-		:call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-	endif 
-	set runtimepath+=~/.vim/bundle/neobundle.vim/ 
+    set nocompatible 
+    if !isdirectory(expand("~/.vim/bundle/neobundle.vim/")) 
+        echo "install neobundle..." 
+        :call system("git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+    endif 
+    set runtimepath+=~/.vim/bundle/neobundle.vim/ 
 endif
 
 call neobundle#begin(expand('~/.vim/bundle')) 
 let g:neobundle_default_git_protocol='https' 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-
 NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build' : {
-			\     'windows' : 'tools\\update-dll-mingw',
-			\     'cygwin' : 'make -f make_cygwin.mak',
-			\     'mac' : 'make',
-			\     'linux' : 'make',
-			\     'unix' : 'gmake',
-			\    },
-			\ }
-
-"colorscheme
-NeoBundle 'nanotech/jellybeans.vim'
+            \ 'build' : {
+            \     'windows' : 'tools\\update-dll-mingw',
+            \     'cygwin' : 'make -f make_cygwin.mak',
+            \     'mac' : 'make',
+            \     'linux' : 'make',
+            \     'unix' : 'gmake',
+            \    },
+            \ }
 NeoBundle 'w0ng/vim-hybrid'
-" NeoBundle 'scrooloose/syntastic'
-
-
-"UI
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'itchyny/lightline.vim'
-
-"markdown
-" NeoBundle 'kannokanno/previm'
-" NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'tell-k/vim-autopep8'
 NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'joker1007/vim-markdown-quote-syntax'
-
-"filer
-" NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
-
-"scrip 
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-build'
-
-"edit tool
 NeoBundle 'vim-easy-align'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tomtom/tcomment_vim'
-" NeoBundle 'cohama/lexima.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'kana/vim-submode'
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'vim-scripts/python_fold'
-NeoBundle 'Konfekt/FastFold'
-
-
-"git
+NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'cohama/agit.vim'
 NeoBundle 'kmnk/vim-unite-giti'
 
-
-
-"NeoBundle 'scrooloose/syntastic.git'
-
 NeoBundleCheck
+
 call neobundle#end()
 filetype plugin on
 
 "colorscheme
 colorscheme hybrid 
-
-let g:syntastic_python_checkers = ['pep8']
 
 "--------------------------
 " vim-indent-guides settings
@@ -149,6 +118,14 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+
+"------------------------
+" python pep8 and pyflake
+"------------------------
+let g:syntastic_python_checkers = ['flake8']
+let g:autopep8_disable_show_diff=1
+autocmd FileType python map <buffer> <leader>f :call Autopep8()<CR>
 
 " -----------
 " neocomplete
@@ -249,8 +226,8 @@ let g:quickrun_config['markdown'] = {
 "quickrun key settings 
 "---------------------
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-nnoremap <F9> :w<CR>:QuickRun<CR>
-nmap <F8> :!python -m pdb %<CR>
+nnoremap <leader>r :w<CR>:QuickRun<CR>
+
 
 "git key settings
 nnoremap    [git]   <Nop>
@@ -276,8 +253,8 @@ au BufRead,BufNewFile *.{txt,text} set filetype=markdown
 "previm_open_cmd setting
 "-----------------------
 augroup PrevimSettings
-	autocmd!
-	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
 
