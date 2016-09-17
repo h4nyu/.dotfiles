@@ -8,6 +8,7 @@ sudo apt-get -y install vim-nox
 sudo apt-get -y install ibus-mozc 
 sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
+sudo apt-get -y install python3-pip 
 sudo apt-get -y install python-mysqldb
 
 

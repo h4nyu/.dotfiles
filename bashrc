@@ -103,7 +103,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 export EDITOR=vim
 
-
 # added by Anaconda2 2.4.0 installer
 export PATH="/home/yao/anaconda/bin:$PATH"
 export PATH="/usr/local/cuda/bin:$PATH"
