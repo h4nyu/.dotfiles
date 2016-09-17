@@ -86,7 +86,6 @@ NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'cohama/agit.vim'
 NeoBundle 'vim-scripts/python_fold'
 NeoBundle 'Konfekt/FastFold'
 
