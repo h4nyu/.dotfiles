@@ -1,5 +1,5 @@
 if has("syntax")
-      syntax on
+    syntax on
 endif
 
 set diffopt+=vertical
@@ -14,6 +14,7 @@ set smarttab
 set hidden
 set showcmd
 set autoindent
+set smartindent
 set ruler
 set laststatus=2
 set clipboard=unnamed,autoselect
@@ -94,8 +95,9 @@ NeoBundleCheck
 call neobundle#end()
 filetype plugin on
 
-"colorscheme
 colorscheme hybrid 
+
+" ================plugin configration================
 
 "--------------------------
 " vim-indent-guides settings
@@ -106,7 +108,10 @@ au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
+
+"--------------------------
 " neo snippets
+"--------------------------
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 " SuperTab like snippets behavior.
@@ -124,11 +129,12 @@ endif
 
 
 "------------------------
-" python pep8 and pyflake
+" syntastic
 "------------------------
 let g:syntastic_python_checkers = ['flake8']
 let g:autopep8_disable_show_diff=1
 autocmd FileType python map <buffer> <leader>f :call Autopep8()<CR>
+
 
 " -----------
 " neocomplete
@@ -140,26 +146,22 @@ let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#sources#syntax#min_keyword_length = 2
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions'
         \ }
-
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
-
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
@@ -177,14 +179,12 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Close popup by <Space>.
 inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
@@ -218,21 +218,18 @@ let g:quickrun_config = {
 let g:quickrun_config['python'] = {
         \ 'cmdopt': '-u',
         \ }
-
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
       \   'cmdopt': '-t html5 -c /css/github.css',
       \   'exec': '%c %o %s -o %s:p:r.html',
       \ }
-
-"---------------------
-"quickrun key settings 
-"---------------------
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-nnoremap <leader>r :w<CR>:QuickRun<CR>
+noremap <silent> <leader>r :w<CR>:<C-u>QuickRun<CR>
 
 
-"git key settings
+"---------------------
+" fugitive and git config
+"---------------------
 nnoremap    [git]   <Nop>
 nmap    <Space>g [git]
 nnoremap [git]s :<C-u>Gstatus<CR>
@@ -254,18 +251,8 @@ let g:vim_markdown_math=1
 au BufRead,BufNewFile *.{txt,text} set filetype=markdown
 
 
-"-----------------------
-"previm_open_cmd setting
-"-----------------------
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-
-
-
 "-----------------
-" unite.vim keymap
+" unite.vim
 "-----------------
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
@@ -281,6 +268,7 @@ nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 noremap  <silent> [unite]c :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
+noremap <silent><C-S-b> :write<CR>:<C-u>Unite build<CR>
 
 
 "-----------------
@@ -307,30 +295,24 @@ let g:lightline = {
       \ }
 
 
-"-----------------
-" key config 
-"-----------------
 
-"other key setting
+"-----------------
+" other keybind
+"-----------------
 nnoremap <silent><Space>o :<C-u>only<CR>
 nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
-noremap <silent><C-e> :<C-u>NERDTreeToggle<CR>
-" noremap <silent> <C-S-b> :write<CR>:<C-u>QuickRun<CR>
-noremap <silent><C-S-b> :write<CR>:<C-u>Unite build<CR>
+inoremap <silent> jj <ESC>
 
-"keymap
-" nnoremap <C-S-m> :PrevimOpen<CR>
 
-"vim-easy-align key setting
+"-----------------
+" Easy Align
+"-----------------
 vmap <Enter> <Plug>(EasyAlign)
 
 
-" imap <F5> <nop>
-" set pastetoggle=<F5>
-
-inoremap <silent> jj <ESC>
-autocmd FileType python setlocal completeopt-=preview
-
+"-----------------
+" split windows
+"-----------------
 nnoremap s <Nop>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
@@ -357,7 +339,6 @@ nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
 nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
-
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
 call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
 call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
@@ -368,6 +349,17 @@ call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
-
 " ビジュアルモード選択した部分を*で検索
 vnoremap / "zy:let @/ = @z<CR>n
+
+
+"-----------------
+" jedi
+"-----------------
+let g:jedi#goto_command = "<C-]>"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "<C-d>"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#rename_command = "R"
+
