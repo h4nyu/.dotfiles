@@ -239,7 +239,7 @@ nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
 nnoremap [git]l :<C-u>Glog<CR>
 nnoremap [git]b :<C-u>Gblame<CR>
-nnoremap [git]p :<C-u>!git push<CR>
+nnoremap [git]p :<C-u>cd %:h<CR> :!git push<CR>
 
 
 
