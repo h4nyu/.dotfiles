@@ -89,6 +89,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/python_fold'
 NeoBundle 'Konfekt/FastFold'
+NeoBundle 'tmhedberg/matchit'
 
 NeoBundleCheck
 
@@ -203,7 +204,7 @@ let g:auto_ctags_directory_list = ['.git', '.svn']
 "----------------
 let g:quickrun_config = {
 \   "_" : {
-        \       "outputter/buffer/split"               : ":belowright 10sp",
+        \       "outputter/buffer/split"               : ":belowright 6sp",
         \       "runner"                               : "vimproc",
         \       "runner/vimproc/updatetime"            : 60,
         \       'outputter': 'buffer',
@@ -220,7 +221,7 @@ let g:quickrun_config['python'] = {
         \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c /css/github.css',
+      \   'cmdopt': '-t html5 -c ~/.pandoc/github.css',
       \   'exec': '%c %o %s -o %s:p:r.html',
       \ }
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
@@ -303,6 +304,26 @@ let g:lightline = {
 nnoremap <silent><Space>o :<C-u>only<CR>
 nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
 inoremap <silent> jj <ESC>
+
+
+"-----------------
+" auto paste
+"-----------------
+if &term =~ "xterm"
+    let &t_ti .= "\e[?2004h"
+    let &t_te .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+    cnoremap <special> <Esc>[200~ <nop>
+    cnoremap <special> <Esc>[201~ <nop>
+endif
 
 
 "-----------------
