@@ -216,7 +216,7 @@ let g:quickrun_config = {
         \       "hook/shabadoubi_touch_henshin/wait"   : 20,
         \   },
         \}
-let g:quickrun_config['python'] = {
+let g:quickrun_config['python3'] = {
         \ 'cmdopt': '-u',
         \ }
 let g:quickrun_config['markdown'] = {
