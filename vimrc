@@ -8,9 +8,6 @@ set noswapfile
 set nocompatible
 set number
 set title
-set tabstop=4
-set shiftwidth=4
-set smarttab
 set hidden
 set showcmd
 set autoindent
@@ -22,15 +19,16 @@ set clipboard=unnamedplus
 set mouse=a
 set ttymouse=xterm2
 set encoding=utf-8
-set laststatus=2
 set wildmenu
 set incsearch
 set cmdheight=1
 set t_Co=256
 set nowritebackup
-set softtabstop=4
-set completeopt=menuone
 set expandtab
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set completeopt=menuone
 set background=dark
 set foldmethod=syntax
 set foldlevel=2
@@ -90,6 +88,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/python_fold'
 NeoBundle 'Konfekt/FastFold'
 NeoBundle 'tmhedberg/matchit'
+NeoBundle 'airblade/vim-rooter'
 
 NeoBundleCheck
 
@@ -134,7 +133,9 @@ endif
 "------------------------
 let g:syntastic_python_checkers = ['flake8']
 let g:autopep8_disable_show_diff=1
-autocmd FileType python map <buffer> <leader>f :call Autopep8()<CR>
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+autocmd FileType python map <buffer> <leader>f :call Autopep8()<CR>:<C-u>w<CR>
 
 
 " -----------
@@ -193,7 +194,7 @@ endif
 
 
 "-----------------
-" auto_ctags
+" auto-tags
 "-----------------
 let g:auto_ctags = 1
 let g:auto_ctags_directory_list = ['.git', '.svn']
@@ -216,16 +217,24 @@ let g:quickrun_config = {
         \       "hook/shabadoubi_touch_henshin/wait"   : 20,
         \   },
         \}
-let g:quickrun_config['python3'] = {
+let g:quickrun_config['python'] = {
+        \ 'command': 'python3',
         \ 'cmdopt': '-u',
         \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c ~/.pandoc/github.css',
+      \   'cmdopt': '-t html5 -c ./github.css',
       \   'exec': '%c %o %s -o %s:p:r.html',
       \ }
+
+let g:quickrun_config['cpp'] = {
+      \   'command': 'make',
+      \   'cmdopt': 'run',
+      \   'exec': '%c %o',
+      \   "outputter": "error:buffer:quickfix"
+      \ }
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-noremap <silent> <leader>r :w<CR>:<C-u>QuickRun<CR>
+noremap <silent> <leader>r :w<CR>:<C-u>Ctags<CR>:<C-u>QuickRun<CR>
 
 
 "---------------------
@@ -240,8 +249,7 @@ nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
 nnoremap [git]l :<C-u>Glog<CR>
 nnoremap [git]b :<C-u>Gblame<CR>
-nnoremap [git]p :<C-u>cd %:h<CR> :!git push<CR>
-
+nnoremap [git]p :!git push<CR>
 
 
 "-----------------------
@@ -385,3 +393,15 @@ let g:jedi#documentation_command = "<C-d>"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "R"
 
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+    set noexpandtab
+endif
+
+
+"-----------------
+" vim-rooter
+"-----------------
+let g:rooter_pattern = ['Makefile', '.git/']
+let g:rooter_use_lcd = 1
+let g:rooter_silent_chdir = 1
