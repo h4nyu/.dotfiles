@@ -8,6 +8,8 @@ sudo apt-get -y install vim-nox
 sudo apt-get -y install pandoc
 sudo apt-get -y install python-pip 
 sudo apt-get -y install python3-pip 
+sudo apt-get -y install python3-numpy
+sudo apt-get -y install python3-rpi.gpio
 sudo apt-get -y install clang
 sudo apt-get -y install exuberant-ctags
 
