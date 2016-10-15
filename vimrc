@@ -33,6 +33,8 @@ set background=dark
 set foldmethod=syntax
 set foldlevel=2
 set foldcolumn=3
+au BufRead,BufNewFile *.{conf,launch} set filetype=xml
+
 
 
 if has("autocmd")
@@ -89,13 +91,22 @@ NeoBundle 'vim-scripts/python_fold'
 NeoBundle 'Konfekt/FastFold'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'airblade/vim-rooter'
+NeoBundle 'airblade/vim-rooter'
+NeoBundle 'osyo-manga/vim-over'
 
 NeoBundleCheck
 
 call neobundle#end()
 filetype plugin on
 
+
+"--------------------------
+" highlight
+"--------------------------
 colorscheme hybrid 
+" let loaded_matchparen = 1
+hi MatchParen ctermfg=gray ctermbg=22
+
 
 " ================plugin configration================
 
@@ -135,7 +146,7 @@ let g:syntastic_python_checkers = ['flake8']
 let g:autopep8_disable_show_diff=1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
-autocmd FileType python map <buffer> <leader>f :call Autopep8()<CR>:<C-u>w<CR>
+autocmd FileType python map <buffer> <leader>f :<C-u>w<CR>:<C-u>call Autopep8()<CR>:<C-u>w<CR>
 
 
 " -----------
@@ -381,6 +392,7 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 " ビジュアルモード選択した部分を*で検索
 vnoremap / "zy:let @/ = @z<CR>n
+
 
 
 "-----------------
