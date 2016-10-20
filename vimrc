@@ -1,6 +1,5 @@
-if has("syntax")
-    syntax on
-endif
+syntax on
+
 
 set diffopt+=vertical
 set tags+=.git/tags
@@ -15,7 +14,6 @@ set smartindent
 set ruler
 set laststatus=2
 set clipboard=unnamed,autoselect
-set clipboard=unnamedplus
 set mouse=a
 set ttymouse=xterm2
 set encoding=utf-8
@@ -30,10 +28,12 @@ set softtabstop=4
 set smarttab
 set completeopt=menuone
 set background=dark
-set foldmethod=syntax
+set foldmethod=syntax 
 set foldlevel=2
 set foldcolumn=3
-au BufRead,BufNewFile *.{conf,launch} set filetype=xml
+
+
+
 
 
 
@@ -69,7 +69,7 @@ NeoBundle 'Shougo/vimproc.vim', {
             \ }
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tell-k/vim-autopep8'
 NeoBundle 'plasticboy/vim-markdown'
@@ -91,13 +91,20 @@ NeoBundle 'vim-scripts/python_fold'
 NeoBundle 'Konfekt/FastFold'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'airblade/vim-rooter'
-NeoBundle 'airblade/vim-rooter'
-NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'alvan/vim-closetag'
+NeoBundle 'Valloric/MatchTagAlways'
 
 NeoBundleCheck
 
 call neobundle#end()
 filetype plugin on
+
+"--------------------------
+"  filetype
+"--------------------------
+filetype indent on
+au BufRead,BufNewFile *.{conf,launch,config,sdf,xacro,gazebo,urdf} set filetype=xml
+au BufRead,BufNewFile *.{txt,text} set filetype=markdown
 
 
 "--------------------------
@@ -111,14 +118,10 @@ hi MatchParen ctermfg=gray ctermbg=22
 " ================plugin configration================
 
 "--------------------------
-" vim-indent-guides settings
+" vim-indent-lines settings
 "--------------------------
-let g:indent_guides_auto_colors=0
-au VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=240
-au VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=240
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
-
+let g:indentLine_color_term = 240
+let g:indentLine_char = '│' 
 
 "--------------------------
 " neo snippets
@@ -234,8 +237,14 @@ let g:quickrun_config['python'] = {
         \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c ./github.css',
+      \   'cmdopt': '-t html5 -c /css/github.css',
       \   'exec': '%c %o %s -o %s:p:r.html',
+      \ }
+
+let g:quickrun_config['xml'] = {
+      \   'command': 'rosrun',
+      \   'cmdopt': 'xacro xacro',
+      \   'exec': '%c %o %s > %s:p:r.urdf',
       \ }
 
 let g:quickrun_config['cpp'] = {
@@ -269,7 +278,6 @@ nnoremap [git]p :!git push<CR>
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=1
 let g:vim_markdown_conceal = 0
-au BufRead,BufNewFile *.{txt,text} set filetype=markdown
 
 
 "-----------------
@@ -417,3 +425,12 @@ endif
 let g:rooter_pattern = ['Makefile', '.git/']
 let g:rooter_use_lcd = 1
 let g:rooter_silent_chdir = 1
+
+
+"-----------------
+" vim-closetag
+"-----------------
+let g:closetag_filenames = "*.html,*.xml,*.sdf,*.config,*.gazebo,*.xacro,*.urdf"
+
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
