@@ -46,8 +46,10 @@ NeoBundle 'airblade/vim-rooter'
 NeoBundle 'alvan/vim-closetag'
 NeoBundle 'Valloric/MatchTagAlways'
 NeoBundle "taketwo/vim-ros"
-NeoBundle 'justmao945/vim-clang'
 NeoBundle 'Shougo/neoinclude.vim'
+NeoBundle 'Rip-Rip/clang_complete'
+NeoBundle 'mopp/next-alter.vim'
+
 NeoBundleCheck
 
 call neobundle#end()

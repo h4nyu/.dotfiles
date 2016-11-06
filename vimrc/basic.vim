@@ -33,7 +33,7 @@ set foldcolumn=3
 set path+=/opt/ros/indigo/include
 set path+=/opt/ros/jade/include
 set path+=/usr/include
-set path+=/usr/include/boost
+set path+=/usr/local/include
 
 
 
