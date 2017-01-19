@@ -48,6 +48,7 @@ NeoBundle 'Valloric/MatchTagAlways'
 NeoBundle "taketwo/vim-ros"
 NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'Rip-Rip/clang_complete'
+
 NeoBundleCheck
 
 call neobundle#end()

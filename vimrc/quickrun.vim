@@ -21,13 +21,19 @@ let g:quickrun_config['python'] = {
         \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c /css/github.css',
+      \   'cmdopt': '-t html5 -c ./github.css',
       \   'exec': '%c %o %s -o %s:p:r.html',
       \ }
 
+let g:quickrun_config['cpp'] = {
+            \   'command': 'catkin',
+            \   'cmdopt': 'build',
+            \   'exec': '%c %o',
+            \ }
+
 let g:quickrun_config['xacro.xml'] = {
       \   'command': 'rosrun',
-      \   'cmdopt': 'xacro xacro',
+      \   'cmdopt': 'xacro xacro --inorder',
       \   'exec': '%c %o %s > %s:p:r.urdf',
       \ }
 

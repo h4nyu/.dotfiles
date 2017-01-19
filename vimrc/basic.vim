@@ -5,6 +5,7 @@ set tags+=.git/tags
 set noswapfile
 set nocompatible
 set number
+set relativenumber
 set title
 set hidden
 set showcmd
@@ -27,7 +28,9 @@ set softtabstop=4
 set smarttab
 set completeopt=menuone
 set background=dark
-set foldmethod=syntax 
+set foldmethod=indent   
+set foldnestmax=11
+set nofoldenable
 set foldlevel=2
 set foldcolumn=3
 set path+=/opt/ros/indigo/include
@@ -56,5 +59,25 @@ au BufRead,BufNewFile *.{text} set filetype=markdown
 " highlight
 "--------------------------
 colorscheme hybrid 
-" let loaded_matchparen = 1
+let loaded_matchparen = 1
 hi MatchParen ctermfg=gray ctermbg=22
+
+" QuickfixCmdPost
+au QuickfixCmdPost make,grep,grepadd,vimgrep copen
+
+
+if &term =~ "xterm"
+    let &t_ti .= "\e[?2004h"
+    let &t_te .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+    cnoremap <special> <Esc>[200~ <nop>
+    cnoremap <special> <Esc>[201~ <nop>
+endif

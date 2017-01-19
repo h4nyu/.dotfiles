@@ -1,19 +1,27 @@
 #!/bin/sh
+# sudo add-apt-repository ppa:graphics-drivers/ppa
 
-sudo apt-get update 
-sudo apt-get upgrade -y
-suda apt-get autoremove
-sudo apt-get -y install curl 
-sudo apt-get -y install vim-nox 
-sudo apt-get -y install pandoc
-sudo apt-get -y install python-pip 
-sudo apt-get -y install python3-pip 
-sudo apt-get -y install python3-numpy
-sudo apt-get -y install python3-rpi.gpio
-sudo apt-get -y install clang
-sudo apt-get -y install exuberant-ctags
+sudo -E apt-get update 
+sudo -E apt-get -y dist-upgrade 
+sudo -E apt-get -y upgrade 
+
+suda -E apt-get autoremove
+sudo -E apt-get -y install curl 
+sudo -E apt-get -y install tmux 
+sudo -E apt-get -y install aptitude
+sudo -E apt-get -y install vim-nox
+sudo -E apt-get -y install fcitx-mozc 
+sudo -E apt-get -y install pandoc
+sudo -E apt-get -y install python-pip 
+sudo -E apt-get -y install python3-pip 
+sudo -E apt-get -y install flashplugin-installer 
+sudo -E apt-get -y install arandr
+sudo -E apt-get -y install ctags
+sudo -E apt-get -y install clang
+sudo -E apt-get -y install python-wstool python-catkin-tools
+
 
 # python packege
-sudo pip install flake8 autopep8
+sudo -E -H pip install flake8 autopep8 jedi
 
 exit

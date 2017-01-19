@@ -20,35 +20,44 @@ NeoBundle 'Shougo/vimproc.vim', {
             \     'unix' : 'gmake',
             \    },
             \ }
+
+
+NeoBundle 'taketwo/vim-ros'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'tell-k/vim-autopep8'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/unite-build'
-NeoBundle 'vim-easy-align'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'kana/vim-submode'
-NeoBundle 'soramugi/auto-ctags.vim'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'vim-scripts/python_fold'
-NeoBundle 'Konfekt/FastFold'
-NeoBundle 'airblade/vim-rooter'
-NeoBundle 'alvan/vim-closetag'
-NeoBundle 'Valloric/MatchTagAlways'
-NeoBundle "taketwo/vim-ros"
-NeoBundle 'Shougo/neoinclude.vim'
-NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'mopp/next-alter.vim'
+NeoBundle 'airblade/vim-rooter'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+
+NeoBundle 'scrooloose/syntastic'
+
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'rhysd/vim-clang-format'
+NeoBundle 'Valloric/YouCompleteMe'
+
+
+NeoBundle 'jiangmiao/auto-pairs'
+
+" NeoBundle 'tell-k/vim-autopep8'
+" NeoBundle 'plasticboy/vim-markdown'
+" NeoBundle 'thinca/vim-quickrun'
+" NeoBundle 'vim-easy-align'
+" NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'vim-scripts/python_fold'
+" NeoBundle 'Konfekt/FastFold'
+" NeoBundle 'alvan/vim-closetag'
+" NeoBundle 'Valloric/MatchTagAlways'
+
+
+" NeoBundle 'kana/vim-submode'
+" NeoBundle 'Chiel92/vim-autoformat'
+" NeoBundle 'davidhalter/jedi-vim'
+" NeoBundle 'soramugi/auto-ctags.vim'
 
 NeoBundleCheck
 
