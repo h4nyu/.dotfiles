@@ -50,6 +50,7 @@ endif
 filetype indent on
 au BufRead,BufNewFile *.{conf,launch,config,sdf,xacro,gazebo,urdf} set filetype=xml
 au BufRead,BufNewFile *.{text} set filetype=markdown
+au BufRead,BufNewFile *.{puml} set filetype=plantuml
 
 
 "--------------------------
@@ -78,3 +79,4 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[200~ <nop>
     cnoremap <special> <Esc>[201~ <nop>
 endif
+

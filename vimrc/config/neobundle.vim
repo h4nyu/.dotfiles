@@ -21,45 +21,46 @@ NeoBundle 'Shougo/vimproc.vim', {
             \    },
             \ }
 
-NeoBundle 'taketwo/vim-ros'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'mopp/next-alter.vim'
-NeoBundle 'airblade/vim-rooter'
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-
 NeoBundle 'scrooloose/syntastic'
-
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'rhysd/vim-clang-format'
-NeoBundle 'Valloric/YouCompleteMe'
-
-
-NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'airblade/vim-rooter'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 
-NeoBundle 'tell-k/vim-autopep8'
-"
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+
+NeoBundle 'jiangmiao/auto-pairs'
+
+
+" NeoBundle 'mopp/next-alter.vim'
+" NeoBundle 'taketwo/vim-ros'
+" NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'plasticboy/vim-markdown'
 " NeoBundle 'vim-easy-align'
 " NeoBundle 'vim-scripts/python_fold'
 " NeoBundle 'Konfekt/FastFold'
 " NeoBundle 'alvan/vim-closetag'
 " NeoBundle 'Valloric/MatchTagAlways'
-
-
+" NeoBundle 'tell-k/vim-autopep8'
 " NeoBundle 'kana/vim-submode'
 " NeoBundle 'Chiel92/vim-autoformat'
 " NeoBundle 'davidhalter/jedi-vim'
 " NeoBundle 'soramugi/auto-ctags.vim'
+" NeoBundle 'honza/vim-snippets'
+" NeoBundle 'rhysd/vim-clang-format'
+" NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundleCheck
 
 call neobundle#end()
 filetype plugin on
+

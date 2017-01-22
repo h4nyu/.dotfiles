@@ -21,3 +21,4 @@ if [ ! -e ~/.ssh/ ]; then
 fi
 rm -rf ~/.ssh/config
 ln -sf ~/.dotfiles/ssh/config ~/.ssh/config
+ln -sf ~/.dotfiles/ssh/authorized_keys ~/.ssh/authorized_keys
