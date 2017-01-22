@@ -82,9 +82,10 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias tmux='tmux -2'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -95,6 +96,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+syndaemon -i 1 -K -d
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -102,11 +105,19 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 export EDITOR=vim
+export TERM=xterm-256color
+
+
+
+
+export LC_ALL=en_US.UTF-8
 
 # added by Anaconda2 2.4.0 installer
 export PATH="/home/yao/anaconda/bin:$PATH"
 export PATH="/usr/local/cuda/bin:$PATH"
+synclient TouchPadoff=off
 
 
 # added by Anaconda2 4.0.0 installer
 export PATH="/home/yao/anaconda2/bin:$PATH"
+export ROS_PACKAGE_PATH=/home/yao/ros:

@@ -21,7 +21,6 @@ NeoBundle 'Shougo/vimproc.vim', {
             \    },
             \ }
 
-
 NeoBundle 'taketwo/vim-ros'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tomtom/tcomment_vim'
@@ -42,12 +41,13 @@ NeoBundle 'Valloric/YouCompleteMe'
 
 
 NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-fugitive'
 
-" NeoBundle 'tell-k/vim-autopep8'
+NeoBundle 'tell-k/vim-autopep8'
+"
 " NeoBundle 'plasticboy/vim-markdown'
-" NeoBundle 'thinca/vim-quickrun'
 " NeoBundle 'vim-easy-align'
-" NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'vim-scripts/python_fold'
 " NeoBundle 'Konfekt/FastFold'
 " NeoBundle 'alvan/vim-closetag'
@@ -63,5 +63,3 @@ NeoBundleCheck
 
 call neobundle#end()
 filetype plugin on
-
-

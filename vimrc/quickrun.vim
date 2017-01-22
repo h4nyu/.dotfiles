@@ -38,4 +38,4 @@ let g:quickrun_config['xacro.xml'] = {
       \ }
 
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-noremap <silent> <leader>r :w<CR>:<C-u>Ctags<CR>:<C-u>QuickRun<CR>
+noremap <silent> <leader>r :w<CR>:<C-u>QuickRun<CR>

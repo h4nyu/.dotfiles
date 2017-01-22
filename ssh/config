@@ -1,0 +1,41 @@
+Host lan_rasp2
+    HostName 192.168.10.100
+    Port 22
+    User yao
+    IdentityFile ~/.ssh/id_rsa
+
+Host wan_rasp2
+    HostName oniku.mydns.jp
+    Port 22
+    User yao
+    IdentityFile ~/.ssh/id_rsa
+
+Host wan_rasp3
+    HostName oniku.mydns.jp
+    Port 32
+    User yao
+
+
+host lan_rasp3
+    hostname 192.168.10.110
+    port 32
+    user yao
+
+Host mizawa
+    HostName teamkad.mydns.jp
+    User mizawa
+    Port 22
+    IdentityFile /home/yao/.ssh/keys/mizawa
+
+Host tunnel
+    hostname oniku.mydns.jp
+    port 22
+    user yao
+    DynamicForward 1080
+
+Host tunnel_noami
+    hostname 115.165.151.59
+    port 50125
+    user yao
+    ForwardAgent yes
+    DynamicForward 1080

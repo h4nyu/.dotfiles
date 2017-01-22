@@ -1,9 +1,10 @@
 "-----------------
 " other keybind
 "-----------------
-nnoremap <silent><Space>o :<C-u>only<CR>
+nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
 nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
 inoremap <silent> jj <ESC>
+
 
 
 nnoremap s <Nop>
@@ -18,7 +19,7 @@ nnoremap sH <C-w>H
 nnoremap sr <C-w>r
 nnoremap s= <C-w>=
 nnoremap sw <C-w>w
-nnoremap so <C-w>_<C-w>|
+nnoremap so :<C-u>only<CR>
 nnoremap sO <C-w>=
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>

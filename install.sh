@@ -1,5 +1,5 @@
 #!/bin/sh
-# sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa
 
 sudo -E apt-get update 
 sudo -E apt-get -y dist-upgrade 

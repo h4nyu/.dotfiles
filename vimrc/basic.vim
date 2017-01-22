@@ -1,11 +1,9 @@
 syntax on
 
 set diffopt+=vertical
-set tags+=.git/tags 
 set noswapfile
 set nocompatible
 set number
-set relativenumber
 set title
 set hidden
 set showcmd
@@ -13,7 +11,6 @@ set autoindent
 set smartindent
 set ruler
 set laststatus=2
-set clipboard=unnamed,autoselect
 set mouse=a
 set ttymouse=xterm2
 set encoding=utf-8
@@ -37,9 +34,9 @@ set path+=/opt/ros/indigo/include
 set path+=/opt/ros/jade/include
 set path+=/usr/include
 set path+=/usr/local/include
-
-
-
+"
+"
+"
 if has("autocmd")
     autocmd BufReadPost *
                 \ if line("'\"") > 0 && line ("'\"") <= line("$") |

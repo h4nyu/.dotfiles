@@ -1,2 +1,3 @@
-config/xfce4/panel/netload*
-tags
+config/fcitx/dbus/*
+config/fcitx/clipboard/*
+
