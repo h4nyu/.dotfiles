@@ -1,12 +1,12 @@
 Host lan_rasp2
     HostName 192.168.10.100
-    Port 22
+    Port 1042
     User yao
     IdentityFile ~/.ssh/id_rsa
 
 Host wan_rasp2
     HostName oniku.mydns.jp
-    Port 22
+    Port 1042
     User yao
     IdentityFile ~/.ssh/id_rsa
 
