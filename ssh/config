@@ -1,12 +1,27 @@
+Host desktop
+    HostName 192.168.10.2
+    Port 1032
+    User yao
+
 Host lan_rasp2
-    HostName 192.168.10.100
-    Port 22
+    HostName 192.168.10.3
+    Port 1042
     User yao
     IdentityFile ~/.ssh/id_rsa
 
+host lan_rasp3
+    hostname 192.168.10.4
+    port 32
+    user yao
+
+Host notebook
+    HostName 192.168.10.5
+    Port 1022
+    User yao
+
 Host wan_rasp2
     HostName oniku.mydns.jp
-    Port 22
+    Port 1042
     User yao
     IdentityFile ~/.ssh/id_rsa
 
@@ -14,12 +29,6 @@ Host wan_rasp3
     HostName oniku.mydns.jp
     Port 32
     User yao
-
-
-host lan_rasp3
-    hostname 192.168.10.110
-    port 32
-    user yao
 
 Host mizawa
     HostName teamkad.mydns.jp
