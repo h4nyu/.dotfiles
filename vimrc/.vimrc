@@ -31,7 +31,7 @@ source ~/.dotfiles/vimrc/config/neosnippet.vim
 " source ~/.dotfiles/vimrc/config/clang_format.vim
 " source ~/.dotfiles/vimrc/config/altr.vim
 " source ~/.dotfiles/vimrc/config/autopep8.vim
-
 " ~/.dotfiles/vimrc/config/ros.vim
+
 " key config
 source ~/.dotfiles/vimrc/config/keys.vim

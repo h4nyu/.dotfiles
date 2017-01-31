@@ -21,7 +21,7 @@ let g:quickrun_config['python'] = {
         \ }
 let g:quickrun_config['markdown'] = {
       \   'command': 'pandoc',
-      \   'cmdopt': '-t html5 -c ./github.css',
+      \   'cmdopt': '-t html5 -c /css/github.css',
       \   'exec': '%c %o %s -o %s:p:r.html',
       \ }
 
