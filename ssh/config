@@ -1,3 +1,9 @@
+Host bitbucket
+    HostName bitbucket.org
+    Port 22
+    User git
+    IdentityFile ~/.ssh/bitbucket_rsa
+
 Host desktop
     HostName 192.168.10.2
     Port 1032
