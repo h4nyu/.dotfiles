@@ -20,11 +20,11 @@ source ~/.dotfiles/vimrc/config/syntastic.vim
 source ~/.dotfiles/vimrc/config/quickrun.vim
 source ~/.dotfiles/vimrc/config/neocomplete.vim
 source ~/.dotfiles/vimrc/config/neosnippet.vim
+source ~/.dotfiles/vimrc/config/jedi.vim
 
 " source ~/.dotfiles/vimrc/easy_motion.vim
 " source ~/.dotfiles/vimrc/closetag.vim
 " source ~/.dotfiles/vimrc/clang.vim
-" source ~/.dotfiles/vimrc/jedi.vim
 " source ~/.dotfiles/vimrc/autotags.vim
 " source ~/.dotfiles/vimrc/markdown.vim
 " source ~/.dotfiles/vimrc/ycm.vim
