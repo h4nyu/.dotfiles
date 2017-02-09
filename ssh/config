@@ -1,4 +1,4 @@
-Host bitbucket.org
+Host bitbucket
     HostName bitbucket.org
     Port 22
     User git
