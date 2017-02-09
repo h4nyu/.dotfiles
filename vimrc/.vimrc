@@ -21,6 +21,7 @@ source ~/.dotfiles/vimrc/config/quickrun.vim
 source ~/.dotfiles/vimrc/config/neocomplete.vim
 source ~/.dotfiles/vimrc/config/neosnippet.vim
 source ~/.dotfiles/vimrc/config/jedi.vim
+source ~/.dotfiles/vimrc/config/autopep8.vim
 
 " source ~/.dotfiles/vimrc/easy_motion.vim
 " source ~/.dotfiles/vimrc/closetag.vim
@@ -30,7 +31,6 @@ source ~/.dotfiles/vimrc/config/jedi.vim
 " source ~/.dotfiles/vimrc/ycm.vim
 " source ~/.dotfiles/vimrc/config/clang_format.vim
 " source ~/.dotfiles/vimrc/config/altr.vim
-" source ~/.dotfiles/vimrc/config/autopep8.vim
 " ~/.dotfiles/vimrc/config/ros.vim
 
 " key config

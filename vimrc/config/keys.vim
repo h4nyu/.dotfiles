@@ -2,7 +2,6 @@
 " other keybind
 "-----------------
 nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
-nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
 inoremap <silent> jj <ESC>
 
 
