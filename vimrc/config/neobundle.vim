@@ -33,10 +33,10 @@ NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'davidhalter/jedi-vim'
+" NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neosnippet.vim'
+" NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'tell-k/vim-autopep8'
 
 
@@ -57,7 +57,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 " NeoBundle 'soramugi/auto-ctags.vim'
 " NeoBundle 'honza/vim-snippets'
 " NeoBundle 'rhysd/vim-clang-format'
-" NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundleCheck
 
