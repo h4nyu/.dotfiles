@@ -45,7 +45,6 @@ NeoBundle 'jiangmiao/auto-pairs'
 
 " NeoBundle 'mopp/next-alter.vim'
 " NeoBundle 'taketwo/vim-ros'
-" NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'plasticboy/vim-markdown'
 " NeoBundle 'vim-easy-align'
 " NeoBundle 'vim-scripts/python_fold'
@@ -55,9 +54,10 @@ NeoBundle 'jiangmiao/auto-pairs'
 " NeoBundle 'kana/vim-submode'
 " NeoBundle 'Chiel92/vim-autoformat'
 " NeoBundle 'soramugi/auto-ctags.vim'
-" NeoBundle 'honza/vim-snippets'
 " NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 NeoBundleCheck
 
