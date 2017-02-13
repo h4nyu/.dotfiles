@@ -21,6 +21,7 @@ NeoBundle 'Shougo/vimproc.vim', {
             \    },
             \ }
 
+
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Yggdroot/indentLine'
@@ -33,14 +34,12 @@ NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-" NeoBundle 'Shougo/neocomplete.vim'
-" NeoBundle 'Shougo/neosnippet.vim'
-" NeoBundle 'Shougo/neosnippet-snippets'
-" NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'tell-k/vim-autopep8'
-
-
 NeoBundle 'jiangmiao/auto-pairs'
+
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 
 " NeoBundle 'mopp/next-alter.vim'
@@ -55,12 +54,13 @@ NeoBundle 'jiangmiao/auto-pairs'
 " NeoBundle 'Chiel92/vim-autoformat'
 " NeoBundle 'soramugi/auto-ctags.vim'
 " NeoBundle 'rhysd/vim-clang-format'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
+" NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neosnippet.vim'
+" NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle 'davidhalter/jedi-vim'
 
 NeoBundleCheck
 
 call neobundle#end()
-filetype plugin on
+filetype plugin indent on
 
