@@ -15,6 +15,7 @@ let g:ycm_complete_in_comments = 1
 let g:UltiSnipsExpandTrigger='<c-k>'
 let g:UltiSnipsJumpForwardTrigger='<c-k>'
 let g:UltiSnipsJumpBackwardTrigger='<c-s-k>'
+let g:UltiSnipsUsePythonVersion=2
 
 let g:ycm_semantic_triggers = {
 \   'roslaunch' : ['="', '$(', '/'],
