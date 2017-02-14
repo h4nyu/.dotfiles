@@ -14,6 +14,10 @@ repo = 'thinca/vim-quickrun'
 hook_add = 'source ~/.dotfiles/vimrc/plugins/quickrun.vim'
 
 [[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+depends = ['unite']
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
@@ -35,4 +39,15 @@ hook_add = 'source ~/.dotfiles/vimrc/plugins/fugitive.vim'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = 'source ~/.dotfiles/vimrc/plugins/lightline.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplete'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/neocomplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 

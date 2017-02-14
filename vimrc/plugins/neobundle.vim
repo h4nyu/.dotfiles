@@ -55,9 +55,6 @@ NeoBundle 'honza/vim-snippets'
 " NeoBundle 'soramugi/auto-ctags.vim'
 " NeoBundle 'rhysd/vim-clang-format'
 " NeoBundle 'Shougo/neocomplete.vim'
-" NeoBundle 'Shougo/neosnippet.vim'
-" NeoBundle 'Shougo/neosnippet-snippets'
-" NeoBundle 'davidhalter/jedi-vim'
 
 NeoBundleCheck
 
