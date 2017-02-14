@@ -1,4 +1,3 @@
-syntax on
 
 set diffopt+=vertical
 set noswapfile
@@ -56,9 +55,6 @@ au BufRead,BufNewFile *.{puml} set filetype=plantuml
 "--------------------------
 " highlight
 "--------------------------
-colorscheme hybrid 
-let loaded_matchparen = 1
-hi MatchParen ctermfg=gray ctermbg=22
 
 " QuickfixCmdPost
 au QuickfixCmdPost make,grep,grepadd,vimgrep copen

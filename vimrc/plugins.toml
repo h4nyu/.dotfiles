@@ -1,0 +1,20 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/unite.vim.git'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/colorscheme.vim'
+
+
+
