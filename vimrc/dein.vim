@@ -4,16 +4,12 @@ endif
 
 let s:dein_path = expand('~/.vim/dein')
 let s:dein_repo_path = s:dein_path . '/repos/github.com/Shougo/dein.vim'
-echo 
 
 if !isdirectory(s:dein_repo_path) 
     execute '!git clone https://github.com/Shougo/dein.vim '. s:dein_repo_path
 endif 
 
-
 execute 'set runtimepath+=' . s:dein_repo_path
-
-
 
 if dein#load_state(s:dein_path)
     call dein#begin(s:dein_path)
