@@ -7,6 +7,7 @@ let g:unite_source_file_mru_limit = 200
 " The prefix key.
 nnoremap    [unite]   <Nop>
 nmap    <Space>f [unite]
+nmap    <Space>u :<C-u>Unite<CR>
 nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
 nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
 nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>

@@ -40,3 +40,5 @@ hook_add = 'source ~/.dotfiles/vimrc/plugins/fugitive.vim'
 repo = 'itchyny/lightline.vim'
 hook_add = 'source ~/.dotfiles/vimrc/plugins/lightline.vim'
 
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'

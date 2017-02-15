@@ -12,11 +12,11 @@ endif
 execute 'set runtimepath+=' . s:dein_repo_path
 
 " if dein#load_state(s:dein_path)
-    call dein#begin(s:dein_path)
-    call dein#load_toml('~/.dotfiles/vimrc/plugins.toml', {'lazy': 0})
-    call dein#load_toml('~/.dotfiles/vimrc/plugins_lazy.toml', {'lazy': 1})
-    call dein#end()
-    call dein#save_state()
+call dein#begin(s:dein_path)
+call dein#load_toml('~/.dotfiles/vimrc/plugins.toml', {'lazy': 0})
+call dein#load_toml('~/.dotfiles/vimrc/plugins_lazy.toml', {'lazy': 1})
+call dein#end()
+call dein#save_state()
 " endif
 
 if dein#check_install()
@@ -24,4 +24,4 @@ if dein#check_install()
 endif
 
 filetype plugin indent on
-syntax enable
+syntax on

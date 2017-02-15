@@ -11,19 +11,14 @@ let g:ycm_always_populate_location_list = 1
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_complete_in_comments = 1
 
-" UltiSnips setup
-let g:UltiSnipsExpandTrigger='<c-k>'
-let g:UltiSnipsJumpForwardTrigger='<c-k>'
-let g:UltiSnipsJumpBackwardTrigger='<c-s-k>'
-let g:UltiSnipsUsePythonVersion=2
 
 let g:ycm_semantic_triggers = {
 \   'roslaunch' : ['="', '$(', '/'],
 \   'rosmsg,rossrv,rosaction' : ['re!^', '/'],
 \ }
 
-nnoremap gd :<C-u> YcmCompleter GoToDefinition<CR>
-nnoremap gl :<C-u> YcmCompleter GoToDeclaration<CR>
+nnoremap gi :<C-u> YcmCompleter GoToDefinition<CR>
+nnoremap gd :<C-u> YcmCompleter GoToDeclaration<CR>
 nnoremap gt :<C-u> YcmCompleter GetType<CR>
 nnoremap gp :<C-u> YcmCompleter GetParent<CR>
 nnoremap fi :<C-u> YcmCompleter FixIt<CR>
