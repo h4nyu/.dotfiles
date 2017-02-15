@@ -42,3 +42,8 @@ hook_add = 'source ~/.dotfiles/vimrc/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
+
+
+[[plugins]]
+repo = 'airblade/vim-rooter'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/rooter.vim'
