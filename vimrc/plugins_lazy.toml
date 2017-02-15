@@ -17,7 +17,9 @@ on_if = 0
 repo = 'Shougo/neosnippet-snippets'
 on_if = 0
 
-
-
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/jedi.vim'
+on_if = 0
 
 
