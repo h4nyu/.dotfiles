@@ -1,0 +1,23 @@
+
+[[plugins]]
+repo = 'Shougo/neocomplete'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/neocomplete.vim'
+on_if = 0
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+hook_add = 'source ~/.dotfiles/vimrc/plugins/neosnippet.vim'
+on_if = 0
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_if = 0
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_if = 0
+
+
+
+
+

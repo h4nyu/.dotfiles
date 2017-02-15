@@ -33,21 +33,10 @@ repo = 'scrooloose/syntastic'
 hook_add = 'source ~/.dotfiles/vimrc/plugins/syntastic.vim'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
-hook_add = 'source ~/.dotfiles/vimrc/plugins/fugitive.vim'
+repo = 'tpope/vim-fugitive' 
+hook_add = 'source ~/.dotfiles/vimrc/plugins/fugitive.vim' 
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = 'source ~/.dotfiles/vimrc/plugins/lightline.vim'
-
-[[plugins]]
-repo = 'Shougo/neocomplete'
-hook_add = 'source ~/.dotfiles/vimrc/plugins/neocomplete.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet'
-hook_add = 'source ~/.dotfiles/vimrc/plugins/neosnippet.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
 
