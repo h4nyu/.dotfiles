@@ -60,3 +60,10 @@ Host tunnel_noami
     user yao
     ForwardAgent yes
     DynamicForward 1080
+
+Host tk2
+    hostname tk2-224-21668.vs.sakura.ne.jp
+    user yao
+    port 22
+    IdentityFile /home/yao/.ssh/yao_rsa 
+
