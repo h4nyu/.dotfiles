@@ -9,7 +9,7 @@ if !isdirectory(s:dein_repo_path)
     execute '!git clone https://github.com/Shougo/dein.vim '. s:dein_repo_path
 endif 
 
-execute 'set runtimepath+=' . s:dein_repo_path
+execute 'set runtimepath^=' . s:dein_repo_path
 
 if dein#load_state(s:dein_path)
     call dein#begin(s:dein_path)
@@ -24,5 +24,4 @@ if dein#check_install()
 endif
 
 filetype plugin indent on
-filetype on
 syntax on
