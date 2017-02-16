@@ -2,7 +2,7 @@ Host bitbucket
     HostName bitbucket.org
     Port 22
     User git
-    IdentityFile ~/.ssh/bitbucket_rsa
+    IdentityFile ~/.ssh/yao_rsa
 
 Host desktop
     HostName 192.168.10.2
@@ -15,16 +15,18 @@ Host lan_rasp2
     User yao
     IdentityFile ~/.ssh/rasp2_rsa
 
+
 Host lan_git
-    HostName 192.168.10.3
-    Port 1042
+    HostName 192.168.10.4
+    Port 32 
     User git
-    IdentityFile ~/.ssh/git_rsa
+    IdentityFile ~/.ssh/yao_rsa
 
 host lan_rasp3
     hostname 192.168.10.4
     port 32
     user yao
+    IdentityFile ~/.ssh/yao_rsa
 
 Host notebook
     HostName 192.168.10.5
