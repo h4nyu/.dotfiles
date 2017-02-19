@@ -22,6 +22,12 @@ Host lan_git
     User git
     IdentityFile ~/.ssh/yao_rsa
 
+Host wan_git
+    HostName oniku.mydns.jp
+    Port 32 
+    User git
+    IdentityFile ~/.ssh/yao_rsa
+
 host lan_rasp3
     hostname 192.168.10.4
     port 32
@@ -43,6 +49,7 @@ Host wan_rasp3
     HostName oniku.mydns.jp
     Port 32
     User yao
+    IdentityFile ~/.ssh/yao_rsa
 
 Host mizawa
     HostName teamkad.mydns.jp
