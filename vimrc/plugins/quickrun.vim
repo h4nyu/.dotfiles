@@ -38,9 +38,8 @@ let g:quickrun_config['xacro.xml'] = {
       \ }
 
 let g:quickrun_config['plantuml'] = {
-      \   'command': 'java',
-      \   'cmdopt': '-jar "`cygpath -w ~/.java/plantuml.jar`"',
-      \   'exec': '%c %o %s',
+      \   'command': 'plantuml',
+      \   'exec': '%c %s',
       \ }
 
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"

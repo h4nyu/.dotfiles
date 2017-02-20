@@ -12,6 +12,12 @@ repo = 'kh3phr3n/python-syntax'
 hook_add = 'source ~/.dotfiles/vimrc/plugins/python-syntax.vim'
 on_ft = ['python']
 
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+on_ft = ['plantuml']
+
+
+
 
 
 
