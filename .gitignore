@@ -1,3 +1,4 @@
 config/fcitx/dbus/*
 config/fcitx/clipboard/*
+config/fcitx/profile_*
 
