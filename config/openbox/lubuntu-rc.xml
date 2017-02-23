@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Syscrash</name>
+    <name>Natura</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -58,7 +58,7 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>Monaco</name>
-      <size>11</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -67,7 +67,7 @@
     </font>
     <font place="InactiveWindow">
       <name>Monaco</name>
-      <size>11</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -76,7 +76,7 @@
     </font>
     <font place="MenuHeader">
       <name>Monaco</name>
-      <size>11</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -85,7 +85,7 @@
     </font>
     <font place="MenuItem">
       <name>Monaco</name>
-      <size>11</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -94,7 +94,7 @@
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>Monaco</name>
-      <size>11</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -103,7 +103,7 @@
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Monaco</name>
-      <size>11</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>2</number>
+    <number>1</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
@@ -323,21 +323,40 @@
       </action>
     </keybind>
     <!-- Keybindings for window tiling -->
-    <keybind key="W-Left">        # HalfLeftScreen
+    <keybind key="A-f">        # HalfRightScreen
+      <action name="MaximizeFull"/>
+    </keybind>
+    <keybind key="A-h">        # HalfLeftScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>0</x><y>0</y><height>100%</height><width>50%</width></action>
     </keybind>
-    <keybind key="W-Right">        # HalfRightScreen
+    <keybind key="A-l">        # HalfRightScreen
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo"><x>-0</x><y>0</y><height>100%</height><width>50%</width></action>
     </keybind>
-    <keybind key="W-Up">        # HalfUpperScreen
+    <keybind key="A-k">        # FullScreen
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo"><x>0</x><y>0</y><width>100%</width><height>50%</height></action>
+      <action name="MoveResizeTo"><x>0</x><y>0</y><height>50%</height><width>100%</width></action>
     </keybind>
-    <keybind key="W-Down">        # HalfLowerScreen
+    <keybind key="A-j">        # HalfLowerScreen
+        <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>0</x><y>-0</y><height>50%</height><width>100%</width></action>
+    </keybind>
+    <keybind key="A-1">        # UpperQuarterLeft
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo"><x>0</x><y>-0</y><width>100%</width><height>50%</height></action>
+      <action name="MoveResizeTo"><x>0</x><y>0</y><height>50%</height><width>50%</width></action>
+    </keybind>
+    <keybind key="A-2">        # LowerQuarterLeft
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>0</x><y>-0</y><height>50%</height><width>50%</width></action>
+    </keybind>
+    <keybind key="A-3">        # LowerQuarterLeft
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>-0</x><y>0</y><height>50%</height><width>50%</width></action>
+    </keybind>
+    <keybind key="A-4">        # LowerQuarterLeft
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo"><x>-0</x><y>-0</y><height>50%</height><width>50%</width></action>
     </keybind>
     <!-- Keybindings for running applications on Home + E -->
     <keybind key="W-e">
@@ -385,6 +404,12 @@
     <keybind key="C-A-T">
       <action name="Execute">
         <command>lxsession-default terminal</command>
+      </action>
+    </keybind>
+    <!-- Launch a browser on Ctrl + Alt + T-->
+    <keybind key="C-A-W">
+      <action name="Execute">
+        <command>firefox</command>
       </action>
     </keybind>
     <!-- Launch a filemanager on Ctrl + Alt + D-->
