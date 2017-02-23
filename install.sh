@@ -1,18 +1,27 @@
 #!/bin/sh
+sudo add-apt-repository ppa:graphics-drivers/ppa
 
-sudo apt-get update 
-sudo apt-get -y upgrade
-sudo apt-get -y install curl 
-sudo apt-get -y install aptitude 
-sudo apt-get -y install vim-gtk 
-sudo apt-get -y install ibus-mozc 
-sudo apt-get -y install pandoc
-sudo apt-get -y install python-pip 
-sudo apt-get -y install pepperflashplugin-nonfree
-sudo apt-get -y install skype
+sudo -E apt-get update 
+sudo -E apt-get -y dist-upgrade 
+sudo -E apt-get -y upgrade 
+
+suda -E apt-get autoremove
+sudo -E apt-get -y install curl 
+sudo -E apt-get -y install tmux 
+sudo -E apt-get -y install aptitude
+sudo -E apt-get -y install vim-nox
+sudo -E apt-get -y install fcitx-mozc 
+sudo -E apt-get -y install pandoc
+sudo -E apt-get -y install python-pip 
+sudo -E apt-get -y install python3-pip 
+sudo -E apt-get -y install flashplugin-installer 
+sudo -E apt-get -y install arandr
+sudo -E apt-get -y install ctags
+sudo -E apt-get -y install clang
+sudo -E apt-get -y install python-wstool python-catkin-tools
 
 
-# monaco font for programing
-sudo cp -r monaco /usr/share/fonts/truetype
+# python packege
+sudo -E -H pip install flake8 autopep8 jedi
 
 exit

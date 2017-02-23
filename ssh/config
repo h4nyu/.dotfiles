@@ -1,0 +1,78 @@
+Host bitbucket
+    HostName bitbucket.org
+    Port 22
+    User git
+    IdentityFile ~/.ssh/yao_rsa
+
+Host desktop
+    HostName 192.168.10.2
+    Port 1032
+    User yao
+
+Host lan_rasp2
+    HostName 192.168.10.3
+    Port 1042
+    User yao
+    IdentityFile ~/.ssh/rasp2_rsa
+
+
+Host lan_git
+    HostName 192.168.10.4
+    Port 32 
+    User git
+    IdentityFile ~/.ssh/yao_rsa
+
+Host wan_git
+    HostName oniku.mydns.jp
+    Port 32 
+    User git
+    IdentityFile ~/.ssh/yao_rsa
+
+host lan_rasp3
+    hostname 192.168.10.4
+    port 32
+    user yao
+    IdentityFile ~/.ssh/yao_rsa
+
+Host notebook
+    HostName 192.168.10.5
+    Port 1022
+    User yao
+
+Host wan_rasp2
+    HostName oniku.mydns.jp
+    Port 1042
+    User yao
+    IdentityFile ~/.ssh/rasp2_rsa
+
+Host wan_rasp3
+    HostName oniku.mydns.jp
+    Port 32
+    User yao
+    IdentityFile ~/.ssh/yao_rsa
+
+Host mizawa
+    HostName teamkad.mydns.jp
+    User mizawa
+    Port 22
+    IdentityFile /home/yao/.ssh/keys/mizawa
+
+Host tunnel
+    hostname oniku.mydns.jp
+    port 22
+    user yao
+    DynamicForward 1080
+
+Host tunnel_noami
+    hostname 115.165.151.59
+    port 50125
+    user yao
+    ForwardAgent yes
+    DynamicForward 1080
+
+Host tk2
+    hostname tk2-224-21668.vs.sakura.ne.jp
+    user yao
+    port 22
+    IdentityFile /home/yao/.ssh/yao_rsa 
+
