@@ -7,4 +7,5 @@ vim の貼り付け機能
     * `pip3 install pep8`
 
 * python2 pep8
+P
     * `pip install pep8`
