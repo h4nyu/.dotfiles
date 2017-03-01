@@ -2,10 +2,6 @@
 
 sh ./exit_root.sh
 
-git config --global user.name "x1nyuan"
-git config --global user.email "yao.ntno@gmail.com"
-git config --global push.default simple
-
 ln -sf ~/.dotfiles/vimrc/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
