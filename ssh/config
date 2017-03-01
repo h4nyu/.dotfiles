@@ -13,7 +13,7 @@ Host lan_rasp2
     HostName 192.168.10.3
     Port 1042
     User yao
-    IdentityFile ~/.ssh/rasp2_rsa
+    IdentityFile ~/.ssh/yao_rsa
 
 
 Host lan_git
@@ -43,7 +43,7 @@ Host wan_rasp2
     HostName oniku.mydns.jp
     Port 1042
     User yao
-    IdentityFile ~/.ssh/rasp2_rsa
+    IdentityFile ~/.ssh/yao_rsa.pub
 
 Host wan_rasp3
     HostName oniku.mydns.jp
