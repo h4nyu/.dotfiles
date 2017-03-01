@@ -15,6 +15,6 @@ if [ ! -e ~/.ssh/ ]; then
     echo "no dir"
     mkdir ~/.ssh
 fi
-rm -rf ~/.ssh/config
 ln -sf ~/.dotfiles/ssh/config ~/.ssh/config
-ln -sf ~/.dotfiles/ssh/authorized_keys ~/.ssh/authorized_keys
+cp ~/.dotfiles/ssh/authorized_keys ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
