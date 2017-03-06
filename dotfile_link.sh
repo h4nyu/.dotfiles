@@ -18,3 +18,5 @@ fi
 ln -sf ~/.dotfiles/ssh/config ~/.ssh/config
 cp ~/.dotfiles/ssh/authorized_keys ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
+
+sudo ln -s `which nodejs` /usr/bin/node
