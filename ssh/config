@@ -76,3 +76,7 @@ Host tk2
     port 22
     IdentityFile /home/yao/.ssh/yao_rsa 
 
+Host github.com
+    hostname github.com
+    IdentityFile /home/yao/.ssh/yao_rsa 
+
