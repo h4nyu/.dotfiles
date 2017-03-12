@@ -2,7 +2,10 @@
 
 sh ./exit_root.sh
 
-sh ./vimrc/link.sh
+cd vimrc
+sh link.sh
+cd ../
+
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/vimperatorrc ~/.vimperatorrc
