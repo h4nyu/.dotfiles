@@ -73,3 +73,13 @@ Host github.com
     hostname github.com
     IdentityFile /home/yao/.ssh/yao_rsa 
 
+Host bda
+    hostname 172.18.214.199
+    user yao
+    IdentityFile ~/.ssh/itg_rsa
+
+Host z820
+    hostname 172.18.200.86
+    user yao
+    IdentityFile ~/.ssh/itg_rsa
+
