@@ -18,13 +18,7 @@ Host lan_rasp2
 
 Host oniku.mydns.jp
     HostName oniku.mydns.jp
-    Port 32 
-    IdentityFile ~/.ssh/yao_rsa
-
-host lan_rasp3
-    hostname 192.168.10.4
-    port 32
-    user yao
+    Port 22 
     IdentityFile ~/.ssh/yao_rsa
 
 Host notebook
@@ -37,12 +31,6 @@ Host wan_rasp2
     Port 1042
     User yao
     IdentityFile ~/.ssh/yao_rsa.pub
-
-Host wan_rasp3
-    HostName oniku.mydns.jp
-    Port 32
-    User yao
-    IdentityFile ~/.ssh/yao_rsa
 
 Host mizawa
     HostName teamkad.mydns.jp
@@ -62,6 +50,14 @@ Host tunnel_noami
     user yao
     ForwardAgent yes
     DynamicForward 1080
+
+Host tunnel_tkg
+    hostname tkg.mydns.jp
+    port 22
+    user yao
+    ForwardAgent yes
+    DynamicForward 1080
+    IdentityFile ~/.ssh/yao_rsa
 
 Host tk2
     hostname tk2-224-21668.vs.sakura.ne.jp
