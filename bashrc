@@ -115,3 +115,4 @@ export PATH="/usr/local/cuda/bin:$PATH"
 # added by Anaconda2 4.0.0 installer
 export PATH="/home/yao/anaconda2/bin:$PATH"
 export ROS_PACKAGE_PATH=/home/yao/ros:
+tmux
