@@ -74,7 +74,7 @@ Host bda
     user yao
     IdentityFile ~/.ssh/itg_rsa
 
-Host z820
+Host A-2013-P48783
     hostname 172.18.200.86
     user yao
     IdentityFile ~/.ssh/itg_rsa
