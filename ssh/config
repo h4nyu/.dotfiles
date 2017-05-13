@@ -79,11 +79,6 @@ Host A-2013-P48783
     user yao
     IdentityFile ~/.ssh/itg_rsa
 
-Host tkg.mydns.jp
-    hostname tkg.mydns.jp
-    user yao
-    IdentityFile ~/.ssh/yao_rsa
-
 Host tkg.pgw.jp
     hostname tkg.pgw.jp
     user yao
