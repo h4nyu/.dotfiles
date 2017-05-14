@@ -52,7 +52,7 @@ Host tunnel_noami
     DynamicForward 1080
 
 Host tunnel_tkg
-    hostname tkg.mydns.jp
+    hostname tkg.pgw.jp
     port 22
     user yao
     ForwardAgent yes
