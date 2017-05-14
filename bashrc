@@ -85,7 +85,7 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias tmux='tmux -2'
+# alias tmux='tmux -2'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -115,4 +115,4 @@ export PATH="/usr/local/cuda/bin:$PATH"
 # added by Anaconda2 4.0.0 installer
 export PATH="/home/yao/anaconda2/bin:$PATH"
 export ROS_PACKAGE_PATH=/home/yao/ros:
-tmux
+# tmux
