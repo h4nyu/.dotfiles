@@ -90,3 +90,8 @@ Host  ipad
     user root
     port 50022
 
+
+Host z820
+    hostname 172.18.200.86
+    user yao
+    port 22
