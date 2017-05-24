@@ -95,3 +95,4 @@ Host z820
     hostname 172.18.200.86
     user yao
     port 22
+    IdentityFile ~/.ssh/itg_rsa
