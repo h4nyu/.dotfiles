@@ -24,6 +24,7 @@ Host oniku.mydns.jp
 Host notebook
     HostName 192.168.10.5
     Port 1022
+    IdentityFile ~/.ssh/yao_rsa
     User yao
 
 Host wan_rasp2
