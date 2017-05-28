@@ -15,9 +15,15 @@ Host lan_rasp2
     User yao
     IdentityFile ~/.ssh/yao_rsa
 
+Host rasp2
+    HostName oniku.pgw.jp
+    Port 1042
+    User yao
+    IdentityFile ~/.ssh/yao_rsa
 
-Host oniku.mydns.jp
-    HostName oniku.mydns.jp
+
+Host oniku.pgw.jp
+    HostName oniku.pgw.jp
     Port 22 
     IdentityFile ~/.ssh/yao_rsa
 
@@ -96,3 +102,4 @@ Host z820
     user yao
     port 22
     IdentityFile ~/.ssh/itg_rsa
+
