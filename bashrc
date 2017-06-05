@@ -96,28 +96,19 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# syndaemon -i 1 -K -d
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+if [[ $(uname -s) == Darwin ]]; then
+    if [ -f /usr/local/etc/bash_completion  ]; then
+        . /usr/local/etc/bash_completion
+    fi
+else 
+    if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+        . /etc/bash_completion
+    fi
 fi
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-. $(brew --prefix)/etc/bash_completion
-fi
 
 export EDITOR=vim
 export TERM=xterm-256color
-
-# added by Anaconda2 2.4.0 installer
-export PATH="/home/yao/anaconda/bin:$PATH"
-export PATH="/usr/local/cuda/bin:$PATH"
-
-
-# added by Anaconda2 4.0.0 installer
-export PATH="/home/yao/anaconda2/bin:$PATH"
-export ROS_PACKAGE_PATH=/home/yao/ros:
-# tmux
