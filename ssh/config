@@ -33,6 +33,12 @@ Host notebook
     IdentityFile ~/.ssh/yao_rsa
     User yao
 
+Host ux21e
+    HostName 192.168.10.6
+    Port 22
+    IdentityFile ~/.ssh/yao_rsa
+    User yao
+
 Host wan_rasp2
     HostName oniku.mydns.jp
     Port 1042
