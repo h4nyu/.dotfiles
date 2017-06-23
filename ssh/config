@@ -22,7 +22,7 @@ Host rasp2
     IdentityFile ~/.ssh/yao_rsa
 
 
-Host oniku.pgw.jp
+Host rasp3
     HostName oniku.pgw.jp
     Port 22 
     IdentityFile ~/.ssh/yao_rsa
