@@ -258,12 +258,12 @@
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
-    </keybind>
-    <keybind key="A-space">
-      <action name="ShowMenu">
-        <menu>client-menu</menu>
-      </action>
-    </keybind>
+    <!-- </keybind> -->
+    <!-- <keybind key="A-space"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>albert show</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="A-Print">
       <action name="Execute">
