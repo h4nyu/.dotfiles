@@ -4,6 +4,12 @@ Host bitbucket.org
     User git
     IdentityFile ~/.ssh/yao_rsa
 
+Host gitlab.com
+    HostName gitlab.com
+    Port 22
+    User git
+    IdentityFile ~/.ssh/yao_rsa
+
 Host desktop
     HostName 192.168.10.2
     Port 1032
