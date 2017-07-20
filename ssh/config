@@ -114,3 +114,8 @@ Host z820
     port 22
     IdentityFile ~/.ssh/itg_rsa
 
+Host itg-srv.cgn.canon.co.jp 
+    hostname itg-srv.cgn.canon.co.jp
+    user yao
+    port 22
+    IdentityFile ~/.ssh/itg_rsa
