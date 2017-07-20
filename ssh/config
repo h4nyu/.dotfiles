@@ -113,3 +113,11 @@ Host itg-srv.cgn.canon.co.jp
     user yao
     port 22
     IdentityFile ~/.ssh/itg_rsa
+
+Host gitlab.com
+    hostname gitlab.com
+    user yao
+    port 22
+    IdentityFile ~/.ssh/yao_rsa
+
+
