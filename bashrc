@@ -82,7 +82,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l'
+alias ls='ls -G'
+alias ll='ls -l -G'
 alias la='ls -A'
 alias l='ls -CF'
 # alias tmux='tmux -2'
