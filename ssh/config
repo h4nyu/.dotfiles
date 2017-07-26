@@ -81,11 +81,11 @@ Host tk2
     hostname tk2-224-21668.vs.sakura.ne.jp
     user yao
     port 22
-    IdentityFile /home/yao/.ssh/yao_rsa 
+    IdentityFile ~/.ssh/yao_rsa 
 
 Host github.com
     hostname github.com
-    IdentityFile /home/yao/.ssh/yao_rsa 
+    IdentityFile ~/.ssh/yao_rsa 
 
 Host bda
     hostname 172.18.214.199
@@ -119,3 +119,11 @@ Host itg-srv.cgn.canon.co.jp
     user yao
     port 22
     IdentityFile ~/.ssh/itg_rsa
+
+Host gitlab.com
+    hostname gitlab.com
+    user yao
+    port 22
+    IdentityFile ~/.ssh/yao_rsa
+
+
