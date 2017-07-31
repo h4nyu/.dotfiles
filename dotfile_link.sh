@@ -5,7 +5,6 @@ cd ../
 
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
-ln -sf ~/.dotfiles/profile ~/.profile
 ln -sf ~/.dotfiles/vimperatorrc ~/.vimperatorrc
 
 rm -rf ~/.pandoc
