@@ -86,7 +86,7 @@ alias ls='ls -G'
 alias ll='ls -l -G'
 alias la='ls -A'
 alias l='ls -CF'
-alias gsf='git submodule foreach --recursvie'
+alias gf='git submodule foreach --recursvie'
 alias gs='git status'
 # alias tmux='tmux -2'
 
