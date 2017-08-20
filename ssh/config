@@ -57,9 +57,10 @@ Host mizawa
     IdentityFile /home/yao/.ssh/keys/mizawa
 
 Host tunnel
-    hostname oniku.mydns.jp
+    hostname tkg.pgw.jp
     port 22
     user yao
+    IdentityFile ~/.ssh/yao_rsa
     DynamicForward 1080
 
 Host tunnel_noami
