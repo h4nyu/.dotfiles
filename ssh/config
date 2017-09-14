@@ -12,7 +12,8 @@ Host gitlab.com
 
 Host desktop
     HostName 192.168.10.2
-    Port 1032
+    Port 22
+    IdentityFile ~/.ssh/yao_rsa
     User yao
 
 Host lan_rasp2
