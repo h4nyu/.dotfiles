@@ -82,8 +82,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='ls -G'
-alias ll='ls -l -G'
+alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias gf='git submodule foreach --recursive'
@@ -117,3 +116,12 @@ export EDITOR=vim
 export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:$PATH"
 
+git config --global user.name "x1nyuan"
+git config --global user.email "yao.ntno@gmail.com"
+git config --global push.default simple
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
+git config --global mergetool.prompt false
+git config --global mergetool.keepBackup false
+git config --global credential.helper cache
+git config --global core.autocrlf false
