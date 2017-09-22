@@ -3,9 +3,10 @@ cd vimrc
 sh link.sh
 cd ../
 
-ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -sf ~/.dotfiles/bashrc ~/.bashrc
-ln -sf ~/.dotfiles/vimperatorrc ~/.vimperatorrc
+cp ~/.dotfiles/tmux.conf ~/.tmux.conf
+cp ~/.dotfiles/bashrc ~/.bashrc
+cp ~/.dotfiles/profile ~/.profile
+cp ~/.dotfiles/vimperatorrc ~/.vimperatorrc
 
 rm -rf ~/.pandoc
 ln -sf ~/.dotfiles/pandoc ~/.pandoc

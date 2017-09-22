@@ -82,7 +82,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l'
+alias ls='ls -G'
+alias ll='ls -l -G'
 alias la='ls -A'
 alias l='ls -CF'
 alias gf='git submodule foreach --recursive'
@@ -115,6 +116,7 @@ fi
 export EDITOR=vim
 export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:$PATH"
+# eval `ssh-agent -s`
 
 git config --global user.name "x1nyuan"
 git config --global user.email "yao.ntno@gmail.com"
