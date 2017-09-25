@@ -11,6 +11,7 @@ Host gitlab.com
     IdentityFile ~/.ssh/yao_rsa
 
 Host desktop
+    ForwardAgent yes
     HostName 192.168.10.2
     Port 22
     IdentityFile ~/.ssh/yao_rsa
