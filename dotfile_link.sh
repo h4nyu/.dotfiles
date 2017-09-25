@@ -1,7 +1,4 @@
 #!/bin/sh
-cd vimrc
-sh link.sh
-cd ../
 
 cp ~/.dotfiles/tmux.conf ~/.tmux.conf
 cp ~/.dotfiles/bashrc ~/.bashrc
@@ -10,7 +7,6 @@ cp ~/.dotfiles/vimperatorrc ~/.vimperatorrc
 
 rm -rf ~/.pandoc
 ln -sf ~/.dotfiles/pandoc ~/.pandoc
-cp -f ./.gitconfig ~/.gitconfig
 
 
 
