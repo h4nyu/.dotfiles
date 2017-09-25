@@ -85,6 +85,7 @@ fi
 alias ls='ls -G'
 alias ll='ls -l -G'
 alias la='ls -A'
+alias ssh='ssh -A'
 alias l='ls -CF'
 alias gf='git submodule foreach --recursive'
 alias gs='git status'
