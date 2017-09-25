@@ -42,6 +42,7 @@ Host notebook
 
 Host ux21e
     HostName 192.168.10.6
+    ForwardAgent yes
     Port 22
     IdentityFile ~/.ssh/yao_rsa
     User yao
