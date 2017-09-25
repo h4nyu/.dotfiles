@@ -125,7 +125,8 @@ Host itg-srv.cgn.canon.co.jp
     IdentityFile ~/.ssh/itg_rsa
 
 Host sadazuka
-    hostname 172.18.212.92
+    hostname 172.18.200.115
+    ForwardAgent yes
     user yao
     port 22
     IdentityFile ~/.ssh/itg_rsa
