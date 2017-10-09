@@ -36,6 +36,7 @@ Host oniku.pgw.jp
 
 Host notebook
     HostName 192.168.10.5
+    ForwardAgent yes
     Port 1022
     IdentityFile ~/.ssh/yao_rsa
     User yao
