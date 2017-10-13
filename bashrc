@@ -72,9 +72,12 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    if [ "$(uname)" = 'Darwin' ]; then
+        export LSCOLORS=xbfxcxdxbxegedabagacad
+        alias ls='ls -G'
+    else
+        alias ls='ls --color=auto'
+    fi
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -82,9 +85,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='ls -G'
-alias ll='ls -l -G'
-alias la='ls -A'
 alias ssh='ssh -A'
 alias fig='docker-compose'
 alias l='ls -CF'
