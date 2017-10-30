@@ -129,3 +129,4 @@ git config --global mergetool.prompt false
 git config --global mergetool.keepBackup false
 git config --global credential.helper cache
 git config --global core.autocrlf false
+git config --global credential.helper 'cache --timeout 28800'
