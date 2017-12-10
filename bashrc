@@ -90,6 +90,8 @@ alias fig='docker-compose'
 alias l='ls -CF'
 alias gf='git submodule foreach --recursive'
 alias gs='git status'
+alias ll='ls -l'
+alias la='ls -a'
 # alias tmux='tmux -2'
 
 # Alias definitions.
