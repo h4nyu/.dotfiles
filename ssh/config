@@ -28,6 +28,7 @@ Host oniku
     Port 22 
     IdentityFile ~/.ssh/yao_rsa
     User yao
+    DynamicForward 1080
 
 Host notebook
     HostName 192.168.10.5
