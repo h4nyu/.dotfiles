@@ -23,16 +23,12 @@ Host lan_rasp2
     User yao
     IdentityFile ~/.ssh/yao_rsa
 
-Host rasp2
-    HostName oniku.pgw.jp
-    Port 1042
-    User yao
-    IdentityFile ~/.ssh/yao_rsa
-
-Host oniku.pgw.jp
-    HostName oniku.pgw.jp
+Host oniku
+    HostName oniku.mydns.jp
     Port 22 
     IdentityFile ~/.ssh/yao_rsa
+    User yao
+    DynamicForward 1080
 
 Host notebook
     HostName 192.168.10.5
@@ -133,3 +129,10 @@ Host sadazuka
     IdentityFile ~/.ssh/itg_rsa
 
 
+Host ubuntu-dev
+    HostName 192.168.10.7
+    Port 22
+    User yao
+    ForwardAgent yes
+
+    IdentityFile ~/.ssh/yao_rsa
