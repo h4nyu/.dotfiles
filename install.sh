@@ -4,9 +4,10 @@ sudo -E apt-get -y install vim-nox
 
 ./exit_root.sh
 
-cp ~/.dotfiles/tmux.conf ~/.tmux.conf
-cp ~/.dotfiles/bashrc ~/.bashrc
-cp -r ~/.dotfiles/vim ~/.vim
+ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -sf ~/.dotfiles/bashrc ~/.bashrc
+ln -sf ~/.dotfiles/vim ~/.vim
+
 cd ~/.vim
 sh install.sh
 
