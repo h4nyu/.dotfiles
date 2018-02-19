@@ -1,0 +1,141 @@
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo ='Shougo/unite.vim'
+hook_add='''
+source ~/.vim/plugins/unite.vim
+'''
+
+[[plugins]]
+repo ='Shougo/neomru.vim'
+depends = ['Shougo/unite.vim']
+
+[[plugins]]
+repo ='Shougo/unite-outline'
+
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+hook_add='''
+source ~/.vim/plugins/nerdcommenter.vim
+'''
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+source ~/.vim/plugins/colorscheme.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+source ~/.vim/plugins/indentline.vim
+'''
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_post_source = '''
+source ~/.vim/plugins/syntastic.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive' 
+hook_add = '''
+source ~/.vim/plugins/fugitive.vim
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+source ~/.vim/plugins/lightline.vim
+'''
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'airblade/vim-rooter'
+hook_add = '''
+source ~/.vim/plugins/vim-rooter.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+hook_add = '''
+source ~/.vim/plugins/neocomplete.vim
+'''
+
+[[plugins]]
+depends = ['Shougo/neocomplete.vim']
+repo = 'Shougo/neosnippet'
+hook_add = '''
+source ~/.vim/plugins/neosnippet.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
+repo = 'tshirtman/vim-cython'
+
+[[plugins]]
+repo = 'mhinz/vim-signify'
+
+[[plugins]]
+repo ='gregsexton/MatchTag'
+
+
+[[plugins]]
+repo ='junegunn/vim-easy-align'
+hook_add='''
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+'''
+
+[[plugins]]
+repo ='cohama/lexima.vim'
+
+[[plugins]]
+repo = "sheerun/vim-polyglot"
+
+[[plugins]]
+repo = "christoomey/vim-tmux-navigator"
+
+[[plugins]]
+repo = "benmills/vimux"
+hook_add='''
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+'''
+
+[[plugins]]
+repo = "edkolev/tmuxline.vim"
+hook_add='''
+let g:tmuxline_powerline_separators = 0
+let g:tmuxline_preset = {
+    \'a'    : '#S',
+    \'b'    : '#W',
+    \'c'    : '#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)',
+    \'cwin' : ['#I', '#W'],
+    \'win'  : ['#I', '#W'],
+    \'x'    : '#{?client_prefix,Prefix,      }',
+    \'y'    : ['%a', '%e-%b-%Y', '%l:%M%p'],
+    \'z'    : '#h'}
+'''
+
+
+
+

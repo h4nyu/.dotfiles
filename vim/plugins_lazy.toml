@@ -1,0 +1,18 @@
+[[plugins]]
+repo = 'tell-k/vim-autopep8'
+hook_add = '''
+source ~/.vim/plugins/vim-autopep8.vim
+'''
+on_ft = ['python']
+
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+hook_add = '''
+source ~/.vim/plugins/jedi-vim.vim
+'''
+on_ft = ['python']
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html']
