@@ -7,8 +7,9 @@ sudo -E apt-get -y install vim-nox
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/vim ~/.vim
+ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 
-cd ~/.vim
-sh install.sh
+git clone https://github.com/Shougo/dein.vim ~/.vim/dein/repos/github.com/Shougo/dein.vim
+vim  -c "q" 
 
 exit
