@@ -115,10 +115,7 @@ repo = "christoomey/vim-tmux-navigator"
 [[plugins]]
 repo = "benmills/vimux"
 hook_add='''
-" Prompt for a command to run
-map <Leader>r :VimuxPromptCommand<CR>
-map <Leader>e :VimuxRunLastCommand<CR>
-map <Leader>i :VimuxInspectRunner<CR>
+source ~/.vim/plugins/vimux.vim
 '''
 
 [[plugins]]
