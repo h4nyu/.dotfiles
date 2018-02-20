@@ -26,8 +26,8 @@ function! s:docker_compose_exec()
     endif
 endfunction
 
-nnoremap <leader>vr :call <SID>compile_and_run()<CR>
-nnoremap <leader>vd :call <SID>docker_compose_exec()<CR>
-nnoremap <leader>vp :VimuxPromptCommand<CR>
-nnoremap <leader>vl :VimuxRunLastCommand<CR>
-nnoremap <leader>vi :VimuxInspectRunner<CR>
+nnoremap <leader>r :call <SID>compile_and_run()<CR>
+nnoremap <leader>de :call <SID>docker_compose_exec()<CR>
+nnoremap <leader>rc :VimuxPromptCommand<CR>
+nnoremap <leader>rl :VimuxRunLastCommand<CR>
+nnoremap <leader>i :VimuxInspectRunner<CR>
