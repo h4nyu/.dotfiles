@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo -E apt-get -y install tmux 
 sudo -E apt-get -y install vim-nox
+sudo -E apt-get -y install silversearcher-ag
 
 ./exit_root.sh
 
