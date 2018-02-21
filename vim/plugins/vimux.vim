@@ -1,5 +1,6 @@
 function! s:compile_and_run()
     exec 'wa'
+    call VimuxRunCommand('clear') 
     if &filetype == 'c'
         call VimuxRunCommand('gcc % -o %<; time ./' . expand('%<')) 
     elseif &filetype == 'sh'
@@ -15,19 +16,7 @@ function! s:compile_and_run()
     endif
 endfunction
 
-function! s:docker_compose_exec()
-    exec ':wa'
-    let l:root_dir = FindRootDirectory()
-    let l:service = fnamemodify(getcwd(), ':t')
-    if &filetype == 'python'
-        call VimuxRunCommand('docker-compose -f '.l:root_dir.'/docker-compose.yml exec  -T '.l:service.' python '. expand('%')) 
-    elseif &filetype == 'python.pytest'
-        call VimuxRunCommand('docker-compose -f '.l:root_dir.'/docker-compose.yml exec  -T '.l:service.' pytest '. expand('%')) 
-    endif
-endfunction
-
-nnoremap <leader>r :call <SID>compile_and_run()<CR>
-nnoremap <leader>de :call <SID>docker_compose_exec()<CR>
+nnoremap <leader>rr :call <SID>compile_and_run()<CR>
 nnoremap <leader>rc :VimuxPromptCommand<CR>
 nnoremap <leader>rl :VimuxRunLastCommand<CR>
 nnoremap <leader>i :VimuxInspectRunner<CR>
