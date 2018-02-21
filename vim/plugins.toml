@@ -3,18 +3,12 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo ='Shougo/unite.vim'
-hook_add='''
-source ~/.vim/plugins/unite.vim
-'''
+repo ='junegunn/fzf'
+build="./install --all"
+
 
 [[plugins]]
-repo ='Shougo/neomru.vim'
-depends = ['Shougo/unite.vim']
-
-[[plugins]]
-repo ='Shougo/unite-outline'
-
+repo ='junegunn/fzf.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'

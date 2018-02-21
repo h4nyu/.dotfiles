@@ -133,3 +133,5 @@ git config --global credential.helper cache
 git config --global core.autocrlf false
 git config --global credential.helper 'cache --timeout 28800'
 git config --global http.postBuffer 52428800
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
