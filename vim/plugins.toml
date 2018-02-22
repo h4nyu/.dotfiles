@@ -10,8 +10,9 @@ build="./install --all"
 [[plugins]]
 repo ='junegunn/fzf.vim'
 hook_add='''
-nnoremap <Space>f :Files<CR>
-nnoremap <Space>s :GFiles?<CR>
+nnoremap <Space><Space> :Files<CR>
+nnoremap <Space>fc :Files %:p:h<CR>
+nnoremap <Space>fg :GFiles<CR>
 nnoremap <Space>h :History<CR>
 nnoremap <Space>c :Commits<CR>
 nnoremap <Space>l :Lines<CR>
