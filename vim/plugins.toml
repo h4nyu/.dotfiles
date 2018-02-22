@@ -138,7 +138,7 @@ function! s:compile_and_run()
     endif
 endfunction
 
-nnoremap <Space>rr :call <SID>compile_and_run()<CR>
+nnoremap <Space>r :call <SID>compile_and_run()<CR>
 nnoremap <Space>e :<C-u>VimuxPromptCommand<CR>
 nnoremap <Space>el :<C-u>VimuxRunLastCommand<CR>
 nnoremap <Space>i :<C-u>VimuxInspectRunner<CR>
