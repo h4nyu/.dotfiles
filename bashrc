@@ -127,10 +127,9 @@ git config --global credential.helper cache
 git config --global core.autocrlf false
 git config --global credential.helper 'cache --timeout 28800'
 git config --global http.postBuffer 52428800
-stty -ixon 
+stty -ixon
 
 
 alias gs='git status' 
 alias gp='git push' 
 alias gf='git fetch' 
-alias dc='docker-compose' 
