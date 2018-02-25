@@ -131,4 +131,6 @@ stty -ixon
 
 
 alias gs='git status' 
+alias gp='git push' 
+alias gf='git fetch' 
 alias dc='docker-compose' 
