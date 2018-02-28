@@ -160,5 +160,11 @@ let g:tmuxline_preset = {
 '''
 
 
+[[plugins]]
+repo = "plasticboy/vim-markdown"
+hook_add='''
+let g:vim_markdown_conceal = 0
+'''
+
 
 
