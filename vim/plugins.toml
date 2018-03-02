@@ -3,22 +3,23 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo ='junegunn/fzf'
-build="./install --all"
 
-
-[[plugins]]
-repo ='junegunn/fzf.vim'
+repo ='ctrlpvim/ctrlp.vim'
 hook_add='''
-nnoremap <Space><Space> :FZF<CR>
-nnoremap <Space>fc :Files %:p:h<CR>
-nnoremap <Space>gf :GFiles<CR>
-nnoremap <Space>b :Buffers<CR>
-nnoremap <Space>h :History<CR>
-nnoremap <Space>c :Commits<CR>
-nnoremap <Space>l :Lines<CR>
-nnoremap <Space>/ :BLines<CR>
-nnoremap <Space>a :Ag<Space>
+nnoremap <Space><Space> :CtrlPMixed<CR>
+nnoremap <Space>b :CtrlPBuffer<CR>
+nnoremap <Space>h :CtrlPMRUFiles<CR>
+nnoremap <Space>f :CtrlPCurWD<CR>
+nnoremap <Space>c :CtrlPCurFile<CR>
+nnoremap <Space>l :CtrlPLine<CR>
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 '''
 
 [[plugins]]
