@@ -9,10 +9,12 @@ hook_add='''
 nnoremap <Space><Space> :CtrlPMixed<CR>
 nnoremap <Space>b :CtrlPBuffer<CR>
 nnoremap <Space>h :CtrlPMRUFiles<CR>
-nnoremap <Space>f :CtrlPCurWD<CR>
-nnoremap <Space>c :CtrlPCurFile<CR>
+nnoremap <Space>ff :CtrlP<CR>
+nnoremap <Space>fc :CtrlPCurFile <CR>
 nnoremap <Space>l :CtrlPLine<CR>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/node_modules/* 
+set wildignore+=*.pyc
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
