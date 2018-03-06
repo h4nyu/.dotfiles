@@ -133,5 +133,6 @@ stty -ixon
 alias gs='git status' 
 alias gp='git push' 
 alias gf='git fetch' 
+alias ag='ag -S -p ~/.ignore' 
 
-export FZF_DEFAULT_COMMAND='ag -s --files-with-matches .'
+export FZF_DEFAULT_COMMAND='ag -S -p ~/.ignore --files-with-matches .'

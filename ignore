@@ -1,1 +1,3 @@
 *.pyc
+*.prof
+node_modules
