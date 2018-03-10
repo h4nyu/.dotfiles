@@ -73,4 +73,3 @@ git config --global http.postBuffer 52428800
 stty -ixon
 
 export FZF_DEFAULT_COMMAND='ag -S -p ~/.ignore --files-with-matches .'
-[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
