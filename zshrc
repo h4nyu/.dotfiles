@@ -1,18 +1,11 @@
-# 環境変数
-export LANG=ja_JP.UTF-8
 
-# ヒストリの設定
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-# 直前のコマンドの重複を削除
 setopt hist_ignore_dups
-# 同じコマンドをヒストリに残さない
 setopt hist_ignore_all_dups
-# 同時に起動したzshの間でヒストリを共有
 setopt share_history
 
-# 補完機能を有効にする
 autoload -Uz compinit
 compinit -u
 if [ -e /usr/local/share/zsh-completions ]; then
@@ -25,22 +18,30 @@ setopt list_packed
 # 補完候補一覧をカラー表示
 zstyle ':completion:*' list-colors ''
 
-# コマンドのスペルを訂正
 setopt correct
-# ビープ音を鳴らさない
 setopt no_beep
+
+autoload -Uz vcs_info
+colors
+
+# PROMPT変数内で変数参照
+setopt prompt_subst
 
 # prompt
 autoload -Uz vcs_info
+autoload -Uz colors # black red green yellow blue magenta cyan white
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{magenta}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
 zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
+
+
 precmd() { vcs_info }
-PROMPT='%m:%F{green}%~%f %n %F{yellow}$%f '
+PROMPT='%F{green}%n@%m:%f%~ %F{green}$%f '
 RPROMPT='${vcs_info_msg_0_}'
+
 
 # alias
 alias ls='ls -aF'
@@ -73,3 +74,6 @@ git config --global http.postBuffer 52428800
 stty -ixon
 
 export FZF_DEFAULT_COMMAND='ag -S -p ~/.ignore --files-with-matches .'
+export EDITOR=vim
+export TERM=xterm-256color
+export PATH="$HOME/.yarn/bin:$PATH"
