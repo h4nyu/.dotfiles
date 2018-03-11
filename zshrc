@@ -6,8 +6,11 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt share_history
 
-autoload -Uz compinit
+autoload -Uz compinit && compinit -i
 compinit -u
+if [ -e ~/.zsh/completion ]; then
+    fpath=(~/.zsh/completion $fpath)
+fi
 if [ -e /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
@@ -46,9 +49,6 @@ RPROMPT='${vcs_info_msg_0_}'
 # alias
 alias ls='ls -aF'
 alias ll='ls -l'
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
 alias vi='vim'
 alias cat='cat -n'
 alias less='less -NM'
