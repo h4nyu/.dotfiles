@@ -25,7 +25,6 @@ setopt correct
 setopt no_beep
 
 autoload -Uz vcs_info
-colors
 
 # PROMPT変数内で変数参照
 setopt prompt_subst
