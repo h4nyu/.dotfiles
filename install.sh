@@ -3,7 +3,7 @@ sudo -E apt-get -y install tmux
 sudo -E apt-get -y install zsh
 sudo -E apt-get -y install vim-nox
 sudo -E apt-get -y install silversearcher-ag
-chsh -s $(which zsh)
+chsh -s $(`which zsh`) $USER
 
 ./exit_root.sh
 
