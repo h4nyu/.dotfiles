@@ -165,3 +165,6 @@ repo = "plasticboy/vim-markdown"
 hook_add='''
 let g:vim_markdown_conceal = 0
 '''
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
