@@ -22,6 +22,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 setopt list_packed
 # 補完候補一覧をカラー表示
 zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' menu select
 
 setopt correct
 setopt no_beep
