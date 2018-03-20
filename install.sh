@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo -E apt-get -y install tmux 
-sudo -E apt-get -y install zsh
+# sudo -E apt-get -y install zsh
 sudo -E apt-get -y install vim-nox
 sudo -E apt-get -y install silversearcher-ag
 chsh -s $(`which zsh`) $USER
@@ -9,7 +9,7 @@ chsh -s $(`which zsh`) $USER
 
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
-ln -sf ~/.dotfiles/zshrc ~/.zshrc
+# ln -sf ~/.dotfiles/zshrc ~/.zshrc
 ln -sf ~/.dotfiles/ignore ~/.ignore
 ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/vim ~/.vim
