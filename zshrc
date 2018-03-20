@@ -1,3 +1,5 @@
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey -e
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
