@@ -1,4 +1,7 @@
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.dotfiles/antigen.zsh
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen apply
 bindkey -e
 
 HISTFILE=~/.zsh_history

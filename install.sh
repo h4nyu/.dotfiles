@@ -15,6 +15,7 @@ ln -sf ~/.dotfiles/ignore ~/.ignore
 ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/vim ~/.vim
 
+curl -L git.io/antigen > antigen.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/Shougo/dein.vim ~/.vim/dein/repos/github.com/Shougo/dein.vim
 
