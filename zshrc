@@ -1,7 +1,13 @@
-source ~/.dotfiles/antigen.zsh
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen apply
+if [[ ! -f ~/.antigen/antigen.zsh ]]; then
+    curl -L git.io/antigen --create-dirs -o ~/.antigen/antigen.zsh
+fi
+
+if [[ -f ~/.antigen/antigen.zsh ]]; then
+    source ~/.antigen/antigen.zsh
+    antigen bundle zsh-users/zsh-completions
+    antigen bundle zsh-users/zsh-autosuggestions
+    antigen apply
+fi
 bindkey -e
 
 HISTFILE=~/.zsh_history
