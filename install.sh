@@ -10,6 +10,6 @@ if [ ! -f ~/.vim ]; then
 fi
 
 
-if [ ! -f ~/.dotfiles/vim/dein.vim ]; then
+if [ ! -d ~/.dotfiles/vim/dein ]; then
     git clone https://github.com/Shougo/dein.vim ~/.vim/dein/repos/github.com/Shougo/dein.vim
 fi
