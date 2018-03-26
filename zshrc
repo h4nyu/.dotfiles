@@ -9,6 +9,7 @@ if [[ -f ~/.antigen/antigen.zsh ]]; then
     antigen apply
 fi
 bindkey -e
+bindkey "\e[Z" reverse-menu-complete
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -16,9 +17,11 @@ SAVEHIST=10000
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
+
+autoload -Uz compinit && compinit -u
+zstyle ':completion:*' menu select interactive
 setopt MENU_COMPLETE
 
-autoload -Uz compinit && compinit -i
 compinit -u
 if [ -e ~/.zsh/completion ]; then
     fpath=(~/.zsh/completion $fpath)
