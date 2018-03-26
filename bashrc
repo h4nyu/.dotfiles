@@ -141,3 +141,6 @@ alias gf='git fetch'
 alias ag='ag -S -p ~/.ignore' 
 
 export FZF_DEFAULT_COMMAND='ag -S -p ~/.ignore --files-with-matches .'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

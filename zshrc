@@ -29,6 +29,11 @@ fi
 if [ -e /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
+
+if [ -e ~/.antigen/bundles/zsh-users/zsh-completions/src ]; then
+    fpath=(~/.antigen/bundles/zsh-users/zsh-completions/src $fpath)
+fi
+
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 補完候補を詰めて表示
@@ -89,6 +94,9 @@ git config --global http.postBuffer 52428800
 stty -ixon
 
 export FZF_DEFAULT_COMMAND='ag -S -p ~/.ignore --files-with-matches .'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 export EDITOR=vim
 export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
