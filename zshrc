@@ -34,13 +34,6 @@ if [ -e ~/.antigen/bundles/zsh-users/zsh-completions/src ]; then
     fpath=(~/.antigen/bundles/zsh-users/zsh-completions/src $fpath)
 fi
 
-# 補完で小文字でも大文字にマッチさせる
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-# 補完候補を詰めて表示
-setopt list_packed
-# 補完候補一覧をカラー表示
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' menu select
 
 setopt correct
 setopt no_beep
@@ -60,14 +53,15 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
 zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 
+export LSCOLORS=ExFxCxdxBxegedabagacad
+export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 precmd() { vcs_info }
 PROMPT='%F{green}%n@%m:%f%~%F{green}$%f '
 RPROMPT='${vcs_info_msg_0_}'
 
-
 # alias
-alias ls='ls -aF'
 alias ll='ls -l'
 alias vi='vim'
 alias cat='cat -n'
@@ -77,8 +71,16 @@ alias gp='git push'
 alias gf='git fetch' 
 alias ag='ag -S -p ~/.ignore' 
 
-export CLICOLOR=1
-export LSCOLORS=DxGxcxdxCxegedabagacad
+case "${OSTYPE}" in
+freebsd*|darwin*)
+  alias ls="ls -GF"
+  ;;
+linux*)
+  alias ls="ls -F --color=auto"
+  ;;
+esac
+
+
 
 git config --global user.name "x1nyuan"
 git config --global user.email "yao.ntno@gmail.com"
