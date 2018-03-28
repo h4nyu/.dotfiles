@@ -17,6 +17,8 @@ SAVEHIST=10000
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
+setopt correct
+setopt no_beep
 
 autoload -Uz compinit && compinit -u
 zstyle ':completion:*' menu select interactive
@@ -35,9 +37,6 @@ if [ -e ~/.antigen/bundles/zsh-users/zsh-completions/src ]; then
 fi
 
 
-setopt correct
-setopt no_beep
-
 autoload -Uz vcs_info
 
 # PROMPT変数内で変数参照
@@ -53,8 +52,8 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
 zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 
-export LSCOLORS=ExFxCxdxBxegedabagacad
-export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LSCOLORS=xbfxcxdxbxegedabagacad
+export LS_COLORS='di=01;33:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 precmd() { vcs_info }
