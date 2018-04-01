@@ -1,6 +1,6 @@
 set statusline+=%#warningmsg#
 set statusline+=%*
-let g:syntastic_python_python_exec = 'python3.6'
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_python_flake8_args='--ignore=E501,E225'
 let g:syntastic_python_checkers=["flake8"]
 
