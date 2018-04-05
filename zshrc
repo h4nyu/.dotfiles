@@ -16,13 +16,10 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 autoload -Uz compinit && compinit -u
-zstyle ':completion:*' format '%B%F{blue}%d%f%b'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' keep-prefix
-# zstyle ':completion:*' recent-dirs-insert both
+zstyle ':completion:*' recent-dirs-insert both
 zstyle ':completion:*' completer _complete _ignored
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path ~/.zsh/cache
@@ -41,7 +38,7 @@ setopt hist_no_store
 setopt hist_verify
 setopt share_history  # シェルのプロセスごとに履歴を共有
 setopt extended_history  # 履歴ファイルに時刻を記録
-#setopt hist_expand  # 補完時にヒストリを自動的に展開する。
+setopt hist_expand  # 補完時にヒストリを自動的に展開する。
 setopt append_history  # 複数の zsh を同時に使う時など history ファイルに上書きせず追加
 setopt auto_cd  # ディレクトリ名だけで移動
 setopt auto_pushd  # cd したら pushd
