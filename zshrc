@@ -22,11 +22,10 @@ zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' keep-prefix
-zstyle ':completion:*' recent-dirs-insert both
+# zstyle ':completion:*' recent-dirs-insert both
 zstyle ':completion:*' completer _complete _ignored
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path ~/.zsh/cache
-zstyle ':completion:*' verbose no
 zstyle ':completion:*' verbose no
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin
 
