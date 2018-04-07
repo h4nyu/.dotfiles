@@ -1,6 +1,4 @@
-fisher
-# set pure_color_cyan (set_color "90B4E9")
-set -x LSCOLORS ebfxcxdxbxegedabagacad
+set -x LSCOLORS exfxcxdxbxegedabagacad
 set -x LS_COLORS 'di=01;94:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 set -x EDITOR vim
 set -x TERM xterm-256color
