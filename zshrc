@@ -16,6 +16,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 autoload -Uz compinit && compinit -u
+zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' keep-prefix
@@ -44,7 +45,7 @@ setopt auto_cd  # ディレクトリ名だけで移動
 setopt auto_pushd  # cd したら pushd
 setopt auto_list  # 補完候補が複数ある時に、一覧表示
 setopt auto_menu  # 補完候補が複数あるときに自動的に一覧表示する
-#setopt auto_param_slash
+setopt auto_param_slash
 setopt list_packed
 setopt list_types
 setopt no_flow_control
