@@ -1,4 +1,3 @@
-fisher fzf rafaelrinaldi/pure
 # set pure_color_cyan (set_color "90B4E9")
 
 set -x LSCOLORS ebfxcxdxbxegedabagacad
