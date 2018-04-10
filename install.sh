@@ -10,10 +10,9 @@ if [ ! -f ~/.vim ]; then
     ln -sf ~/.dotfiles/vim ~/.vim
 fi
 
-if [ ! -d ~/.fzf ]; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-fi
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 if [ ! -d ~/.dotfiles/vim/dein ]; then
     git clone https://github.com/Shougo/dein.vim ~/.vim/dein/repos/github.com/Shougo/dein.vim
