@@ -3,9 +3,6 @@ function sync_history --on-event fish_preexec
     history --merge
 end
 
-if test -e ~/.env.fish
-    source ~/.env.fish
-end
 set -x LSCOLORS exfxcxdxbxegedabagacad
 set -x LS_COLORS 'di=01;94:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 set -x EDITOR vim
@@ -29,3 +26,7 @@ git config --global core.autocrlf false
 git config --global credential.helper 'cache --timeout 28800'
 git config --global http.postBuffer 52428800
 stty -ixon
+
+if test -e ~/.env.fish
+    source ~/.env.fish
+end
