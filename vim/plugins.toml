@@ -62,6 +62,40 @@ source ~/.vim/plugins/lightline.vim
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
+hook_add = '''
+let g:AutoPairsMapCR = 0
+'''
+
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets']
+hook_add = '''
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+'''
+
+
 
 [[plugins]]
 repo = 'airblade/vim-rooter'
@@ -70,20 +104,21 @@ source ~/.vim/plugins/vim-rooter.vim
 '''
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-hook_add = '''
-source ~/.vim/plugins/neocomplete.vim
-'''
+repo = 'roxma/nvim-yarp'
 
 [[plugins]]
-depends = ['Shougo/neocomplete.vim']
-repo = 'Shougo/neosnippet'
-hook_add = '''
-source ~/.vim/plugins/neosnippet.vim
-'''
+repo = 'roxma/vim-hug-neovim-rpc'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'Shougo/deoplete.nvim'
+depends = ['roxma/nvim-yarp', 'roxma/vim-hug-neovim-rpc']
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+inoremap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
+'''
 
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'
