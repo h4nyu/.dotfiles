@@ -3,7 +3,12 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo ='junegunn/fzf'
+build = 'install'
+
+[[plugins]]
 repo ='junegunn/fzf.vim'
+depends = ['fzf']
 hook_add='''
 nnoremap <Space><Space> :FZF<CR>
 nnoremap <Space>fc :Files %:p:h<CR>
