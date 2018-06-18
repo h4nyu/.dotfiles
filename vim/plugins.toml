@@ -3,6 +3,9 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo ='rhysd/clever-f.vim'
+
+[[plugins]]
 repo ='junegunn/fzf'
 build = 'install'
 
