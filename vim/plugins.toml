@@ -3,22 +3,25 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo ='junegunn/fzf'
-build = 'install'
+repo = 'Shougo/neomru.vim'
 
 [[plugins]]
-repo ='junegunn/fzf.vim'
-depends = ['fzf']
+repo = 'Shougo/denite.nvim'
 hook_add='''
-nnoremap <Space><Space> :FZF<CR>
-nnoremap <Space>fc :Files %:p:h<CR>
-nnoremap <Space>gf :GFiles<CR>
-nnoremap <Space>b :Buffers<CR>
-nnoremap <Space>h :History<CR>
-nnoremap <Space>c :Commits<CR>
-nnoremap <Space>l :Lines<CR>
-nnoremap <Space>/ :BLines<CR>
-nnoremap <Space>a :Ag<Space>
+let s:menus = {}
+let s:menus.vim = {
+    \ 'description': 'Vim',
+    \ }
+let s:menus.vim.file_candidates = [
+    \ ['    > Edit configuation file (init.vim)', '~/.config/nvim/init.vim']
+    \ ]
+nnoremap [denite] <Nop>
+nnoremap <Space><Space> :<C-u>Denite file_rec<CR>
+nnoremap <Space>fc :<C-u>DeniteBufferDir file<CR>
+nnoremap <Space>ff :<C-u>Denite buffer<CR>
+nnoremap <Space>h :<C-u>Denite file_mru<CR>
+nnoremap <Space>l :<C-u>Denite line<CR>
+nnoremap <Space>g :<C-u>Denite grep file<CR>
 '''
 
 [[plugins]]
