@@ -7,7 +7,7 @@ repo ='rhysd/clever-f.vim'
 
 [[plugins]]
 repo ='junegunn/fzf'
-build = 'install'
+build = './install'
 
 [[plugins]]
 repo ='junegunn/fzf.vim'
