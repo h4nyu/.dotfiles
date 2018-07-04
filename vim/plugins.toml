@@ -219,5 +219,5 @@ let g:multi_cursor_quit_key            = 'q'
 [[plugins]]
 repo = 'Chiel92/vim-autoformat'
 hook_add='''
-nnoremap <leader>f :<C-u>Autoformat<CR>
+nnoremap <leader>f :<C-u>Autoformat <CR>:<C-u>:w<CR>
 '''
