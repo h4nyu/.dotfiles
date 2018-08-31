@@ -14,15 +14,15 @@ alias gp='git push'
 alias gf='git fetch' 
 alias ag='ag -S -p ~/.ignore' 
 
-git config --local push.default simple
-git config --local merge.tool vimdiff
-git config --local merge.conflictstyle diff3
-git config --local mergetool.prompt false
-git config --local mergetool.keepBackup false
-git config --local credential.helper cache
-git config --local core.autocrlf false
-git config --local credential.helper 'cache --timeout 28800'
-git config --local http.postBuffer 52428800
+git config --global push.default simple
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
+git config --global mergetool.prompt false
+git config --global mergetool.keepBackup false
+git config --global credential.helper cache
+git config --global core.autocrlf false
+git config --global credential.helper 'cache --timeout 28800'
+git config --global http.postBuffer 52428800
 stty -ixon
 
 if test -e ~/.env.fish
