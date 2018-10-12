@@ -3,7 +3,24 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo ='rhysd/clever-f.vim'
+repo ='easymotion/vim-easymotion'
+hook_add='''
+" <Leader>f{char} to move to {char}
+map  f <Plug>(easymotion-bd-f)
+nmap f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map L <Plug>(easymotion-bd-jk)
+nmap L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  W <Plug>(easymotion-bd-w)
+nmap W <Plug>(easymotion-overwin-w)
+let g:EasyMotion_smartcase = 1
+'''
 
 [[plugins]]
 repo ='junegunn/fzf'
