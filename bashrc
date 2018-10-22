@@ -139,9 +139,8 @@ stty -ixon
 alias gs='git status' 
 alias gp='git push' 
 alias gf='git fetch' 
-alias ag='ag -S -p ~/.ignore' 
 
-export FZF_DEFAULT_COMMAND='ag -U --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
