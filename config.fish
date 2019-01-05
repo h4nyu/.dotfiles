@@ -8,11 +8,12 @@ set -x LS_COLORS 'di=01;94:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30
 set -x EDITOR vim
 set -x TERM xterm-256color
 set -x FZF_DEFAULT_COMMAND 'ag --hidden -g ""'
+set -gx  LC_ALL en_US.UTF-8
 
 
-alias gs='git status' 
-alias gp='git push' 
-alias gf='git fetch' 
+alias gs='git status'
+alias gp='git push'
+alias gf='git fetch'
 
 
 git config --global push.default simple
