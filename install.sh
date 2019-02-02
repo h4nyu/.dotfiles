@@ -7,14 +7,12 @@ ln -sf ~/.dotfiles/ignore ~/.ignore
 ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 
 if [ ! -f ~/.vim ]; then
-    ln -sf ~/.dotfiles/vim ~/.vim
+    mkdir ~/.viM
+    ln -sf ~/.dotfiles/vim/src ~/.vim
 fi
 
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-
-if [ ! -d ~/.dotfiles/vim/dein ]; then
-    git clone https://github.com/Shougo/dein.vim ~/.vim/dein/repos/github.com/Shougo/dein.vim
-fi
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 if [ ! -d ~/.fzf ]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
