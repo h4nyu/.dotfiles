@@ -1,15 +1,16 @@
 " ================
 " basic config
 " ================
-source ~/.vim/basics/basic.vim
-source ~/.vim/basics/keys.vim
-source ~/.vim/basics/util.vim
-source ~/.vim/basics/filetypes.vim
+source ~/.vim/src/basic.vim
+source ~/.vim/src/keys.vim
+source ~/.vim/src/util.vim
+source ~/.vim/src/filetypes.vim
+source ~/.vim/src/plugins.vim
+source ~/.vim/src/plugin_confs.vim
 
 
 " ================
 " plugin loader
 " ================
-source ~/.vim/dein.vim
 
 
