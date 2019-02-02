@@ -12,6 +12,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Initialize plugin system
