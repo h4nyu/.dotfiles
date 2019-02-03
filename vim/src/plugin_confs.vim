@@ -152,3 +152,8 @@ endfunction
 " jiangmiao/auto-pairs
 " --------------------
 let g:AutoPairsMapCR = 0
+
+" ------------------------
+" vim-python/python-syntax
+" ------------------------
+let g:python_highlight_all = 1

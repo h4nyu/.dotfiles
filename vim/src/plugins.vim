@@ -14,6 +14,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'vim-python/python-syntax'
 
 " Initialize plugin system
 call plug#end()
