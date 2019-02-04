@@ -16,6 +16,7 @@ Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
+Plug 'tell-k/vim-autopep8'
 
 " Initialize plugin system
 call plug#end()
