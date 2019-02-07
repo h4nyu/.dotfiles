@@ -14,5 +14,6 @@ augroup END
 
 au BufNewFile,BufRead *.in set filetype=requirement
 au BufNewFile,BufRead *.swift set filetype=swift
+au BufNewFile,BufRead *.html set filetype=xml
 
 au FileType python set efm+=%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m

@@ -18,6 +18,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'tell-k/vim-autopep8'
 Plug 'airblade/vim-rooter'
+Plug 'othree/html5.vim'
 
 " Initialize plugin system
 call plug#end()
