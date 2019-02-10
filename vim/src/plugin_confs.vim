@@ -1,3 +1,4 @@
+" 
 " ------------
 " junegunn/fzf
 " ------------
@@ -170,3 +171,8 @@ let g:autopep8_disable_show_diff=1
 " -------------------
 autocmd FileType python noremap <buffer> <Leader>f :call Autopep8()<CR>
 let g:rooter_patterns = ['.git/']
+
+" -----------------
+" ervandew/supertab
+" -----------------
+let g:SuperTabDefaultCompletionType = "<c-n>"
