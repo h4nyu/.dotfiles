@@ -19,6 +19,7 @@ set nowritebackup
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 set smarttab
 set completeopt=menuone
 set foldmethod=indent   
