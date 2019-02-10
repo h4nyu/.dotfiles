@@ -20,6 +20,7 @@ Plug 'vim-python/python-syntax'
 Plug 'tell-k/vim-autopep8'
 Plug 'airblade/vim-rooter'
 Plug 'othree/html5.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " Initialize plugin system
 call plug#end()
