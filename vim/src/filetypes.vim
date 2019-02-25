@@ -8,6 +8,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.json setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd FileType vue syntax sync fromstart
     autocmd FileType nginx setl sw=2 sts=2 et
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
 
 au BufNewFile,BufRead *.in set filetype=requirement
