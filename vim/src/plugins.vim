@@ -12,7 +12,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
@@ -20,6 +19,18 @@ Plug 'tell-k/vim-autopep8'
 Plug 'airblade/vim-rooter'
 Plug 'othree/html5.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'mattn/emmet-vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 " Initialize plugin system
 call plug#end()
