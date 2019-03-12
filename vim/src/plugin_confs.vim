@@ -172,33 +172,9 @@ let g:autopep8_disable_show_diff=1
 autocmd FileType python noremap <buffer> <Leader>f :call Autopep8()<CR>
 let g:rooter_patterns = ['.git/']
 
+" -----------------
+" ervandew/supertab
+" -----------------
 
-" --------------------
-" Shougo/deoplete.nvim
-" --------------------
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab>
-    \ pumvisible() ? "\<C-n>" : deoplete#manual_complete()
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
-" --------------------
-" Shougo/deoplete.nvim
-" --------------------
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
