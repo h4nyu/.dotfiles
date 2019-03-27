@@ -22,7 +22,6 @@ Plug 'othree/html5.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
-Plug 'vim-syntastic/syntastic'
 Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
