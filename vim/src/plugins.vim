@@ -21,8 +21,18 @@ Plug 'airblade/vim-rooter'
 Plug 'othree/html5.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mattn/emmet-vim'
-Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 " Initialize plugin system
 call plug#end()
+
