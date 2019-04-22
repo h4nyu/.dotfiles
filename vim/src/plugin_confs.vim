@@ -161,12 +161,6 @@ let g:python_highlight_all = 1
 
 
 " -------------------
-" tell-k/vim-autopep8
-" -------------------
-autocmd FileType python noremap <buffer> <Leader>f :call Autopep8()<CR>
-let g:autopep8_disable_show_diff=1
-
-" -------------------
 " airblade/vim-rooter
 " -------------------
 autocmd FileType python noremap <buffer> <Leader>f :call Autopep8()<CR>
