@@ -163,12 +163,10 @@ let g:python_highlight_all = 1
 " -------------------
 " airblade/vim-rooter
 " -------------------
-autocmd FileType python noremap <buffer> <Leader>f :call Autopep8()<CR>
 let g:rooter_patterns = ['.git/']
 
-
 " -------------------
-" airblade/vim-rooter
+" deoplete
 " -------------------
 let g:deoplete#enable_at_startup = 1
 function! s:check_back_space() abort "{{{
@@ -179,12 +177,6 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ deoplete#manual_complete()
-
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
