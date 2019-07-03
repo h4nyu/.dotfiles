@@ -10,7 +10,6 @@ set smartindent
 set ruler
 set laststatus=2
 set mouse=a
-set ttymouse=xterm2
 set encoding=utf-8
 set wildmenu
 set incsearch

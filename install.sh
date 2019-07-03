@@ -6,6 +6,8 @@ ln -sf ~/.dotfiles/config.fish ~/.config/fish/config.fish
 ln -sf ~/.dotfiles/ignore ~/.ignore
 ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 
+mkdir -p ~/.config/nvim
+ln -sf ~/.dotfiles/vim/.vimrc ~/.config/nvim/init.vim
 
 if [ ! -f ~/.vim ]; then
     mkdir -p ~/.vim/src
