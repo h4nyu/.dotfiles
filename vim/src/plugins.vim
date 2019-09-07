@@ -23,6 +23,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-easy-align'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
