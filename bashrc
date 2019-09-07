@@ -139,7 +139,8 @@ stty -ixon
 alias gs='git status' 
 alias gp='git push' 
 alias gf='git fetch' 
-alias gbr="git branch | grep -v "master" | xargs git branch -D"
+alias gbr="git branch | grep -ve " master$" | xargs git branch -D"
+
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
