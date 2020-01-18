@@ -31,6 +31,8 @@ set path+=/opt/ros/jade/include
 set path+=/usr/include
 set path+=/usr/local/include
 set tags=./tags;
+set autoread
+au CursorHold * checktime
 
 
 set background=dark

@@ -25,6 +25,7 @@ Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 Plug 'junegunn/vim-easy-align'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'rust-lang/rust.vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
