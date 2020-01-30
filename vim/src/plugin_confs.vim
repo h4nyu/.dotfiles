@@ -32,8 +32,6 @@ map  W <Plug>(easymotion-bd-w)
 nmap W <Plug>(easymotion-overwin-w)
 let g:EasyMotion_smartcase = 1
 
-" w0ng/vim-hybrid
-colorscheme hybrid
 
 
 " ------------------------
@@ -201,3 +199,5 @@ hi tsxTypeBraces guifg=#999999
 " dark-grey
 hi tsxTypes guifg=#666666
 
+" w0ng/vim-hybrid
+colorscheme hybrid
