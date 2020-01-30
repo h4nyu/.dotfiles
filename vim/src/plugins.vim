@@ -26,6 +26,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'rust-lang/rust.vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
