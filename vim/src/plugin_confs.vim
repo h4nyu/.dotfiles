@@ -164,22 +164,6 @@ let g:python_highlight_all = 1
 let g:rooter_patterns = ['.git/']
 
 " -------------------
-" deoplete
-" -------------------
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-
-" -------------------
 "  peitalin / vim-jsx-typescript
 " -------------------
 " dark red
