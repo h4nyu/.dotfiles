@@ -1,9 +1,6 @@
 #!/bin/bash
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
-ln -sf ~/.dotfiles/zshrc ~/.zshrc
-ln -sf ~/.dotfiles/config.fish ~/.config/fish/config.fish
-ln -sf ~/.dotfiles/ignore ~/.ignore
 ln -sf ~/.dotfiles/vim/.vimrc ~/.vimrc
 
 mkdir -p ~/.config/nvim
@@ -21,4 +18,3 @@ if [ ! -d ~/.fzf ]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 fi
-
