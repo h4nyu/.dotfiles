@@ -185,3 +185,6 @@ hi tsxTypes guifg=#666666
 
 " w0ng/vim-hybrid
 colorscheme hybrid
+
+" deoplete
+inoremap <silent><expr> <TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"

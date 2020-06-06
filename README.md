@@ -6,6 +6,7 @@
 - zsh
 - vim-nox
 - silversearcher-ag
+- pynvim
 
 ## install
 ```bash
