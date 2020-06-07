@@ -201,7 +201,7 @@ imap <expr><TAB>
 \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
+call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
