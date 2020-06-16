@@ -184,4 +184,4 @@ hi tsxTypeBraces guifg=#999999
 hi tsxTypes guifg=#666666
 
 " w0ng/vim-hybrid
-colorscheme molokai
+colorscheme jellybeans
