@@ -42,7 +42,9 @@ fi
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
-export PS1="\e[0;32m[\u@\h \W]\$ \e[m "
+# export PS1="\e[0;32m[\u@\h \W]\$ \e[m "
+
+export PS1="\[$(tput sgr0)\]\[\033[38;5;46m\][\u\[$(tput sgr0)\]\[\033[38;5;226m\]@\[$(tput sgr0)\]\[\033[38;5;208m\]\H]\[$(tput sgr0)\]\[\033[38;5;15m\] \n\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;135m\]\w:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;135m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
