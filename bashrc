@@ -42,6 +42,8 @@ fi
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
+export PS1="\e[0;32m[\u@\h \W]\$ \e[m "
+
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
