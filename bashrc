@@ -107,7 +107,8 @@ alias gf='git fetch'
 alias grb='git branch | grep -ve " master$" | xargs git branch -D'
 
 
-export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 
+export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --border --info=inline --preview 'file {}'"
+# fg:#bbccdd,fg+:#ddeeff, bg:#334455,
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
