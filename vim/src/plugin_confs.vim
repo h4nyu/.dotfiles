@@ -9,8 +9,7 @@ nnoremap <Space>gf :GFiles<CR>
 nnoremap <Space>gs :GFiles?<CR>
 nnoremap <Space>h :History<CR>
 nnoremap <Space>c :Commits<CR>
-nnoremap <Space>l :Lines<CR>
-nnoremap <Space>/ :BLines<CR>
+nnoremap <Space>l :BLines<CR>
 nnoremap <Space>a :Ag<Space>
 
 
