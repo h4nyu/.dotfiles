@@ -6,7 +6,6 @@ nnoremap <Space><Space> :FZF<CR>
 nnoremap <Space>fc :Files %:p:h<CR>
 nnoremap <Space>fb :Buffers<CR>
 nnoremap <Space>gf :GFiles<CR>
-nnoremap <Space>gs :GFiles?<CR>
 nnoremap <Space>h :History<CR>
 nnoremap <Space>c :Commits<CR>
 nnoremap <Space>l :BLines<CR>
