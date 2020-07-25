@@ -3,15 +3,12 @@
 - curl
 - git 
 - tmux
-- zsh
 - vim-nox
-- silversearcher-ag
-- pynvim
+- ripgrep
 
 ## install
 ```bash
-git clone this_repo ~/.dotfiles
+git clone this_repo
 cd ~/.dotfiles
 sh install.sh
 ```
-

@@ -25,7 +25,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'zxqfl/tabnine-vim'
+Plug 'ajh17/VimCompletesMe'
 
 " Initialize plugin system
 call plug#end()
