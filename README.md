@@ -4,6 +4,7 @@
 - git 
 - tmux
 - vim-nox
+- ripgrep
 
 ## install
 ```bash
