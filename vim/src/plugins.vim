@@ -13,10 +13,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
+Plug 'maxmellon/vim-jsx-pretty'
+
+" auto-complete
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
