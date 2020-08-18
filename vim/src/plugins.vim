@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " auto-complete
