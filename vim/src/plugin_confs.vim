@@ -2,36 +2,36 @@
 " ------------
 " junegunn/fzf
 " ------------
-nnoremap <Space><Space> :FZF<CR>
-nnoremap <Space>fc :Files %:p:h<CR>
-nnoremap <Space>fb :Buffers<CR>
-nnoremap <Space>gf :GFiles<CR>
-nnoremap <Space>h :History<CR>
-nnoremap <Space>c :Commits<CR>
-nnoremap <Space>l :BLines<CR>
-nnoremap <Space>a :Ag<Space>
+nnoremap <Leader>j :Rg<CR>
+nnoremap <Leader>l :Files %:p:h<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>k :GFiles<CR>
+nnoremap <Leader>h :History<CR>
 
 
 " -------------------------
 " easymotion/vim-easymotion
 " -------------------------
 " <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+map  f <Plug>(easymotion-bd-f)
+nmap f <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
 
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 let g:EasyMotion_smartcase = 1
-
-
 
 " ------------------------
 " scrooloose/nerdcommenter
@@ -57,8 +57,7 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-nnoremap <Space>c :call NERDComment(0,"toggle")<CR>
-vnoremap <Space>c :call NERDComment(0,"toggle")<CR>
+nnoremap <Leader>/ :call NERDComment(0,"toggle")<CR>
 
 
 " -------------------
@@ -71,15 +70,12 @@ let g:indentLine_char = "|"
 " tpope/vim-fugitive
 " ------------------
 nnoremap    [git]   <Nop>
-nmap    <space>g [git]
+nmap    <Leader>g [git]
 nnoremap [git]s :<C-u>Gstatus<CR>
-nnoremap [git]w :<C-u>Gwrite<CR>
-nnoremap [git]r :<C-u>Gmove
 nnoremap [git]d :<C-u>Gdiff<CR>
-nnoremap [git]c :<C-u>Gcommit<CR>
 nnoremap [git]l :<C-u>Glog<CR>
 nnoremap [git]b :<C-u>Gblame<CR>
-nnoremap [git]p :!git push<CR>
+nnoremap [git]p :<C-u>Git push<CR>
 
 " ---------------------
 " itchyny/lightline.vim

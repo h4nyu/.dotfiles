@@ -34,6 +34,7 @@ set tags=./tags;
 set autoread
 au CursorHold * checktime
 
+let mapleader = "\<Space>"
 
 set background=dark
 set t_Co=256
