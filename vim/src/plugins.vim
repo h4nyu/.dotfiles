@@ -15,6 +15,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'airblade/vim-rooter'
 
 " auto-complete
 Plug 'Shougo/neosnippet.vim'
