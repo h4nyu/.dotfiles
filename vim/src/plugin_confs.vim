@@ -2,12 +2,11 @@
 " ------------
 " junegunn/fzf
 " ------------
-nnoremap <Leader>f :Rg<CR>
-nnoremap <Leader>k :Files %:p:h<CR>
+nnoremap <Leader>j :Rg<CR>
 nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>j :GFiles<CR>
+nnoremap <Leader>k :GFiles<CR>
+nnoremap <Leader>l :Files %:p:h<CR>
 nnoremap <Leader>h :History<CR>
-
 
 " -------------------------
 " easymotion/vim-easymotion
@@ -57,7 +56,7 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-nnoremap <Leader>/ :call NERDComment(0,"toggle")<CR>
+nnoremap <Leader>c :call NERDComment(0,"toggle")<CR>
 
 
 " -------------------
