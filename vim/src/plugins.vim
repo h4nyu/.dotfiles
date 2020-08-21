@@ -7,7 +7,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'w0ng/vim-hybrid'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -30,6 +30,5 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
-" Initialize plugin system
+Initialize plugin system
 call plug#end()
-

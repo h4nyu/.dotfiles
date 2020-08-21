@@ -56,7 +56,7 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-nnoremap <Leader>c :call NERDComment(0,"toggle")<CR>
+nnoremap <Leader>c :Commentary<CR>
 
 
 " -------------------
