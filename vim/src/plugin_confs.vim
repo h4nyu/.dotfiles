@@ -2,10 +2,10 @@
 " ------------
 " junegunn/fzf
 " ------------
-nnoremap <Leader>j :Rg<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>k :GFiles<CR>
-nnoremap <Leader>l :Files %:p:h<CR>
+nnoremap <Leader>s :Rg<CR>
+nnoremap <Leader>f :GFiles<CR>
+nnoremap <Leader>F :Files<CR>
+nnoremap <Leader>fc :Files %:p:h<CR>
 nnoremap <Leader>h :History<CR>
 
 " -------------------------
