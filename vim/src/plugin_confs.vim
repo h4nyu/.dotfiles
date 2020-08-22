@@ -11,6 +11,7 @@ nnoremap <silent> <Leader>h :History<CR>
 " tpope/vim-commentary
 " ------------------------
 xmap <Leader>c :Commentary<CR>
+nmap <Leader>c :Commentary<CR>
 
 " -------------------
 " Yggdroot/indentLine
