@@ -2,61 +2,15 @@
 " ------------
 " junegunn/fzf
 " ------------
-nnoremap <Leader>s :Rg<CR>
-nnoremap <Leader>f :GFiles<CR>
-nnoremap <Leader>F :Files<CR>
-nnoremap <Leader>h :History<CR>
-
-" -------------------------
-" easymotion/vim-easymotion
-" -------------------------
-" <Leader>f{char} to move to {char}
-map  f <Plug>(easymotion-bd-f)
-nmap f <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-let g:EasyMotion_smartcase = 1
+nnoremap <silent> <Leader><Leader> :GFiles<CR>
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader><Enter> :Rg<CR>
+nnoremap <silent> <Leader>h :History<CR>
 
 " ------------------------
-" scrooloose/nerdcommenter
+" tpope/vim-commentary
 " ------------------------
-" add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-"
-" Align line-wise comment delimiters flush left instead of following code
-" indentation
-let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'  }  }
-
-" Allow commenting and inverting empty lines (useful when commenting a  region)
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
 nnoremap <Leader>c :Commentary<CR>
-
 
 " -------------------
 " Yggdroot/indentLine

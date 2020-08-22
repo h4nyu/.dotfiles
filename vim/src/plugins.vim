@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'easymotion/vim-easymotion'
 Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
