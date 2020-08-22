@@ -5,7 +5,6 @@
 nnoremap <Leader>s :Rg<CR>
 nnoremap <Leader>f :GFiles<CR>
 nnoremap <Leader>F :Files<CR>
-nnoremap <Leader>fc :Files %:p:h<CR>
 nnoremap <Leader>h :History<CR>
 
 " -------------------------
