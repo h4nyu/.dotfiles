@@ -1,4 +1,7 @@
-set diffopt+=vertical
+if &diff
+    set diffopt-=internal
+    set diffopt+=vertical
+endif
 set noswapfile
 set nocompatible
 set number
