@@ -10,12 +10,12 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'rhysd/clever-f.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'airblade/vim-rooter'
+Plug 'easymotion/vim-easymotion'
 
 " auto-complete
 Plug 'Shougo/neosnippet.vim'
