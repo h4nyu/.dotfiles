@@ -3,6 +3,7 @@
 " junegunn/fzf
 " ------------
 nnoremap <silent> <Leader><Leader> :Rg<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
