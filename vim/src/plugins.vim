@@ -17,6 +17,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'airblade/vim-rooter'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-python/python-syntax'
+Plug 'airblade/vim-gitgutter'
 
 " auto-complete
 Plug 'Shougo/neosnippet.vim'
