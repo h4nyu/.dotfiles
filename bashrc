@@ -101,6 +101,7 @@ git config --global http.postBuffer 52428800
 stty -ixon
 
 
+alias ga='git add -A' 
 alias gs='git status' 
 alias gp='git push' 
 alias gf='git fetch' 
