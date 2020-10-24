@@ -10,14 +10,18 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'airblade/vim-rooter'
 Plug 'easymotion/vim-easymotion'
+Plug 'airblade/vim-rooter'
+
+
+" syntax highlight
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
-Plug 'airblade/vim-gitgutter'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " auto-complete
 Plug 'Shougo/neosnippet.vim'
