@@ -18,22 +18,12 @@ Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-rooter'
 
 
+
 " syntax highlight
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " auto-complete
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-
+Plug 'codota/tabnine-vim'
 call plug#end()
