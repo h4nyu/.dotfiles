@@ -19,11 +19,21 @@ Plug 'airblade/vim-rooter'
 
 
 
+
 " syntax highlight
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 
-" auto-complete
-Plug 'codota/tabnine-vim'
+" autocomplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
+let g:deoplete#enable_at_startup = 1
 call plug#end()
