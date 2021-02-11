@@ -5,7 +5,6 @@
 nnoremap <silent> <Leader><Leader> :GFiles<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <Leader><CR> :Rg<CR>
-nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 
@@ -151,22 +150,3 @@ imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
-
-" -------------------
-"  easymotion
-" -------------------
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-let g:EasyMotion_smartcase = 1
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-" Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)

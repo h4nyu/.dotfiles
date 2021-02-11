@@ -11,10 +11,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
+Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'easymotion/vim-easymotion'
+Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
 
 
@@ -25,6 +26,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 
+
 " autocomplete
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -33,7 +35,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 let g:deoplete#enable_at_startup = 1
 call plug#end()

@@ -35,6 +35,8 @@ set path+=/usr/include
 set path+=/usr/local/include
 set tags=./tags;
 set autoread
+set smartcase
+set incsearch
 au CursorHold * checktime
 
 let mapleader = "\<Space>"
