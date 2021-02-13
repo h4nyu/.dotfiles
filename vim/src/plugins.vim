@@ -14,7 +14,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'rhysd/clever-f.vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-rooter'
 
 " syntax highlight

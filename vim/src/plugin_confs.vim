@@ -150,3 +150,23 @@ imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+" -------------------
+"  easymotion
+" -------------------
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1
+
+" s{char}{char} to move to {char}{char}
+nmap f <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-overwin-f2)
+nmap t <Plug>(easymotion-t2)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
