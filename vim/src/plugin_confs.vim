@@ -144,6 +144,7 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 
 " For conceal markers.
