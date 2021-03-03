@@ -40,6 +40,8 @@ set tags=./tags;
 set autoread
 set smartcase
 set incsearch
+set guicursor=
+
 au CursorHold * checktime
 
 let mapleader = "\<Space>"
@@ -299,3 +301,8 @@ map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
+
+" -------------------
+"  fzf.vim
+" -------------------
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
