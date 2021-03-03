@@ -84,7 +84,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:$PATH"
 # eval `ssh-agent -s`
@@ -106,6 +106,8 @@ alias gs='git status'
 alias gp='git push' 
 alias gf='git fetch' 
 alias grb='git branch | grep -ve " master$" | xargs git branch -D'
+alias vim='nvim'
+alias vi='nvim'
 
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'

@@ -1,4 +1,132 @@
-" 
+" ================
+" basic config
+" ================
+if &diff
+    set diffopt-=internal
+    set diffopt+=vertical
+endif
+set noswapfile
+set nocompatible
+set number
+set title
+set hidden
+set showcmd
+set autoindent
+set smartindent
+set ruler
+set laststatus=2
+set mouse=a
+set encoding=utf-8
+set wildmenu
+set incsearch
+set cmdheight=1
+set nowritebackup
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set smarttab
+set completeopt=menuone
+set foldmethod=indent   
+set foldnestmax=11
+set nofoldenable
+set foldlevel=2
+set foldcolumn=3
+set path+=/opt/ros/indigo/include
+set path+=/opt/ros/jade/include
+set path+=/usr/include
+set path+=/usr/local/include
+set tags=./tags;
+set autoread
+set smartcase
+set incsearch
+au CursorHold * checktime
+
+let mapleader = "\<Space>"
+
+set background=dark
+set t_Co=256
+
+let loaded_matchparen = 1
+hi MatchParen ctermbg=1
+
+au QuickfixCmdPost make,grep,grepadd,vimgrep copen
+
+
+" ================
+" keys
+" ================
+nnoremap <silent><buffer>q :quit<CR>
+nnoremap <silent><ESC><ESC> :<C-u>noh<CR>
+inoremap <silent> jj <ESC>
+nnoremap <C-w>o :<C-u>only<CR>
+
+" ================
+" filetypes
+" ================
+"
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 
+    autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.json setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd FileType vue syntax sync fromstart
+    autocmd FileType nginx setl sw=2 sts=2 et
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType java setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
+
+au BufNewFile,BufRead *.in set filetype=requirement
+au BufNewFile,BufRead *.swift set filetype=swift
+au BufNewFile,BufRead *.html set filetype=xml
+au BufNewFile,BufRead *.tsx set filetype=typescript
+
+au FileType python set efm+=%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+
+" ================
+" plugins 
+" ================
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'w0ng/vim-hybrid'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'itchyny/lightline.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
+Plug 'airblade/vim-rooter'
+
+" syntax highlight
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'vim-python/python-syntax'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
+" autocomplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+let g:deoplete#enable_at_startup = 1
+call plug#end()
+
 " ------------
 " junegunn/fzf
 " ------------
