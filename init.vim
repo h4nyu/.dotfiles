@@ -41,6 +41,8 @@ set autoread
 set smartcase
 set incsearch
 set guicursor=
+set timeoutlen=500
+set ttimeoutlen=50
 
 au CursorHold * checktime
 
