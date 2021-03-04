@@ -136,7 +136,7 @@ call plug#end()
 " ------------
 nnoremap <silent> <Leader><Leader> :GFiles<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
-nnoremap <silent> <Leader><CR> :Rg<CR>
+nnoremap <silent> <Leader><CR> :Ag<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 

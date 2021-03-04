@@ -110,6 +110,5 @@ alias vim='nvim'
 alias vi='nvim'
 
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
 # fg:#bbccdd,fg+:#ddeeff, bg:#334455,
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
