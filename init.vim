@@ -117,7 +117,6 @@ Plug 'airblade/vim-rooter'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 " autocomplete
 if has('nvim')
