@@ -307,3 +307,4 @@ map  N <Plug>(easymotion-prev)
 "  fzf.vim
 " -------------------
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
+let g:fzf_preview_window = []
