@@ -106,7 +106,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
 
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
