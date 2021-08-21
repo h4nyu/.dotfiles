@@ -1,5 +1,9 @@
-set -x EDITOR vim
-alias gs="git status"
-alias gp="git push"
-alias gc="git commit -a"
-alias ga="git add -A"
+alias gs='git status'
+alias ga='git add -A'
+alias gp='git push'
+alias gc='git commit -a'
+alias vim='nvim'
+alias vi='nvim'
+
+set -x EDITOR nvim
+
