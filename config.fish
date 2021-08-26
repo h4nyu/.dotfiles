@@ -6,4 +6,5 @@ alias vim='nvim'
 alias vi='nvim'
 
 set -x EDITOR nvim
+ssh-agent -s
 
