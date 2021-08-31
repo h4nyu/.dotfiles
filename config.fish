@@ -7,3 +7,6 @@ alias vi='nvim'
 
 set -x EDITOR nvim
 
+if test -e ~/.config/fish/env.fish
+    source ~/.config/fish/env.fish
+end

@@ -3,8 +3,8 @@ ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/init.vim ~/.vimrc
 
-mkdir -p ~/.config/fish/conf.d
-ln -sf ~/.dotfiles/config.fish ~/.config/fish/conf.d/config.fish
+mkdir -p ~/.config/fish/
+ln -sf ~/.dotfiles/config.fish ~/.config/fish/config.fish
 
 mkdir -p ~/.config/nvim
 ln -sf ~/.dotfiles/init.vim ~/.config/nvim/init.vim
