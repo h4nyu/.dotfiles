@@ -156,10 +156,7 @@ let g:indentLine_char = "|"
 " ------------------
 nnoremap    [git]   <Nop>
 nmap    <Leader>g [git]
-nnoremap [git]s :<C-u>Gstatus<CR>
-nnoremap [git]d :<C-u>Gdiff<CR>
-nnoremap [git]l :<C-u>Glog<CR>
-nnoremap [git]b :<C-u>Gblame<CR>
+nnoremap [git]s :<C-u>Git<CR>
 nnoremap [git]p :<C-u>Git push<CR>
 
 " ---------------------
