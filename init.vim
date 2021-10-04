@@ -55,7 +55,8 @@ let loaded_matchparen = 1
 hi MatchParen ctermbg=1
 
 au QuickfixCmdPost make,grep,grepadd,vimgrep copen
-
+let g:python_host_prog = system("bash -c 'echo -n $(which python2)'")
+let g:python3_host_prog = system("bash -c 'echo -n $(which python3)'")
 
 " ================
 " keys

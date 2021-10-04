@@ -3,4 +3,5 @@ config/fcitx/clipboard/*
 config/fcitx/profile_*
 antigen.zsh
 vim/vim
+env.fish
 
