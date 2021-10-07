@@ -109,6 +109,20 @@ alias grb='git branch | grep -ve " master$" | xargs git branch -D'
 alias vim='nvim'
 alias vi='nvim'
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    update_terminal_cwd() {
+        # Identify the directory using a "file:" scheme URL,
+        # including the host name to disambiguate local vs.
+        # remote connections. Percent-escape spaces.
+        local SEARCH=' '
+        local REPLACE='%20'
+        local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+        printf '\e]7;%s\a' "$PWD_URL"
+    }
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
+    fi
+fi
 
 # fg:#bbccdd,fg+:#ddeeff, bg:#334455,
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
