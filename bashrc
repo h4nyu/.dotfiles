@@ -88,6 +88,8 @@ export EDITOR=nvim
 export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:$PATH"
 
+export LD_LIBRARY_PATH=/usr/local/lib # https://github.com/google-github-actions/setup-gcloud/issues/128
+
 git config --global push.default simple
 git config --global merge.tool vimdiff
 git config --global merge.conflictstyle diff3
