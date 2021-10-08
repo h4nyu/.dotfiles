@@ -87,7 +87,6 @@ fi
 export EDITOR=nvim
 export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:$PATH"
-# eval `ssh-agent -s`
 
 git config --global push.default simple
 git config --global merge.tool vimdiff
