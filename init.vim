@@ -135,7 +135,7 @@ call plug#end()
 " junegunn/fzf
 " ------------
 nnoremap <silent> <Leader><Leader> :GitFiles<CR>
-nnoremap <silent> <Leader>fc :GitFiles %:p:h<CR>
+nnoremap <silent> <Leader>fc :GitFiles <C-R>=expand('%:h')<CR><CR>
 nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <Leader><CR> :Ag<CR>
 nnoremap <silent> <Leader>h :History<CR>
