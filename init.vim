@@ -90,6 +90,7 @@ au BufNewFile,BufRead *.in set filetype=requirement
 au BufNewFile,BufRead *.swift set filetype=swift
 au BufNewFile,BufRead *.html set filetype=xml
 au BufNewFile,BufRead *.tsx set filetype=typescript
+au BufNewFile,BufRead *.prisma setfiletype graphql
 
 au FileType python set efm+=%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
@@ -117,6 +118,7 @@ Plug 'airblade/vim-rooter'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jparise/vim-graphql'
 
 " autocomplete
 if has('nvim')
