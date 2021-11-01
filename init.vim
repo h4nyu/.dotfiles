@@ -310,3 +310,9 @@ map  N <Plug>(easymotion-prev)
 " -------------------
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
 let g:fzf_preview_window = []
+
+" -------------------
+"  junegunn/vim-easy-align
+" -------------------
+xmap ga <Plug>(LiveEasyAlign)
+nmap ga <Plug>(LiveEasyAlign)
