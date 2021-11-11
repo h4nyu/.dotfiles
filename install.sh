@@ -21,7 +21,7 @@ if [ ! -d ~/.fzf ]; then
 fi
 
 
-if [ ! -d ~/.bash_completion ]; then
-    mkdir -p ~/.bash_completion
+if [ ! -d ~/.bash_completion.d ]; then
+    mkdir -p ~/.bash_completion.d
 fi
-curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose -o ~/.bash_completion/docker-compose
+curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose -o ~/.bash_completion.d/docker-compose
