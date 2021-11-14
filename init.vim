@@ -121,6 +121,7 @@ Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 
+Plug 'wakatime/vim-wakatime'
 " autocomplete
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
