@@ -278,7 +278,7 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 imap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
+call deoplete#custom#option('smart_case', v:true)
 
 " For conceal markers.
 if has('conceal')
