@@ -131,7 +131,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 " ------------
@@ -278,7 +277,8 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 imap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 
 " For conceal markers.
 if has('conceal')
