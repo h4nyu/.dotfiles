@@ -120,6 +120,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
+Plug 'sheerun/vim-polyglot'
 
 Plug 'wakatime/vim-wakatime'
 " autocomplete
@@ -132,6 +133,11 @@ else
 endif
 
 call plug#end()
+
+" disable conceal
+let g:vim_json_syntax_conceal = 0
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
 
 " ------------
 " junegunn/fzf
