@@ -121,17 +121,10 @@ Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
+Plug 'github/copilot.vim'
+
 
 Plug 'wakatime/vim-wakatime'
-" autocomplete
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 call plug#end()
 
 " disable conceal
@@ -279,12 +272,6 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-imap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('smart_case', v:true)
 
 " For conceal markers.
 if has('conceal')
