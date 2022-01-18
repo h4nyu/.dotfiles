@@ -311,8 +311,7 @@ map  N <Plug>(easymotion-prev)
 " -------------------
 "  fzf.vim
 " -------------------
-let g:fzf_layout = { 'down': '~40%' }
-let g:fzf_preview_window = []
+let g:fzf_layout = { 'down': '~60%' }
 
 " -------------------
 "  junegunn/vim-easy-align
