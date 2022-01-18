@@ -1,6 +1,7 @@
 " ================
 " basic config
 " ================
+" 
 if &diff
     set diffopt-=internal
     set diffopt+=vertical
@@ -123,9 +124,18 @@ Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
 Plug 'github/copilot.vim'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 Plug 'wakatime/vim-wakatime'
 call plug#end()
+
 
 " disable conceal
 let g:vim_json_syntax_conceal = 0
@@ -309,3 +319,5 @@ let g:fzf_preview_window = []
 " -------------------
 xmap ga <Plug>(LiveEasyAlign)
 nmap ga <Plug>(LiveEasyAlign)
+
+let g:deoplete#enable_at_startup = 1
