@@ -124,15 +124,6 @@ Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
 Plug 'github/copilot.vim'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-
 Plug 'wakatime/vim-wakatime'
 call plug#end()
 
@@ -295,13 +286,8 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 
 " s{char}{char} to move to {char}{char}
-nmap f <Plug>(easymotion-overwin-f)
-nmap s <Plug>(easymotion-overwin-f2)
-nmap t <Plug>(easymotion-t2)
+nmap f <Plug>(easymotion-overwin-f2)
 
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
 " Gif config
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
