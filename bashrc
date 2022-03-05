@@ -128,3 +128,4 @@ fi
 
 # fg:#bbccdd,fg+:#ddeeff, bg:#334455,
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source ~/.local/share/blesh/ble.sh

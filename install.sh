@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/bashrc ~/.bashrc
 ln -sf ~/.dotfiles/init.vim ~/.vimrc
@@ -25,3 +26,6 @@ if [ ! -d ~/.bash_completion.d ]; then
     mkdir -p ~/.bash_completion.d
 fi
 curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose -o ~/.bash_completion.d/docker-compose
+git clone --recursive --depth=1 https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=~/.local
+rm -rf ble.sh
