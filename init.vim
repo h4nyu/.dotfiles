@@ -286,7 +286,11 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 
 " s{char}{char} to move to {char}{char}
-nmap f <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f2)
+map  f <Plug>(easymotion-bd-f)
+nmap f <Plug>(easymotion-overwin-f)
+map  w <Plug>(easymotion-bd-w)
+nmap w <Plug>(easymotion-overwin-w)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
