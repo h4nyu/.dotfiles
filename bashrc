@@ -125,14 +125,3 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
       . $(brew --prefix)/etc/bash_completion
     fi
 fi
-
-# fg:#bbccdd,fg+:#ddeeff, bg:#334455,
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-source ~/.local/share/blesh/ble.sh
-ble-face -s command_builtin_dot       fg=white,bold
-ble-face -s command_builtin           fg=white
-ble-face -s command_alias             fg=white
-ble-face -s command_function          fg=white
-ble-face -s command_file              fg=white
-ble-face -s command_keyword           fg=white
-ble-face -s command_jobs              fg=white
