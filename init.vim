@@ -123,7 +123,10 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
 Plug 'github/copilot.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
+
 
 
 Plug 'wakatime/vim-wakatime'
@@ -312,8 +315,7 @@ xmap ga <Plug>(LiveEasyAlign)
 nmap ga <Plug>(LiveEasyAlign)
 
 " -------------------
-"  coc
+"  Shougo/deoplete.nvim
 " -------------------
-let g:coc_global_extensions = ['coc-json', 'coc-git', "coc-tabnine"]
-
+let g:deoplete#enable_at_startup = 1
 
