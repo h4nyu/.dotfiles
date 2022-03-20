@@ -123,6 +123,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
 Plug 'github/copilot.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 Plug 'wakatime/vim-wakatime'
 call plug#end()
@@ -309,4 +311,9 @@ let g:fzf_layout = { 'down': '~60%' }
 xmap ga <Plug>(LiveEasyAlign)
 nmap ga <Plug>(LiveEasyAlign)
 
-let g:deoplete#enable_at_startup = 1
+" -------------------
+"  coc
+" -------------------
+let g:coc_global_extensions = ['coc-json', 'coc-git', "coc-tabnine"]
+
+
