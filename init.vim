@@ -318,8 +318,13 @@ nmap ga <Plug>(LiveEasyAlign)
 "  Shougo/deoplete.nvim
 " -------------------
 let g:deoplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
+
+" -------------------
+"  copilot
+" -------------------
 let g:copilot_filetypes = { 'yaml': v:true,  }
 imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
