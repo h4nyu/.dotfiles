@@ -127,3 +127,4 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
