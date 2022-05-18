@@ -207,8 +207,8 @@ function! LightlineFilename()
 endfunction
 
 function! LightlineFugitive()
-  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-    let branch = fugitive#head()
+  if &ft !~? 'vimfiler\|gundo' && exists("*FugitiveHead")
+    let branch = FugitiveHead()
     return branch !=# '' ? '|/'.branch : ''
   endif
   return ''
