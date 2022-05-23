@@ -110,7 +110,7 @@ alias vimdiff='nvim -d '
 alias grb='git branch | grep -ve " master$" | xargs git branch -D'
 alias vim='nvim'
 alias vi='nvim'
-alias mk='microk8s kubectl'
+alias kubectl='microk8s kubectl'
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     update_terminal_cwd() {
@@ -129,3 +129,5 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+
+source <(kubectl completion bash)
