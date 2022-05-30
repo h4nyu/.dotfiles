@@ -339,7 +339,7 @@ lua <<EOF
 	buffer = "[Buffer]",
 	cmp_tabnine = "[TN]",
 	path = "[Path]",
-	copilot = "[Copilot]",
+	copilot = "[Cop]",
   }
 
 
@@ -395,10 +395,10 @@ lua <<EOF
       ['<C-k>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
+      { name = 'cmp_tabnine' },
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'copilot' },
-      { name = 'cmp_tabnine' },
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
