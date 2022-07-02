@@ -122,15 +122,11 @@ Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
-Plug 'github/copilot.vim'
 
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-copilot'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 
 
@@ -318,8 +314,19 @@ nmap ga <Plug>(LiveEasyAlign)
 " -------------------
 let g:deoplete#enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+call deoplete#custom#var('tabnine', {'line_limit': 2000, 'max_num_results': 20, })
 
 " -------------------
 "  copilot
@@ -327,112 +334,3 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " let g:copilot_filetypes = { 'yaml': v:true,  }
 " imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 " let g:copilot_no_tab_map = v:true
-"
-
-" -------------------
-"  nvim-cmp
-" -------------------
-lua <<EOF
-  -- Setup nvim-cmp.
-  local cmp = require'cmp'
-  local source_mapping = {
-	buffer = "[Buffer]",
-	cmp_tabnine = "[TN]",
-	path = "[Path]",
-	copilot = "[Cop]",
-  }
-
-
-  cmp.setup({
-    snippet = {
-      -- REQUIRED - you must specify a snippet engine
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-      end,
-    },
-    window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
-    },
-    formatting = {
-	  format = function(entry, vim_item)
-	  	local menu = source_mapping[entry.source.name]
-	  	if entry.source.name == 'cmp_tabnine' then
-	  		if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-	  			menu = entry.completion_item.data.detail .. ' ' .. menu
-	  		end
-	  	end
-	  	vim_item.menu = menu
-	  	return vim_item
-	  end
-	},
-
-    mapping = cmp.mapping.preset.insert({
-      ["<Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.select_next_item()
-        elseif has_words_before() then
-          cmp.complete()
-        else
-          fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-        end
-      end, {"i", "s"}),
-      ["<S-Tab>"] = cmp.mapping(function()
-        if cmp.visible() then
-          cmp.select_prev_item()
-        else
-          fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-        end
-      end, {"i", "s"}),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-k>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      ['<C-k>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    }),
-    sources = cmp.config.sources({
-      { name = 'cmp_tabnine' },
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      { name = 'copilot' },
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
-      { name = 'buffer' },
-    })
-  })
-
-
-  -- Set configuration for specific filetype.
-  cmp.setup.filetype('gitcommit', {
-    sources = cmp.config.sources({
-      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-    }, {
-      { name = 'buffer' },
-    })
-  })
-
-  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline('/', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = 'buffer' }
-    }
-  })
-
-  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-      { name = 'path' }
-    }, {
-      { name = 'cmdline' }
-    })
-  })
-EOF
-
