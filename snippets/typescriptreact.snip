@@ -12,3 +12,17 @@ abbr    minimal storybook
       return <$1 />
     }
 
+
+snippet const function  
+abbr    define function
+    const ${1:name} = ${2:async} (${3:props}: ${4:{}}) => {
+      return ${5:}
+    }
+
+snippet div button... 
+abbr    <div className ... />
+    <div className="${1:button}" onClick={${2:() => {}}}> ${3:button}</div>
+
+snippet useState 
+abbr    const [...,...] = useState(...)
+    const [${1:value}, ${2:setValue}] = React.useState(${3:})
