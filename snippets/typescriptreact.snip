@@ -1,0 +1,14 @@
+snippet import-minimal-storybook  
+abbr    minimal storybook
+    import React from "react";
+    import {${1:module}} from "${2:module}";
+
+    export default {
+        title: "$1",
+        component: $1,
+    }
+
+    export const Default = (props) => {
+      return <$1 />
+    }
+
