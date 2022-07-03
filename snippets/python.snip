@@ -1,2 +1,18 @@
-snippet print print('...={...}')
-    print(f'$1={$1}')
+snippet print 
+abbr    print('...={...}')
+    print(f'${1:value}={${1:value}}')
+
+snippet from 
+abbr    from ... import ...
+    from ${1:module} import ${2:module}
+
+snippet classTyped
+abbr    class Class(...): ...
+    class ${1:name}:
+        def __init__(self, ${2:args}) -> None:
+            ...
+
+snippet defm
+abbr    def method(self, ...) -> ...:
+    def ${1:name}(self, ${2}) -> ${3:type}:
+        ...
