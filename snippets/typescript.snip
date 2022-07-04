@@ -1,0 +1,11 @@
+snippet const-function  
+abbr    define function
+    const ${1:name} = ${2:async} (${3:props}: ${4:{}}) => {
+      return ${5:}
+    }
+
+snippet if-error  
+abbr    if (... instanceof Error) { ... }
+    if (${1:value} instanceof Error){
+      return $1
+    }
