@@ -9,3 +9,27 @@ abbr    if (... instanceof Error) { ... }
     if (${1:value} instanceof Error){
       return $1
     }
+
+snippet test-each  
+abbr    test.each([...])("...", (...) => {...})
+    test.each([
+    [{}]
+    ]).("${1:name}", ${2:}() => {
+      ${3:}
+    })
+
+snippet test  
+abbr    test("...", (...) => {...})
+    test("${1:name}", ${2:}() => {
+      ${3:}
+    })
+
+snippet describe  
+abbr    describe("...", (...) => {...})
+    describe("${1:name}", () => {
+      ${2:}
+    })
+
+snippet select-sql  
+abbr    SELECT * FROM ... WHERE ... = ...
+    \`SELECT * FROM ${1:table} WHERE ${3:condition}\`
