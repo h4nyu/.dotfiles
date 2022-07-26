@@ -336,10 +336,10 @@ lua <<EOF
   -- Setup nvim-cmp.
   local cmp = require'cmp'
   local source_mapping = {
+	copilot = "[Cop]",
 	buffer = "[Buffer]",
 	cmp_tabnine = "[TN]",
 	path = "[Path]",
-	copilot = "[Cop]",
   }
 
 
