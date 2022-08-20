@@ -130,7 +130,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-copilot'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 
 
@@ -338,7 +338,7 @@ lua <<EOF
   local source_mapping = {
 	copilot = "[Cop]",
 	buffer = "[Buffer]",
-	cmp_tabnine = "[TN]",
+	-- cmp_tabnine = "[TN]",
 	path = "[Path]",
   }
 
