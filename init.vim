@@ -373,7 +373,7 @@ lua <<EOF
     mapping = cmp.mapping.preset.insert({
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-k>'] = cmp.mapping.complete(),
+      ['<C-k>'] = cmp.mapping.confirm({ select = true }),
       ['<C-e>'] = cmp.mapping.abort(), 
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
       ["<Tab>"] = cmp.mapping(function(fallback)
