@@ -146,19 +146,25 @@ let g:vim_markdown_conceal_code_blocks = 0
 
 " ------------
 " junegunn/fzf
-" ------------
+" -----------
 nnoremap <silent> <Leader><Leader> :GitFiles<CR>
+nnoremap <silent> <CR><CR> :GitFiles<CR>
 nnoremap <silent> <Leader>fc :Files <C-R>=expand('%:h')<CR><CR>
+nnoremap <silent> <CR>fc :Files <C-R>=expand('%:h')<CR><CR>
 nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <CR>l :Lines<CR>
 nnoremap <silent> <Leader><CR> :Ag<CR>
 nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <CR>h :Lines<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
-
+nnoremap <silent> <CR>b :Lines<CR>
 " ------------------------
 " tpope/vim-commentary
 " ------------------------
 xmap <Leader>c :Commentary<CR>
 nmap <Leader>c :Commentary<CR>
+xmap <CR>c :Commentary<CR>
+nmap <CR>c :Commentary<CR>
 
 " -------------------
 " Yggdroot/indentLine
@@ -171,6 +177,7 @@ let g:indentLine_char = "|"
 " ------------------
 nnoremap    [git]   <Nop>
 nmap    <Leader>g [git]
+nmap    <CR>g [git]
 nnoremap [git]s :<C-u>Git<CR>
 nnoremap [git]p :<C-u>Git push<CR>
 
