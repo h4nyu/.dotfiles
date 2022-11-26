@@ -1,7 +1,9 @@
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -132,5 +134,9 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
 
-[ -f ~/.local/share/blesh/ble.sh ] && source ~/.local/share/blesh/ble.sh
+# Add this lines at the top of .bashrc:
 
+# your bashrc settings come here...
+
+# Add this line at the end of .bashrc:
+[[ ${BLE_VERSION-} ]] && ble-attach
