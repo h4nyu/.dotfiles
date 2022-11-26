@@ -29,3 +29,6 @@ curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completi
 
 git config --global mergetool.vimdiff.cmd 'nvim -d -c "wincmd l" "$LOCAL" "$MERGED" "$REMOTE"'
 git config --global mergetool.keepBackup false
+git clone --recursive https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=~/.local
+rm -rf ble.sh

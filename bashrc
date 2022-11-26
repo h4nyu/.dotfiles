@@ -132,3 +132,5 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
 
+[ -f ~/.local/share/blesh/ble.sh ] && source ~/.local/share/blesh/ble.sh
+
