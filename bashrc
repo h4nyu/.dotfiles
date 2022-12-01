@@ -139,5 +139,5 @@ fi
 # your bashrc settings come here...
 
 # Add this line at the end of .bashrc:
-[[ ${BLE_VERSION-} ]] && ble-attach 
+# [[ ${BLE_VERSION-} ]] && ble-attach 
 
