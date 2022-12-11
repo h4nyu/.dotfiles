@@ -3,13 +3,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -139,5 +132,3 @@ fi
 # your bashrc settings come here...
 
 # Add this line at the end of .bashrc:
-# [[ ${BLE_VERSION-} ]] && ble-attach 
-
