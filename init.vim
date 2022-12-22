@@ -295,12 +295,16 @@ endif
 " -------------------
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1 " US layout
 
 " s{char}{char} to move to {char}{char}
 map  f <Plug>(easymotion-bd-f)
 nmap f <Plug>(easymotion-overwin-f)
-map  s <Plug>(easymotion-bd-f)
-nmap s <Plug>(easymotion-overwin-f)
+map  s <Plug>(easymotion-bd-f2)
+nmap s <Plug>(easymotion-overwin-f2)
+nmap t <Plug>(easymotion-t2)
+map  t <Plug>(easymotion-bd-t2)
+
 map  w <Plug>(easymotion-bd-w)
 nmap w <Plug>(easymotion-overwin-w)
 
