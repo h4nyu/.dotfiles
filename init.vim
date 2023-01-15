@@ -130,7 +130,9 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-copilot'
-" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+Plug 'hrsh7th/cmp-calc'
+Plug 'hrsh7th/cmp-omni'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 
 
@@ -350,7 +352,7 @@ lua <<EOF
   local source_mapping = {
 	copilot = "[Cop]",
 	buffer = "[Buffer]",
-	-- cmp_tabnine = "[TN]",
+    cmp_tabnine = "[TN]",
 	path = "[Path]",
   }
 
@@ -405,9 +407,11 @@ lua <<EOF
     }),
     sources = cmp.config.sources({
       { name = 'cmp_tabnine' },
+      { name = 'omni' },
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'copilot' },
+      { name = 'calc' },
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
