@@ -353,7 +353,7 @@ lua <<EOF
   -- Setup nvim-cmp.
   local cmp = require'cmp'
   local source_mapping = {
-    name = 'vsnip',
+    vsnip = '[Vsnip]',
 	copilot = "[Cop]",
 	buffer = "[Buffer]",
     cmp_tabnine = "[TN]",
@@ -410,11 +410,11 @@ lua <<EOF
       end, { "i", "s" }),
     }),
     sources = cmp.config.sources({
+      { name = 'copilot' },
       { name = 'cmp_tabnine' },
+      { name = 'vsnip' }, -- For vsnip users.
       { name = 'omni' },
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      { name = 'copilot' },
       { name = 'calc' },
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
