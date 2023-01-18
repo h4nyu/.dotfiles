@@ -132,6 +132,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-copilot'
 Plug 'hrsh7th/cmp-calc'
 Plug 'hrsh7th/cmp-omni'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 
@@ -350,6 +353,7 @@ lua <<EOF
   -- Setup nvim-cmp.
   local cmp = require'cmp'
   local source_mapping = {
+    name = 'vsnip',
 	copilot = "[Cop]",
 	buffer = "[Buffer]",
     cmp_tabnine = "[TN]",
