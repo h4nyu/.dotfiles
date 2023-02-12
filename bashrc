@@ -81,7 +81,8 @@ fi
 
 export EDITOR=nvim
 export TERM=xterm-256color
-export PATH="$HOME/.yarn/bin:/snap/bin:$PATH"
+export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin$PATH"
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export LD_LIBRARY_PATH=/usr/local/lib # https://github.com/google-github-actions/setup-gcloud/issues/128
 
