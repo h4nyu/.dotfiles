@@ -152,6 +152,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 " ------------
 " junegunn/fzf
 " -----------
+let g:fzf_layout = { 'down': '~60%' }
 nnoremap <silent> <Leader><Leader> :GitFiles<CR>
 nnoremap <silent> <CR><CR> :GitFiles<CR>
 nnoremap <silent> <Leader>fc :Files <C-R>=expand('%:h')<CR><CR>
@@ -303,8 +304,8 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_smartsign_us = 1 " US layout
 
 " s{char}{char} to move to {char}{char}
-map  f <Plug>(easymotion-bd-f)
-nmap f <Plug>(easymotion-overwin-f)
+map  f <Plug>((easymotion-bd-f2)
+nmap f <Plug>(easymotion-overwin-f2)
 map  s <Plug>(easymotion-bd-f2)
 nmap s <Plug>(easymotion-overwin-f2)
 nmap t <Plug>(easymotion-t2)
@@ -318,11 +319,6 @@ map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
-
-" -------------------
-"  fzf.vim
-" -------------------
-let g:fzf_layout = { 'down': '~60%' }
 
 " -------------------
 "  junegunn/vim-easy-align
