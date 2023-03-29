@@ -308,11 +308,6 @@ map  f <Plug>((easymotion-bd-f2)
 nmap f <Plug>(easymotion-overwin-f2)
 map  s <Plug>(easymotion-bd-f2)
 nmap s <Plug>(easymotion-overwin-f2)
-nmap t <Plug>(easymotion-t2)
-map  t <Plug>(easymotion-bd-t2)
-
-map  w <Plug>(easymotion-bd-w)
-nmap w <Plug>(easymotion-overwin-w)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
