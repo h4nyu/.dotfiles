@@ -335,6 +335,10 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 " let g:copilot_no_tab_map = v:true
 "
+" -------------------
+" rhysd/clever-f.vim
+" -------------------
+g:clever_f_smart_case = 1
 
 " -------------------
 "  nvim-cmp
