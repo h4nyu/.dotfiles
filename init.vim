@@ -136,6 +136,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+Plug 'rhysd/clever-f.vim'
 
 
 
@@ -304,8 +305,6 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_smartsign_us = 1 " US layout
 
 " s{char}{char} to move to {char}{char}
-map  f <Plug>((easymotion-bd-f2)
-nmap f <Plug>(easymotion-overwin-f2)
 map  s <Plug>(easymotion-bd-f2)
 nmap s <Plug>(easymotion-overwin-f2)
 
