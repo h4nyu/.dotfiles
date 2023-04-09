@@ -338,7 +338,8 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " -------------------
 " rhysd/clever-f.vim
 " -------------------
-g:clever_f_smart_case = 1
+let g:clever_f_ignore_case = 1
+let g:clever_f_smart_case = 1
 
 " -------------------
 "  nvim-cmp
