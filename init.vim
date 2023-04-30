@@ -135,7 +135,6 @@ Plug 'hrsh7th/cmp-omni'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'rhysd/clever-f.vim'
 
 
@@ -351,7 +350,6 @@ lua <<EOF
     vsnip = '[Vsnip]',
 	copilot = "[Cop]",
 	buffer = "[Buffer]",
-    cmp_tabnine = "[TN]",
 	path = "[Path]",
   }
 
@@ -373,11 +371,6 @@ lua <<EOF
     formatting = {
 	  format = function(entry, vim_item)
 	  	local menu = source_mapping[entry.source.name]
-	  	if entry.source.name == 'cmp_tabnine' then
-	  		if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-	  			menu = entry.completion_item.data.detail .. ' ' .. menu
-	  		end
-	  	end
 	  	vim_item.menu = menu
 	  	return vim_item
 	  end
@@ -406,7 +399,6 @@ lua <<EOF
     }),
     sources = cmp.config.sources({
       { name = 'copilot' },
-      { name = 'cmp_tabnine' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'omni' },
       { name = 'nvim_lsp' },
