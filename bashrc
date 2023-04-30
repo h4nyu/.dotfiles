@@ -126,8 +126,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
-
 # Add this lines at the top of .bashrc:
 
 # your bashrc settings come here...
