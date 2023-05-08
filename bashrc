@@ -106,9 +106,6 @@ alias vimdiff='nvim -d '
 alias grb='git branch | grep -ve " master$" | xargs git branch -D'
 alias vim='nvim'
 alias vi='nvim'
-alias mk='microk8s kubectl'
-source <(kubectl completion bash)
-complete -F __start_kubectl mk
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     update_terminal_cwd() {

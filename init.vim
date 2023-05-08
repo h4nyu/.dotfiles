@@ -135,10 +135,6 @@ Plug 'hrsh7th/cmp-omni'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug 'rhysd/clever-f.vim'
-
-
-
 
 Plug 'wakatime/vim-wakatime'
 call plug#end()
@@ -306,6 +302,8 @@ let g:EasyMotion_use_smartsign_us = 1 " US layout
 " s{char}{char} to move to {char}{char}
 map  s <Plug>(easymotion-bd-f2)
 nmap s <Plug>(easymotion-overwin-f2)
+map  f <Plug>(easymotion-bd-f2)
+nmap f <Plug>(easymotion-overwin-f2)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
@@ -334,11 +332,6 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
 " let g:copilot_no_tab_map = v:true
 "
-" -------------------
-" rhysd/clever-f.vim
-" -------------------
-let g:clever_f_ignore_case = 1
-let g:clever_f_smart_case = 1
 
 " -------------------
 "  nvim-cmp
