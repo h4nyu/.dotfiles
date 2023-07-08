@@ -135,8 +135,9 @@ Plug 'hrsh7th/cmp-omni'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-
+Plug 'itchyny/vim-cursorword'
 Plug 'wakatime/vim-wakatime'
+Plug 'bkad/CamelCaseMotion'
 call plug#end()
 
 
@@ -437,3 +438,16 @@ EOF
 " custom styles
 " ================
 hi LineNr ctermfg=grey cterm=bold
+
+
+" ================
+" CamelCaseMotion
+" ================
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
