@@ -25,7 +25,6 @@ fi
 if [ ! -d ~/.bash_completion.d ]; then
     mkdir -p ~/.bash_completion.d
 fi
-curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose -o ~/.bash_completion.d/docker-compose
 
 git config --global mergetool.vimdiff.cmd 'nvim -d -c "wincmd l" "$LOCAL" "$MERGED" "$REMOTE"'
 git config --global mergetool.keepBackup false
