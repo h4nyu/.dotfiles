@@ -397,6 +397,7 @@ lua <<EOF
       { name = 'omni' },
       { name = 'nvim_lsp' },
       { name = 'calc' },
+      { name = 'path' },
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
