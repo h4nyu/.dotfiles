@@ -84,7 +84,8 @@ export TERM=xterm-256color
 export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin$PATH"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export NODE_OPTIONS=--dns-result-order=ipv4first
-
+HISTSIZE=20000
+HISTFILESIZE=20000
 export LD_LIBRARY_PATH=/usr/local/lib # https://github.com/google-github-actions/setup-gcloud/issues/128
 
 git config --global push.default simple
