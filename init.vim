@@ -137,7 +137,7 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'itchyny/vim-cursorword'
 Plug 'wakatime/vim-wakatime'
-Plug 'bkad/CamelCaseMotion'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 
@@ -334,6 +334,23 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " let g:copilot_no_tab_map = v:true
 "
 
+" ----  dhruvasagar/vim-table-mode ----
+
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+" ----  dhruvasagar/vim-table-mode ----
+
 " -------------------
 "  nvim-cmp
 " -------------------
@@ -439,16 +456,3 @@ EOF
 " custom styles
 " ================
 hi LineNr ctermfg=grey cterm=bold
-
-
-" ================
-" CamelCaseMotion
-" ================
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
