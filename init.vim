@@ -138,6 +138,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'itchyny/vim-cursorword'
 Plug 'wakatime/vim-wakatime'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'rhysd/clever-f.vim'
 call plug#end()
 
 
