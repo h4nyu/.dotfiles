@@ -106,10 +106,10 @@ alias gp='git push'
 alias gf='git fetch' 
 alias vimdiff='nvim -d '
 alias grb='git branch | grep -ve " master$" | xargs git branch -D'
-alias vim='nvim'
-alias vi='nvim'
+alias n='nvim'
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH=/opt/homebrew/bin:$PATH
     update_terminal_cwd() {
         # Identify the directory using a "file:" scheme URL,
         # including the host name to disambiguate local vs.
@@ -119,6 +119,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
         printf '\e]7;%s\a' "$PWD_URL"
     }
+
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
       . $(brew --prefix)/etc/bash_completion
     fi

@@ -122,14 +122,12 @@ Plug 'vim-python/python-syntax'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'sheerun/vim-polyglot'
-Plug 'github/copilot.vim'
 
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-copilot'
 Plug 'hrsh7th/cmp-calc'
 Plug 'hrsh7th/cmp-omni'
 Plug 'hrsh7th/cmp-vsnip'
@@ -325,13 +323,6 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
 
-" -------------------
-"  copilot
-" -------------------
-" let g:copilot_filetypes = { 'yaml': v:true,  }
-" imap <silent><script><expr> <C-k> copilot#Accept("\<CR>")
-" let g:copilot_no_tab_map = v:true
-"
 
 " ----  dhruvasagar/vim-table-mode ----
 
@@ -358,7 +349,6 @@ lua <<EOF
   local cmp = require'cmp'
   local source_mapping = {
     vsnip = '[Vsnip]',
-	copilot = "[Cop]",
 	buffer = "[Buffer]",
 	path = "[Path]",
   }
@@ -408,7 +398,6 @@ lua <<EOF
       end, { "i", "s" }),
     }),
     sources = cmp.config.sources({
-      { name = 'copilot' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'omni' },
       { name = 'nvim_lsp' },
