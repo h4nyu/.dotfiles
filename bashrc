@@ -79,15 +79,29 @@ if ! shopt -oq posix; then
   fi
 fi
 
+### environment variables ###
 export EDITOR=nvim
 export TERM=xterm-256color
-export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin$PATH"
+export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin:$/opt/homebrew/bin:$PATH"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export NODE_OPTIONS=--dns-result-order=ipv4first
 HISTSIZE=20000
 HISTFILESIZE=20000
 export LD_LIBRARY_PATH=/usr/local/lib # https://github.com/google-github-actions/setup-gcloud/issues/128
 
+### alias ###
+alias ga='git add -A' 
+alias gs='git status' 
+alias gp='git push' 
+alias gf='git fetch' 
+alias vimdiff='nvim -d '
+alias grb='git branch | grep -ve " master$" | xargs git branch -D'
+[ $(which nvim) ] && alias vim='nvim'
+[ $(which nvim) ] && alias vi='nvim'
+[ $(which nvim) ] && alias oldvim='vim'
+[ $(which nvim) ] && alias oldvi='vi'
+
+### git ###
 git config --global push.default simple
 git config --global merge.tool vimdiff
 git config --global merge.conflictstyle diff3
@@ -99,17 +113,8 @@ git config --global credential.helper 'cache --timeout 28800'
 git config --global http.postBuffer 52428800
 stty -ixon
 
-
-alias ga='git add -A' 
-alias gs='git status' 
-alias gp='git push' 
-alias gf='git fetch' 
-alias vimdiff='nvim -d '
-alias grb='git branch | grep -ve " master$" | xargs git branch -D'
-alias n='nvim'
-
+### mac ###
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH=/opt/homebrew/bin:$PATH
     update_terminal_cwd() {
         # Identify the directory using a "file:" scheme URL,
         # including the host name to disambiguate local vs.
@@ -125,9 +130,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     fi
 fi
 
+### fzf ###
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# Add this lines at the top of .bashrc:
 
-# your bashrc settings come here...
-
-# Add this line at the end of .bashrc:
