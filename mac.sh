@@ -1,1 +1,1 @@
-brew install bash-completion
+brew install bash-completion tmux
