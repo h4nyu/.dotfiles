@@ -113,6 +113,9 @@ git config --global credential.helper 'cache --timeout 28800'
 git config --global http.postBuffer 52428800
 stty -ixon
 
+### ssh ###
+[ -f ~/.ssh/yao_rsa ] && ssh-add ~/.ssh/yao_rsa
+
 ### mac ###
 if [[ "$OSTYPE" == "darwin"* ]]; then
     update_terminal_cwd() {
