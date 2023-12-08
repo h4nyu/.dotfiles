@@ -82,7 +82,7 @@ fi
 ### environment variables ###
 export EDITOR=nvim
 export TERM=xterm-256color
-export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin:$/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin:/opt/homebrew/bin:/usr/local/bin:~/.tfenv/bin:$PATH"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export NODE_OPTIONS=--dns-result-order=ipv4first
 HISTSIZE=20000
