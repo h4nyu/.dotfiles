@@ -132,6 +132,9 @@ Plug 'hrsh7th/cmp-calc'
 Plug 'hrsh7th/cmp-omni'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-copilot'
+
+Plug 'github/copilot.vim'
 
 Plug 'itchyny/vim-cursorword'
 Plug 'wakatime/vim-wakatime'
@@ -351,6 +354,7 @@ lua <<EOF
     vsnip = '[Vsnip]',
 	buffer = "[Buffer]",
 	path = "[Path]",
+    copilot = "[Cop]",
   }
 
 
@@ -403,6 +407,7 @@ lua <<EOF
       { name = 'nvim_lsp' },
       { name = 'calc' },
       { name = 'path' },
+      { name = 'copilot' },
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
