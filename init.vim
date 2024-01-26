@@ -307,6 +307,8 @@ let g:EasyMotion_use_smartsign_us = 1 " US layout
 " s{char}{char} to move to {char}{char}
 map  s <Plug>(easymotion-bd-f2)
 nmap s <Plug>(easymotion-overwin-f2)
+map  f <Plug>(easymotion-bd-f2)
+nmap f <Plug>(easymotion-overwin-f2)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
