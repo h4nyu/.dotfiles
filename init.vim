@@ -140,6 +140,7 @@ Plug 'itchyny/vim-cursorword'
 Plug 'wakatime/vim-wakatime'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'rhysd/clever-f.vim'
+Plug 'windwp/nvim-autopairs'
 call plug#end()
 
 
@@ -348,6 +349,9 @@ inoreabbrev <expr> __
 "  nvim-cmp
 " -------------------
 lua <<EOF
+  -- Setup nvim-autopairs.
+  require("nvim-autopairs").setup {}
+
   -- Setup nvim-cmp.
   local cmp = require'cmp'
   local source_mapping = {
