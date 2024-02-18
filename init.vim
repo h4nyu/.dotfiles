@@ -76,7 +76,9 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.mjs setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.mjsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.json setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd FileType vue syntax sync fromstart
@@ -306,6 +308,8 @@ let g:EasyMotion_use_smartsign_us = 1 " US layout
 " s{char}{char} to move to {char}{char}
 map  s <Plug>(easymotion-bd-f2)
 nmap s <Plug>(easymotion-overwin-f2)
+map  f <Plug>(easymotion-bd-f2)
+nmap f <Plug>(easymotion-overwin-f2)
 
 " Gif config
 map  / <Plug>(easymotion-sn)
