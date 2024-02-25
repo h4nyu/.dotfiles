@@ -117,6 +117,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/vim-easy-align'
+Plug 'preservim/vim-markdown'
 
 " syntax highlight
 Plug 'maxmellon/vim-jsx-pretty'
