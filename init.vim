@@ -139,7 +139,6 @@ Plug 'hrsh7th/cmp-copilot'
 Plug 'github/copilot.vim'
 
 Plug 'itchyny/vim-cursorword'
-Plug 'wakatime/vim-wakatime'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'rhysd/clever-f.vim'
 Plug 'windwp/nvim-autopairs'
