@@ -115,7 +115,7 @@ git config --global http.postBuffer 52428800
 stty -ixon
 
 ### ssh ###
-[ -f ~/.ssh/yao_rsa ] && ssh-add ~/.ssh/yao_rsa
+[ -f ~/.ssh/yao_rsa ] && eval $(ssh-agent) &&ssh-add ~/.ssh/yao_rsa
 
 ### mac ###
 if [[ "$OSTYPE" == "darwin"* ]]; then
