@@ -88,6 +88,7 @@ export NODE_OPTIONS=--dns-result-order=ipv4first
 HISTSIZE=20000
 HISTFILESIZE=20000
 export LD_LIBRARY_PATH=/usr/local/lib # https://github.com/google-github-actions/setup-gcloud/issues/128
+export HISTCONTROL=ignoreboth:erasedups # https://askubuntu.com/questions/15926/how-to-avoid-duplicate-entries-in-bash-history
 
 ### alias ###
 alias ga='git add -A' 
