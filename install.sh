@@ -9,12 +9,9 @@ ln -sf ~/.dotfiles/config.fish ~/.config/fish/config.fish
 ln -sf ~/.dotfiles/fish_plugins ~/.config/fish/fish_plugins
 
 mkdir -p ~/.config/nvim
-ln -sf ~/.dotfiles/init.vim ~/.config/nvim/init.vim
+ln -sf ~/.dotfiles/init.lua ~/.config/nvim/init.lua
 
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 if [ ! -d ~/.fzf ]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
