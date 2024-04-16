@@ -91,7 +91,16 @@ require("lazy").setup({
       vim.api.nvim_set_keymap("n", "<Leader>fc", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
     end
-  }, {
+  }, 
+  {
+    "tpope/vim-fugitive",
+    config = function() 
+      vim.api.nvim_set_keymap("n", "<Leader>gs", ":Git<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>gp", ":Git push<CR>", { noremap = true, silent = true })
+
+    end
+  },
+  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-buffer",
