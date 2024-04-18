@@ -36,6 +36,7 @@ vim.cmd([[
     autocmd FileType java setlocal ts=2 sts=2 sw=2 expandtab
   augroup END
 ]])
+vim.cmd([[filetype plugin indent on]])
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -115,7 +116,12 @@ require("lazy").setup({
     config = function() 
       vim.api.nvim_set_keymap("n", "<Leader>gs", ":Git<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>gp", ":Git push<CR>", { noremap = true, silent = true })
-
+    end
+  },
+  {
+    'tpope/vim-commentary',
+    config = function() 
+      vim.api.nvim_set_keymap("x", "<Leader>/", ":Commentary<CR>", { noremap = true, silent = true })
     end
   },
   {
