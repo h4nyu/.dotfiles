@@ -136,7 +136,6 @@ require("lazy").setup({
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-f>'] = cmp.mapping.confirm({ select = true }),
           ['<C-k>'] = cmp.mapping.confirm({ select = true }),
-          ['<Space>'] = cmp.mapping.confirm({ select = true }),
           ['<C-e>'] = cmp.mapping.abort(), 
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
           ["<Tab>"] = vim.schedule_wrap(function(fallback)
