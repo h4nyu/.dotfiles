@@ -122,6 +122,7 @@ require("lazy").setup({
     'tpope/vim-commentary',
     config = function() 
       vim.api.nvim_set_keymap("x", "<Leader>/", ":Commentary<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>/", ":Commentary<CR>", { noremap = true, silent = true })
     end
   },
   {
