@@ -104,6 +104,9 @@ require("lazy").setup({
     "peitalin/vim-jsx-typescript"
   },
   {
+    "dhruvasagar/vim-table-mode"
+  },
+  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-buffer",
@@ -133,6 +136,7 @@ require("lazy").setup({
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-f>'] = cmp.mapping.confirm({ select = true }),
           ['<C-k>'] = cmp.mapping.confirm({ select = true }),
+          ['<Space>'] = cmp.mapping.confirm({ select = true }),
           ['<C-e>'] = cmp.mapping.abort(), 
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
           ["<Tab>"] = vim.schedule_wrap(function(fallback)
