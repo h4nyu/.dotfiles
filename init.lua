@@ -90,6 +90,10 @@ require("lazy").setup({
       vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":GitFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>fc", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>b", ":Buffers<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>l", ":Lines<CR>", { noremap = true, silent = true })
     end
   }, 
   {
