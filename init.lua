@@ -8,6 +8,7 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.swapfile = true
+vim.opt.smartcase = true
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
@@ -51,15 +52,23 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  'wbthomason/packer.nvim',
-  'rstacruz/vim-closer',
+  {
+    'rstacruz/vim-closer',
+  },
+  {
+    "airblade/vim-gitgutter",
+  },
   {
     'zbirenbaum/copilot.lua',
+  },
+  {
+    'easymotion/vim-easymotion',
     config = function() 
-      require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
+      vim.g.EasyMotion_do_mapping = 0
+      vim.g.EasyMotion_smartcase = 1
+      vim.g.EasyMotion_use_smartsign_us = 1
+      vim.api.nvim_set_keymap("n", "s", "<Plug>(easymotion-overwin-f2)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "f", "<Plug>(easymotion-overwin-f)", { noremap = true, silent = true })
     end
   },
   {
@@ -82,18 +91,23 @@ require("lazy").setup({
       require('lualine').setup()
     end
   },
-  "junegunn/fzf",
+  {
+    "junegunn/fzf",
+  },
   {
     "junegunn/fzf.vim",
     config = function() 
       vim.g.fzf_layout = { down = "~60%" }
       vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":GitFiles<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>fc", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>f", ":Files<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>c", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>b", ":Buffers<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>l", ":Lines<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>m", ":Marks<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>t", ":Tags<CR>", { noremap = true, silent = true })
     end
   }, 
   {
