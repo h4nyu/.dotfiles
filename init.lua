@@ -63,14 +63,7 @@ require("lazy").setup({
     'zbirenbaum/copilot.lua',
   },
   {
-    'easymotion/vim-easymotion',
-    config = function() 
-      vim.g.EasyMotion_do_mapping = 0
-      vim.g.EasyMotion_smartcase = 1
-      vim.g.EasyMotion_use_smartsign_us = 1
-      vim.api.nvim_set_keymap("n", "s", "<Plug>(easymotion-overwin-f2)", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "f", "<Plug>(easymotion-overwin-f)", { noremap = true, silent = true })
-    end
+    'rhysd/clever-f.vim',
   },
   {
     "zbirenbaum/copilot-cmp",
