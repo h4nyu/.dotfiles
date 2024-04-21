@@ -61,6 +61,9 @@ require("lazy").setup({
   },
   {
     'zbirenbaum/copilot.lua',
+    config = function ()
+      require("copilot").setup({})
+    end
   },
   {
     'rhysd/clever-f.vim',
