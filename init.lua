@@ -60,6 +60,18 @@ require("lazy").setup({
     "airblade/vim-gitgutter",
   },
   {
+    'easymotion/vim-easymotion',
+    config = function ()
+      vim.g.EasyMotion_do_mapping = 0
+      vim.g.EasyMotion_smartcase = 1
+      vim.g.EasyMotion_use_smartsign_us = 1
+      vim.api.nvim_set_keymap("n", "L", "<Plug>(easymotion-overwin-line)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "w", "<Plug>(easymotion-bd-w)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "f", "<Plug>(easymotion-bd-f)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "s", "<Plug>(easymotion-bd-f2)", { noremap = true, silent = true })
+    end
+  },
+  {
     'zbirenbaum/copilot.lua',
     config = function ()
       require("copilot").setup({})
