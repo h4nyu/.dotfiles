@@ -107,7 +107,7 @@ require("lazy").setup({
     "junegunn/fzf.vim",
     config = function() 
       vim.g.fzf_layout = { down = "~60%" }
-      vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":GitFiles<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>j", ":GitFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>f", ":Files<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>c", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
