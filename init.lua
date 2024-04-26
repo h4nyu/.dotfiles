@@ -150,6 +150,9 @@ require("lazy").setup({
       local cmp = require'cmp'
       local source_mapping = {
         copilot = "[Cop]",
+        omni = "[Omn]",
+        path = "[Pat]",
+        buffer = "[Buf]",
       }
       local has_words_before = function()
         if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
