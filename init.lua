@@ -158,6 +158,9 @@ require("lazy").setup({
       end
 
       cmp.setup({
+        completion = {
+          completeopt = 'menu,menuone,noinsert'
+        },
         formatting = {
           format = function(entry, vim_item)
             local menu = source_mapping[entry.source.name]
@@ -189,6 +192,7 @@ require("lazy").setup({
         sources = cmp.config.sources({
           { name = 'copilot' },
           { name = 'omni' },
+          { name = 'path' },
         }, {
           { name = 'buffer' },
         })
