@@ -9,6 +9,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.swapfile = true
 vim.opt.smartcase = true
+vim.opt.ignorecase = true
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
@@ -54,6 +55,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    'airblade/vim-rooter',
+  },
+  {
     'rstacruz/vim-closer',
   },
   {
@@ -66,9 +70,9 @@ require("lazy").setup({
       vim.g.EasyMotion_smartcase = 1
       vim.g.EasyMotion_use_smartsign_us = 1
       vim.api.nvim_set_keymap("n", "L", "<Plug>(easymotion-overwin-line)", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "w", "<Plug>(easymotion-bd-w)", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "f", "<Plug>(easymotion-bd-f)", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "s", "<Plug>(easymotion-bd-f2)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "w", "<Plug>(easymotion-overwin-w)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "f", "<Plug>(easymotion-overwin-f)", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "s", "<Plug>(easymotion-overwin-f2)", { noremap = true, silent = true })
     end
   },
   {
