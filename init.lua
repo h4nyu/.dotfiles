@@ -56,6 +56,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   {
     'airblade/vim-rooter',
+    config = function ()
+      vim.g.rooter_patterns = { '.git', '.git/' }
+    end
   },
   {
     'rstacruz/vim-closer',
