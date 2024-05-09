@@ -169,6 +169,11 @@ require("lazy").setup({
     "dhruvasagar/vim-table-mode"
   },
   {
+    'tzachar/cmp-tabnine',
+    build = './install.sh',
+    dependencies = 'hrsh7th/nvim-cmp',
+  },
+  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-buffer",
@@ -177,12 +182,6 @@ require("lazy").setup({
     },
     config = function() 
       local cmp = require'cmp'
-      local source_mapping = {
-        copilot = "[Cop]",
-        omni = "[Omn]",
-        path = "[Pat]",
-        buffer = "[Buf]",
-      }
       local has_words_before = function()
         if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -192,13 +191,6 @@ require("lazy").setup({
       cmp.setup({
         completion = {
           completeopt = 'menu,menuone,noinsert'
-        },
-        formatting = {
-          format = function(entry, vim_item)
-            local menu = source_mapping[entry.source.name]
-            vim_item.menu = menu
-            return vim_item
-          end
         },
         mapping = cmp.mapping.preset.insert({
           ['<C-Space>'] = cmp.mapping.complete(),
@@ -222,6 +214,7 @@ require("lazy").setup({
           end, { "i", "s" }),
         }),
         sources = cmp.config.sources({
+          { name = 'cmp_tabnine' },
           { name = 'copilot' },
           { name = 'omni' },
           { name = 'path' },
