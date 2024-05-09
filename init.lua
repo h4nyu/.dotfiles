@@ -136,15 +136,14 @@ require("lazy").setup({
     "junegunn/fzf.vim",
     config = function() 
       vim.g.fzf_layout = { down = "~60%" }
-      vim.api.nvim_set_keymap("n", "<Leader>k", ":Files<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>fc", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>f", ":Files<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>k", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>b", ":Buffers<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>l", ":Lines<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>m", ":Marks<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>t", ":Tags<CR>", { noremap = true, silent = true })
     end
   }, 
   {
@@ -186,10 +185,36 @@ require("lazy").setup({
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
       end
+      local source_mapping = {
+        buffer = "[Buffer]",
+        copilot = "[Copilot]",
+        omni = "[Omni]",
+        cmp_tabnine = "[TN]",
+        path = "[Path]",
+      }
 
       cmp.setup({
         completion = {
           completeopt = 'menu,menuone,noinsert'
+        },
+        formatting = {
+          format = function(entry, vim_item)
+            vim_item.menu = source_mapping[entry.source.name]
+            if entry.source.name == "cmp_tabnine" then
+              local detail = (entry.completion_item.labelDetails or {}).detail
+              vim_item.kind = ""
+              if detail and detail:find('.*%%.*') then
+                vim_item.kind = vim_item.kind .. ' ' .. detail
+              end
+
+              if (entry.completion_item.data or {}).multiline then
+                vim_item.kind = vim_item.kind .. ' ' .. '[ML]'
+              end
+            end
+            local maxwidth = 80
+            vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
+            return vim_item
+          end,
         },
         mapping = cmp.mapping.preset.insert({
           ['<C-Space>'] = cmp.mapping.complete(),
