@@ -136,9 +136,8 @@ require("lazy").setup({
     "junegunn/fzf.vim",
     config = function() 
       vim.g.fzf_layout = { down = "~60%" }
-      vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":GitFiles<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>f", ":Files<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>c", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>k", ":Files<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>fc", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
@@ -158,8 +157,8 @@ require("lazy").setup({
   {
     'tpope/vim-commentary',
     config = function() 
-      vim.api.nvim_set_keymap("x", "<Leader>k", ":Commentary<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>k", ":Commentary<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("x", "<Leader>c", ":Commentary<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>c", ":Commentary<CR>", { noremap = true, silent = true })
     end
   },
   {
