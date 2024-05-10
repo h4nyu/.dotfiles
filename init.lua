@@ -177,14 +177,17 @@ require("lazy").setup({
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-omni",
+      'hrsh7th/cmp-vsnip',
+      'hrsh7th/vim-vsnip'
     },
     config = function() 
       local cmp = require'cmp'
       local has_words_before = function()
-        if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+        unpack = unpack or table.unpack
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-        return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
+        return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
       end
+
       local source_mapping = {
         buffer = "[Buffer]",
         copilot = "[Copilot]",
@@ -196,6 +199,11 @@ require("lazy").setup({
       cmp.setup({
         completion = {
           completeopt = 'menu,menuone,noinsert'
+        },
+        snippet = {
+          expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+          end,
         },
         formatting = {
           format = function(entry, vim_item)
@@ -219,7 +227,7 @@ require("lazy").setup({
         mapping = cmp.mapping.preset.insert({
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-f>'] = cmp.mapping.confirm({ select = true }),
-          ['<C-k>'] = cmp.mapping.confirm({ select = true }),
+          ['<C-k>'] = cmp.mapping.confirm(),
           ['<C-e>'] = cmp.mapping.abort(), 
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
           ["<Tab>"] = vim.schedule_wrap(function(fallback)
