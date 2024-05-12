@@ -83,7 +83,9 @@ require("lazy").setup({
     end
   },
   {
-    'rstacruz/vim-closer',
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
   },
   {
     "airblade/vim-gitgutter",
