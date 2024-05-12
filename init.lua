@@ -55,6 +55,20 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    "nat-418/boole.nvim",
+    config = function()
+      require("boole").setup({
+        mappings = {
+          increment = '<C-a>',
+          decrement = '<C-x>'
+        },
+        additions = {
+          {'Todo', 'Waitiing', 'Done', "InProgres"}
+        },
+      })
+    end
+  },
+  {
     "shellRaining/hlchunk.nvim",
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
