@@ -63,7 +63,7 @@ require("lazy").setup({
           decrement = '<C-x>'
         },
         additions = {
-          {'Todo', 'Waitiing', 'Done', "InProgres"}
+          {'Todo', 'Waiting', 'Done', "InProgres"}
         },
       })
     end
