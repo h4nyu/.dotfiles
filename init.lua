@@ -7,7 +7,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.swapfile = true
+vim.opt.swapfile = false
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
