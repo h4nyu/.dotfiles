@@ -55,6 +55,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    'mhinz/vim-startify'
+  },
+  {
     "nat-418/boole.nvim",
     config = function()
       require("boole").setup({
