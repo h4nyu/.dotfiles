@@ -115,8 +115,25 @@ git config --global credential.helper 'cache --timeout 28800'
 git config --global http.postBuffer 52428800
 stty -ixon
 
-### ssh ###
-[ -f ~/.ssh/yao_rsa ] && eval $(ssh-agent) &&ssh-add ~/.ssh/yao_rsa
+### ssh-agent ###
+SSH_PID_FILE="$HOME/.config/ssh-agent.pid"
+SSH_AUTH_SOCK="$HOME/.config/ssh-agent.sock"
+if [ -z "$SSH_AGENT_PID" ]
+then
+	# no PID exported, try to get it from pidfile
+	SSH_AGENT_PID=$(cat "$SSH_PID_FILE")
+fi
+
+if ! kill -0 $SSH_AGENT_PID &> /dev/null
+then
+	rm "$SSH_AUTH_SOCK" &> /dev/null
+	>&2 echo "Starting SSH agent, since it's not running; this can take a moment"
+	eval "$(ssh-agent -s -a $SSH_AUTH_SOCK)"
+	echo $SSH_AGENT_PID > $SSH_PID_FILE
+
+  [ -f ~/.ssh/yao_rsa ] && ssh-add ~/.ssh/yao_rsa
+	>&2 echo "Started ssh-agent with '$SSH_AUTH_SOCK'"
+fi
 
 ### mac ###
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -137,4 +154,5 @@ fi
 
 ### fzf ###
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 
