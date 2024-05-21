@@ -55,7 +55,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
-    'mhinz/vim-startify'
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup({})
+    end
   },
   {
     "nat-418/boole.nvim",
@@ -150,6 +153,7 @@ require("lazy").setup({
           component_separators = { left = '|', right = '|'},
           section_separators = { left = '', right = ''},
         },
+        sections = {lualine_c = {require('auto-session.lib').current_session_name}}
       })
     end
   },
@@ -163,7 +167,7 @@ require("lazy").setup({
       vim.api.nvim_set_keymap("n", "<Leader>f", ":Files<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>k", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = false, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>b", ":Buffers<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>l", ":Lines<CR>", { noremap = true, silent = true })
