@@ -274,10 +274,10 @@ require("lazy").setup({
           end, { "i", "s" }),
         }),
         sources = cmp.config.sources({
-          { name = 'cmp_tabnine' },
           { name = 'copilot' },
-          { name = 'omni' },
+          { name = 'cmp_tabnine' },
           { name = 'path' },
+          { name = 'omni' },
         }, {
           { name = 'buffer' },
         })
