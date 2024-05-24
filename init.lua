@@ -169,7 +169,7 @@ require("lazy").setup({
       vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = false, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>b", ":Buffers<CR>", { noremap = true, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>l", ":Lines<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>l", ":BLines<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>m", ":Marks<CR>", { noremap = true, silent = true })
     end
   }, 
