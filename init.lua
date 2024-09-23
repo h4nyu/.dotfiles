@@ -203,11 +203,6 @@ require("lazy").setup({
     "dhruvasagar/vim-table-mode"
   },
   {
-    'tzachar/cmp-tabnine',
-    build = './install.sh',
-    dependencies = 'hrsh7th/nvim-cmp',
-  },
-  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-buffer",
@@ -228,7 +223,6 @@ require("lazy").setup({
         buffer = "[Buffer]",
         copilot = "[Copilot]",
         omni = "[Omni]",
-        cmp_tabnine = "[TN]",
         path = "[Path]",
       }
 
@@ -244,17 +238,6 @@ require("lazy").setup({
         formatting = {
           format = function(entry, vim_item)
             vim_item.menu = source_mapping[entry.source.name]
-            if entry.source.name == "cmp_tabnine" then
-              local detail = (entry.completion_item.labelDetails or {}).detail
-              vim_item.kind = ""
-              if detail and detail:find('.*%%.*') then
-                vim_item.kind = vim_item.kind .. ' ' .. detail
-              end
-
-              if (entry.completion_item.data or {}).multiline then
-                vim_item.kind = vim_item.kind .. ' ' .. '[ML]'
-              end
-            end
             local maxwidth = 80
             vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
             return vim_item
@@ -283,7 +266,6 @@ require("lazy").setup({
         }),
         sources = cmp.config.sources({
           { name = 'copilot' },
-          { name = 'cmp_tabnine' },
           { name = 'path' },
           { name = 'omni' },
         }, {
