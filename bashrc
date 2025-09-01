@@ -76,13 +76,15 @@ if ! shopt -oq posix; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  elif [ -f /opt/homebrew/etc/bash_completion ]; then
+    . /opt/homebrew/etc/bash_completion
   fi
 fi
 
 ### environment variables ###
 export EDITOR=nvim
 export TERM=xterm-256color
-export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin:/opt/homebrew/bin:/usr/local/bin:~/.tfenv/bin:~/.local/bin:$PATH"
+export PATH="$HOME/.yarn/bin:/snap/bin:$HOME/.emacs.d/bin:/opt/homebrew/bin:/usr/local/bin:~/.tfenv/bin:~/.local/bin:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export NODE_OPTIONS=--dns-result-order=ipv4first
 HISTSIZE=20000
@@ -95,6 +97,7 @@ alias ga='git add -A'
 alias gs='git status' 
 alias gp='git push' 
 alias gca='git commit -a'
+alias gswm='git switch main'
 alias gf='git fetch' 
 alias vimdiff='nvim -d '
 alias grb='git branch | grep -ve " master$" | xargs git branch -D'
