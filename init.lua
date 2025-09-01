@@ -69,8 +69,7 @@ require("lazy").setup({
     end
   },
   {
-    "shellRaining/hlchunk.nvim",
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    'nvim-treesitter/nvim-treesitter',
     build = ":TSUpdate", 
     main = 'nvim-treesitter.configs', 
     config = function () 
@@ -80,6 +79,18 @@ require("lazy").setup({
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },  
+      })
+    end
+  },
+  {
+    "shellRaining/hlchunk.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("hlchunk").setup({
+        chunk = {
+          enable = true
+        },
+
       })
     end
   },
