@@ -29,12 +29,6 @@ autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.mjsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType vue syntax sync fromstart
-autocmd FileType nginx setl sw=2 sts=2 et
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType java setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
 ]])
 vim.cmd([[filetype plugin indent on]])
@@ -77,16 +71,17 @@ require("lazy").setup({
   {
     "shellRaining/hlchunk.nvim",
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = function()
-      require("hlchunk").setup({
-        indent = { enable = false },
-        blank = { enable = false },
-        chunk = {
-          style = "#00ffff",
-        },
+    build = ":TSUpdate", 
+    main = 'nvim-treesitter.configs', 
+    config = function () 
+      local configs = require("nvim-treesitter.configs")
+      configs.setup({
+        ensure_installed = { "c", "lua", "vim", "vimdoc", "html", "typescript", "yaml", "tsx" },
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },  
       })
-    end,
-
+    end
   },
   {
     'Wansmer/treesj',
@@ -204,9 +199,6 @@ require("lazy").setup({
         extra = false,
       },
     }
-  },
-  {
-    "peitalin/vim-jsx-typescript"
   },
   {
     "dhruvasagar/vim-table-mode"
