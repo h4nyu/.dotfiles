@@ -164,6 +164,7 @@ require("lazy").setup({
     config = function() 
       require('lualine').setup({
         sections = {
+          lualine_b = {},
           lualine_c = {
             {
               'filename',
