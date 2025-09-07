@@ -145,18 +145,9 @@ require("lazy").setup({
   },
   'christoomey/vim-tmux-navigator',
   {
-    "rebelot/kanagawa.nvim",
+    'w0ng/vim-hybrid',
     config = function() 
-      require("kanagawa").setup({
-        commentStyle = { italic = false },
-        keywordStyle = { italic = false },
-        overrides = function()
-          return {
-            ["@variable.builtin"] = { italic = false },
-          }
-        end
-      })
-      vim.cmd("colorscheme kanagawa")
+      vim.cmd("colorscheme hybrid")
     end
   },
   {
