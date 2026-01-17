@@ -39,6 +39,25 @@ augroup END
 vim.cmd([[filetype plugin indent on]])
 
 
+-- Todo Panel
+vim.keymap.set("n", "<Leader>n", function()
+  local filename = vim.fn.expand("~/mydocs/todo.md")
+
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    local name = vim.api.nvim_buf_get_name(buf)
+
+    if name == filename then
+      vim.api.nvim_win_close(win, true) -- 閉じる (トグル動作)
+      return
+    end
+  end
+  vim.cmd("botright split " .. filename)
+  vim.cmd("resize 30")
+
+end, { desc = "Toggle Todo Panel" })
+
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -192,11 +211,10 @@ require("lazy").setup({
     "junegunn/fzf.vim",
     config = function() 
       vim.g.fzf_layout = { down = "~60%" }
-      vim.api.nvim_set_keymap("n", "<Leader>f", ":Files<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<Leader>f", ":GFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>k", ":Files<C-R>=expand('%:h')<CR><CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader><CR>", ":Ag<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>h", ":History<CR>", { noremap = false, silent = true })
-      vim.api.nvim_set_keymap("n", "<Leader>g", ":GFiles<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>b", ":Buffers<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>l", ":BLines<CR>", { noremap = true, silent = true })
       vim.api.nvim_set_keymap("n", "<Leader>m", ":Marks<CR>", { noremap = true, silent = true })
