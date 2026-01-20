@@ -79,20 +79,6 @@ require("lazy").setup({
     end
   },
   {
-    "nat-418/boole.nvim",
-    config = function()
-      require("boole").setup({
-        mappings = {
-          increment = '<C-a>',
-          decrement = '<C-x>'
-        },
-        additions = {
-          {'Todo', 'Waiting', 'Done', "InProgres"}
-        },
-      })
-    end
-  },
-  {
     'nvim-treesitter/nvim-treesitter',
     build = ":TSUpdate", 
     main = 'nvim-treesitter.configs', 
