@@ -40,22 +40,53 @@ vim.cmd([[filetype plugin indent on]])
 
 
 -- Todo Panel
+local function sync_todo_repo(dir)
+  -- 変更があるか確認してから commit & push
+  local cmd = string.format(
+    "cd %s && git add . && if ! git diff --cached --quiet; then git commit -m 'Update todo: '\"$(date)\" && git push --quiet; else exit 0; fi",
+    dir
+  )
+  
+  vim.fn.jobstart({"sh", "-c", cmd}, {
+    on_exit = function(_, return_val)
+      if return_val == 0 then
+        -- 成功メッセージを表示
+        vim.notify("Todo synced successfully!", vim.log.levels.INFO)
+      else
+        -- 失敗メッセージを表示
+        vim.notify("Todo sync failed!", vim.log.levels.WARN)
+      end
+    end,
+  })
+end
+
 vim.keymap.set("n", "<Leader>n", function()
   local filename = vim.fn.expand("~/mydocs/todo.md")
+  local target_dir = vim.fn.expand("~/mydocs")
 
   for _, win in ipairs(vim.api.nvim_list_wins()) do
     local buf = vim.api.nvim_win_get_buf(win)
     local name = vim.api.nvim_buf_get_name(buf)
 
     if name == filename then
-      vim.api.nvim_win_close(win, true) -- 閉じる (トグル動作)
+      -- パネルを閉じる前に保存を実行
+      vim.api.nvim_buf_call(buf, function()
+        vim.cmd("silent! update")
+      end)
+      
+      -- ウィンドウを閉じる
+      vim.api.nvim_win_close(win, true)
+      
+      -- バックグラウンドで同期を実行
+      sync_todo_repo(target_dir)
       return
     end
   end
+
+  -- パネルを開く処理
   vim.cmd("botright split " .. filename)
   vim.cmd("resize 30")
-
-end, { desc = "Toggle Todo Panel" })
+end, { desc = "Toggle Todo Panel with Auto Sync" })
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
